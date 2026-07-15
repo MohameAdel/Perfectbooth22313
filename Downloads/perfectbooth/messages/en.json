@@ -1,0 +1,69 @@
+{
+  "Header": {
+    "title": "Perfect Booth",
+    "subtitle": "To organize conferences and exhibitions",
+    "nav": {
+      "home": "Home",
+      "about": "Who We Are",
+      "services": "Services",
+      "media": "Media",
+      "partners": "Partners",
+      "blog": "Blog",
+      "registration": "Registration",
+      "contact": "Contact Us"
+    }
+  },
+  "Hero": {
+    "title": "Wedding Kingdom Expo",
+    "subtitle": "Perfect Booth",
+    "years": "Years"
+  },
+  "About": {
+    "subtitle": "Who We Are",
+    "title": "Perfect Booth",
+    "description1": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
+    "description2": "From planning to production, we deliver complete event solutions, custom booth manufacturing, and on-site support for organizations, ministries, corporations, and institutions across Egypt.",
+    "readMore": "Read More"
+  },
+  "Services": {
+    "subtitle": "Delivering Excellence in Every Event",
+    "title": "Our Services",
+    "cards": {
+      "tents": "Tents and Outdoor Equipment",
+      "booths": "Exhibition Booths",
+      "printing": "Publications and Visual Identity",
+      "audio": "Sound and Lighting Systems"
+    }
+  },
+  "Solutions": {
+    "subtitle": "Trusted by Leading Organizations",
+    "title": "Integrated Event Solutions",
+    "description": "We offer everything your event needs in one place: planning, production, exhibition booths, tents, publications, sound and lighting systems, registration solutions, visual identity, logistics services, and on-site coordination.",
+    "cards": {
+      "planning": {
+        "title": "Planning",
+        "desc": "Developing a strategy and timeline for the event, setting goals and objectives, and identifying the necessary resources."
+      },
+      "evaluation": {
+        "title": "Evaluation",
+        "desc": "Measuring the success of the event against its goals and objectives, and identifying areas of improvement for future events."
+      },
+      "coordination": {
+        "title": "Coordination",
+        "desc": "Managing logistics such as venue selection, catering, travel arrangements, and audiovisual equipment."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Promoting the event to potential attendees, sponsors, and exhibitors through various channels such as social media and email."
+      },
+      "networking": {
+        "title": "Networking",
+        "desc": "Creating opportunities for attendees to network with each other and with exhibitors, for example through networking sessions and 1-on-1 meetings."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Introducing new ideas and concepts to highlight the event and provide a unique experience for attendees."
+      }
+    }
+  }
+}
