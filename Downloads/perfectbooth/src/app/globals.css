@@ -3486,3 +3486,11 @@ a {
     min-height: auto !important;
   }
 }
+
+
+/* === HERO BANNER IMAGE MARGIN FIX === */
+@media (max-width: 768px) {
+  .pb-hero-1-image {
+    margin-top: 9rem !important;
+  }
+}
