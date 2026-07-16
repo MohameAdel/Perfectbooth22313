@@ -97,12 +97,9 @@
     "eyebrow": "Partners in delivery",
     "title": "Selected collaborations"
   },
-  "ContactLocation": {
-    "decorativeText": "Contact",
-    "title": "Let’s shape your next exhibition space.",
-    "description": "Share your exhibition brief, venue, timeline, or concept. We protect visual quality, reduce friction, and elevate the final presentation.",
-    "cta": "Start a project",
-    "email": "Info@perfectbooth-events.com",
-    "phone": "+201116013011"
+  "OurLocation": {
+    "decorativeText": "Our Location",
+    "title": "Your exhibition partner, closer than you think.",
+    "cta": "View our location"
   }
 }
