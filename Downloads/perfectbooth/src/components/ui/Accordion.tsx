@@ -56,7 +56,6 @@ export default function Accordion({ items }: AccordionProps) {
 
   return (
     <div className="faq-accordion-container">
-      <div className="faq-accordion-top-divider"></div>
       {items.map((item, index) => (
         <AccordionItem
           key={index}

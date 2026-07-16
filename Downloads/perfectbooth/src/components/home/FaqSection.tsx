@@ -7,7 +7,6 @@ export default function FaqSection() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   // Extract items directly from translations
-  // Using an array map approach based on the JSON structure we injected
   const items = t.raw('items') as { q: string, a: string }[];
 
   return (
@@ -17,9 +16,10 @@ export default function FaqSection() {
         {/* Introductory Column */}
         <div className="faq-intro">
           <div className="faq-eyebrow">
-            <span className="faq-eyebrow-line"></span>
             {t('eyebrow')}
           </div>
+          <div className="faq-eyebrow-line"></div>
+          
           <h2 className="faq-title">
             {t('title')}
           </h2>
