@@ -43,11 +43,7 @@ export default function Header() {
       {/* Main Header */}
       <header className="main-header">
         <div className={`logo-container ${isScrolled ? 'mobile-hidden-logo' : ''}`} style={isScrolled ? { transition: 'all 0.3s ease' } : { transition: 'all 0.3s ease' }}>
-          <Logo />
-          <div className="logo-text">
-            <span className="logo-title">{t('title')}</span>
-            <span className="logo-subtitle">{t('subtitle')}</span>
-          </div>
+          <Logo width={isScrolled ? 140 : 180} height={isScrolled ? 50 : 60} />
         </div>
 
         {/* Desktop Navigation */}

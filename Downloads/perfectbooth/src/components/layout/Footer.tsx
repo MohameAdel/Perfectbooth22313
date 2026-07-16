@@ -22,9 +22,8 @@ export default function Footer() {
           <div className="company-info-content">
             <div className="footer-logo-wrapper">
               {/* Intentional larger logo presentation for the footer */}
-              <Logo size={90} />
+              <Logo width={220} height={80} />
             </div>
-            <p className="company-name">{tHeader('title')}</p>
             <address className="company-desc">
               <p className="desc-text">{t('description')}</p>
               <p className="location-text">{t('address')}</p>
