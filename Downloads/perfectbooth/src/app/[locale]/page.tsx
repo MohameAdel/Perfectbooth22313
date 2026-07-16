@@ -4,6 +4,7 @@ import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import SolutionsSection from '@/components/home/SolutionsSection';
 import SelectedProjectsSection from '@/components/home/SelectedProjectsSection';
+import FaqSection from '@/components/home/FaqSection';
 import WhyPerfectBoothSection from '@/components/home/WhyPerfectBoothSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import OurLocationSection from '@/components/home/OurLocationSection';
@@ -20,6 +21,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <SolutionsSection />
       <WhyPerfectBoothSection />
       <SelectedProjectsSection />
+      <FaqSection />
       <PartnersSection />
       <OurLocationSection />
     </main>

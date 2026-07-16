@@ -110,5 +110,28 @@
     "description": "perfect booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops.",
     "copyright": "© {year} perfect booth. All rights reserved.",
     "address": "Cairo, Egypt"
+  },
+  "Faq": {
+    "eyebrow": "Frequently Asked Questions",
+    "title": "Clear answers before your project begins",
+    "description": "Essential information to help you move from the first brief to a confident exhibition delivery.",
+    "items": [
+      {
+        "q": "What services does Perfect Booth provide?",
+        "a": "Perfect Booth designs exhibition booths, brand activations, and complete spatial environments. Our services cover creative direction, custom fabrication, installation planning, and on-site execution."
+      },
+      {
+        "q": "Can Perfect Booth manage the project from concept to final handover?",
+        "a": "Yes. Discovery, design direction, fabrication, installation, testing, and final readiness are coordinated through one connected process to preserve the design quality through delivery."
+      },
+      {
+        "q": "What information is needed to start an exhibition project?",
+        "a": "Share the venue, dates or timeline, project goals, target audience, booth requirements, and any available visual direction. A rough initial idea is enough to begin the conversation."
+      },
+      {
+        "q": "Is project communication available in English and Arabic?",
+        "a": "Yes. Perfect Booth supports project communication and coordination in both English and Arabic throughout the project stages."
+      }
+    ]
   }
 }
