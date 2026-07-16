@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileNavigation from './MobileNavigation';
+import Logo from '@/components/ui/Logo';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -42,13 +43,7 @@ export default function Header() {
       {/* Main Header */}
       <header className="main-header">
         <div className={`logo-container ${isScrolled ? 'mobile-hidden-logo' : ''}`} style={isScrolled ? { transition: 'all 0.3s ease' } : { transition: 'all 0.3s ease' }}>
-          {/* Mock Logo using Next Image */}
-          <div style={{ position: 'relative', width: '60px', height: '60px' }}>
-            {/* If we had a real Perfect Booth logo we'd use it. Using placeholder for now */}
-            <div style={{ width: '100%', height: '100%', border: '2px solid var(--primary-gold)', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'var(--primary-gold)', fontWeight: 'bold', fontSize: '12px', textAlign: 'center', lineHeight: '1' }}>
-              PB
-            </div>
-          </div>
+          <Logo />
           <div className="logo-text">
             <span className="logo-title">{t('title')}</span>
             <span className="logo-subtitle">{t('subtitle')}</span>

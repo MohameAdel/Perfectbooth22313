@@ -103,14 +103,10 @@
     "cta": "View our location"
   },
   "Footer": {
-    "ctaTitle": "Have an Event in Mind?",
-    "ctaButton": "Contact Us",
-    "description": "Perfect Booth provides premium event solutions, exhibition stand design, and on-site operations across Egypt.",
-    "navTitle": "Quick Links",
-    "contactTitle": "Contact Info",
-    "copyright": "© 2026 Perfect Booth. All rights reserved.",
-    "address": "Cairo, Egypt",
-    "phone": "+20 123 456 7890",
-    "email": "info@perfectbooth.com"
+    "companyInfoTitle": "Company Information",
+    "contactTitle": "Contact",
+    "description": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops.",
+    "copyright": "© {year} Perfect Booth. All rights reserved.",
+    "address": "Cairo, Egypt"
   }
 }
