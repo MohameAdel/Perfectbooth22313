@@ -716,6 +716,14 @@ a {
     justify-content: center;
     background-color: #111;
     padding: 15px 5%;
+    overflow: hidden;
+  }
+  
+  .logo-container.mobile-hidden-logo {
+    max-height: 0 !important;
+    padding: 0 5% !important;
+    opacity: 0;
+    margin: 0;
   }
 
   .nav-links {

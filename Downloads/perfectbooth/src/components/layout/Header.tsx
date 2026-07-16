@@ -41,7 +41,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="main-header">
-        <div className="logo-container">
+        <div className={`logo-container ${isScrolled ? 'mobile-hidden-logo' : ''}`} style={isScrolled ? { transition: 'all 0.3s ease' } : { transition: 'all 0.3s ease' }}>
           {/* Mock Logo using Next Image */}
           <div style={{ position: 'relative', width: '60px', height: '60px' }}>
             {/* If we had a real Perfect Booth logo we'd use it. Using placeholder for now */}
