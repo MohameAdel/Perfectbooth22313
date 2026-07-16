@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -5,11 +8,19 @@ import MobileNavigation from './MobileNavigation';
 
 export default function Header() {
   const t = useTranslations('Header');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}>
-      {/* Top Bar - Hidden on mobile */}
-      <div className="top-bar">
+      <div className={`top-bar ${isScrolled ? 'hidden-top-bar' : ''}`} style={{ transition: 'all 0.3s ease', overflow: 'hidden', maxHeight: isScrolled ? 0 : '100px', padding: isScrolled ? 0 : '0.5rem 5%', opacity: isScrolled ? 0 : 1, borderBottom: isScrolled ? 'none' : undefined }}>
         <div className="top-bar-right">
           <span>{t('title')}</span>
         </div>
