@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.ouneg.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'admin.perfectbooth-events.com',
+      },
     ],
   },
 };
