@@ -15,9 +15,9 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <HomeHero />
       <AboutSection />
       <ServicesSection />
-      <SelectedProjectsSection />
       <SolutionsSection />
       <WhyPerfectBoothSection />
+      <SelectedProjectsSection />
     </main>
   );
 }
