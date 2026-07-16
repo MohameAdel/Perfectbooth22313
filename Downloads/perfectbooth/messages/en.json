@@ -1,6 +1,6 @@
 {
   "Header": {
-    "title": "Perfect Booth",
+    "title": "perfect booth",
     "subtitle": "To organize conferences and exhibitions",
     "nav": {
       "home": "Home",
@@ -15,13 +15,13 @@
   },
   "Hero": {
     "title": "Wedding Kingdom Expo",
-    "subtitle": "Perfect Booth",
+    "subtitle": "perfect booth",
     "years": "Years"
   },
   "About": {
     "subtitle": "Who We Are",
-    "title": "Perfect Booth",
-    "description1": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
+    "title": "perfect booth",
+    "description1": "perfect booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
     "description2": "From planning to production, we deliver complete event solutions, custom booth manufacturing, and on-site support for organizations, ministries, corporations, and institutions across Egypt.",
     "readMore": "Read More"
   },
@@ -70,7 +70,7 @@
     "close": "Close",
     "contactInfo": "Contact Info",
     "followUs": "Follow Us",
-    "copyright": "© 2026 Perfect Booth. All rights reserved.",
+    "copyright": "© 2026 perfect booth. All rights reserved.",
     "addressPlaceholder": "Cairo, Egypt (Address to be verified)",
     "phonePlaceholder": "+20 123 456 7890 (To be verified)",
     "emailPlaceholder": "info@perfectbooth.com (To be verified)"
@@ -106,8 +106,8 @@
     "companyInfoTitle": "Company Information",
     "contactTitle": "Contact",
     "quickLinksTitle": "Quick Links",
-    "description": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops.",
-    "copyright": "© {year} Perfect Booth. All rights reserved.",
+    "description": "perfect booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops.",
+    "copyright": "© {year} perfect booth. All rights reserved.",
     "address": "Cairo, Egypt"
   }
 }
