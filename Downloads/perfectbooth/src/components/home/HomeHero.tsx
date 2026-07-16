@@ -56,16 +56,19 @@ export default function HomeHero() {
         </div>
 
         {/* Image Panel (Right/End) */}
-        <div className="pb-hero-1-image animate-fade-in-fix" style={{ position: 'relative', width: '100%', minHeight: '300px' }}>
+        <div className="pb-hero-1-image animate-fade-in-fix">
           <Image
             src="/assets/banner2.png"
             alt={t('title')}
-            fill
-            sizes="(max-width: 767px) 100vw, (max-width: 1024px) 56vw, 60vw"
+            width={1920}
+            height={1080}
+            sizes="100vw"
             quality={95}
             priority
             style={{ 
-              objectFit: 'cover'
+              width: '100%',
+              height: 'auto',
+              display: 'block'
             }}
           />
         </div>
