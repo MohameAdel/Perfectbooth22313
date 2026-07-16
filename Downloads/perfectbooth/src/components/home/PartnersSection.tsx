@@ -113,7 +113,7 @@ export default function PartnersSection() {
             <div key={partner.id} className="partner-card">
               <Image 
                 src={partner.src} 
-                alt={\`Perfect Booth Partner \${partner.id}\`}
+                alt={`Perfect Booth Partner ${partner.id}`}
                 fill 
                 sizes="(max-width: 768px) 60vw, 25vw"
                 className="partner-img" 

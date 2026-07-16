@@ -35,7 +35,7 @@ export default function ContactLocationSection() {
             <h2 className="cl-title">{t('title')}</h2>
             <p className="cl-description">{t('description')}</p>
             
-            <Link href={\`/\${locale}/contact\`} className="cl-cta-button">
+            <Link href={`/${locale}/contact`} className="cl-cta-button">
               <span>{t('cta')}</span>
               <svg className="cl-cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -43,8 +43,8 @@ export default function ContactLocationSection() {
             </Link>
 
             <div className="cl-contact-info">
-              <a href={\`mailto:\${t('email')}\`} className="cl-contact-link" dir="ltr">{t('email')}</a>
-              <a href={\`tel:\${t('phone')}\`} className="cl-contact-link" dir="ltr">{t('phone')}</a>
+              <a href={`mailto:${t('email')}`} className="cl-contact-link" dir="ltr">{t('email')}</a>
+              <a href={`tel:${t('phone')}`} className="cl-contact-link" dir="ltr">{t('phone')}</a>
             </div>
           </div>
         </div>
