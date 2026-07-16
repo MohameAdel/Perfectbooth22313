@@ -1685,7 +1685,7 @@ a {
 }
 
 .footer-cta {
-  padding: 6rem 5%;
+  padding: 4rem 5%;
   text-align: center;
   background: linear-gradient(135deg, rgba(20, 24, 30, 0.8), rgba(9, 10, 12, 1));
   border-bottom: 1px solid var(--pb-divider);
@@ -1701,11 +1701,11 @@ a {
 }
 
 .footer-cta h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 600;
   margin-bottom: 2rem;
   color: #fff;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 
 .footer-cta .cta-btn {
@@ -1729,7 +1729,7 @@ a {
 }
 
 .footer-main {
-  padding: 5rem 5%;
+  padding: 4rem 5%;
 }
 
 .footer-grid {
@@ -1746,10 +1746,11 @@ a {
 }
 
 .footer-col h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-bottom: 2rem;
   color: #fff;
+  letter-spacing: 1px;
   position: relative;
   display: inline-block;
 }
@@ -1759,16 +1760,16 @@ a {
   position: absolute;
   bottom: -10px;
   inset-inline-start: 0;
-  width: 40px;
-  height: 2px;
+  width: 30px;
+  height: 1px;
   background-color: var(--pb-accent);
 }
 
 .footer-desc {
-  color: var(--pb-text-soft);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.8;
   margin: 1.5rem 0;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   max-width: 400px;
 }
 
@@ -1783,14 +1784,15 @@ a {
 }
 
 .footer-links a {
-  color: var(--pb-text-soft);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
 }
 
 .footer-links a:hover {
-  color: var(--pb-accent);
+  color: #fff;
   transform: translateX(5px);
 }
 
@@ -1803,7 +1805,8 @@ a {
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  color: var(--pb-text-soft);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
 }
 
 .footer-contact-item i {
