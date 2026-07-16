@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="company-info-content">
             <div className="footer-logo-wrapper">
               {/* Intentional larger logo presentation for the footer */}
-              <Logo width={220} height={80} />
+              <Logo width={190} height={104} className="footer-logo" />
             </div>
             <address className="company-desc">
               <p className="desc-text">{t('description')}</p>

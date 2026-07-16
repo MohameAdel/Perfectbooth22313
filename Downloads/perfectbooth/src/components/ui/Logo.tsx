@@ -7,14 +7,25 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ width = 180, height = 60, className = '' }: LogoProps) {
+export default function Logo({ width = 150, height = 82, className = '' }: LogoProps) {
   return (
-    <div className={`brand-logo ${className}`} style={{ position: 'relative', width: `${width}px`, height: `${height}px`, display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+    <div 
+      className={`brand-logo ${className}`} 
+      style={{ 
+        position: 'relative', 
+        width: `var(--logo-width, ${width}px)`, 
+        height: `var(--logo-height, ${height}px)`, 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        maxWidth: '100%'
+      }}
+    >
       <Image
         src="/logo.png"
         alt="Perfect Booth Logo"
         fill
-        style={{ objectFit: 'contain', objectPosition: 'left center' }}
+        style={{ objectFit: 'contain' }}
         priority
       />
     </div>
