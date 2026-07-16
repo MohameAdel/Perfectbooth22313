@@ -1026,5 +1026,4 @@ a {
   color: var(--pb-text-muted);
 }
 
-.hamburger-menu { display: none; }
-@media (max-width: 768px) { .hamburger-menu { display: flex !important; } }
+.hamburger-menu { display: flex; }
