@@ -74,5 +74,14 @@
     "addressPlaceholder": "Cairo, Egypt (Address to be verified)",
     "phonePlaceholder": "+20 123 456 7890 (To be verified)",
     "emailPlaceholder": "info@perfectbooth.com (To be verified)"
+  },
+  "WhyPerfectBooth": {
+    "eyebrow": "Why brands return",
+    "title": "Clear communication, strong taste, and exact execution.",
+    "description": "Our projects are built to feel calm under pressure, premium in the details, and reliable in delivery.",
+    "proof1": "Detail without clutter",
+    "proof2": "Corporate polish",
+    "proof3": "Execution confidence",
+    "proof4": "Content-ready spaces"
   }
 }

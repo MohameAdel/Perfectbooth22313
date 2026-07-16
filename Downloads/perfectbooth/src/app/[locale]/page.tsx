@@ -3,6 +3,7 @@ import HomeHero from '@/components/home/HomeHero';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import SolutionsSection from '@/components/home/SolutionsSection';
+import WhyPerfectBoothSection from '@/components/home/WhyPerfectBoothSection';
 
 export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
   const { locale } = await params;
@@ -14,6 +15,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <AboutSection />
       <ServicesSection />
       <SolutionsSection />
+      <WhyPerfectBoothSection />
     </main>
   );
 }
