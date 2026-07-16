@@ -8,46 +8,46 @@ export default function HomeHero() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <section className="hero-split-section">
-      <div className="hero-split-container">
+    <section className="pb-hero-1-section">
+      <div className="pb-hero-1-container">
         
         {/* Content Panel (Left/Start) */}
-        <div className="hero-content-panel">
-          <div className="hero-content-inner" dir={dir}>
-            <div className="hero-eyebrow animate-slide-in">
-              <span className="eyebrow-line"></span>
+        <div className="pb-hero-1-content">
+          <div className="pb-hero-1-inner" dir={dir}>
+            <div className="pb-hero-1-eyebrow animate-slide-in-fix">
+              <span className="pb-hero-1-line"></span>
               {t('eyebrow')}
             </div>
             
-            <h1 className="hero-title animate-slide-in" style={{ animationDelay: '0.1s' }}>
+            <h1 className="pb-hero-1-title animate-slide-in-fix" style={{ animationDelay: '0.1s' }}>
               {t('title')}
             </h1>
             
-            <p className="hero-description animate-slide-in" style={{ animationDelay: '0.2s' }}>
+            <p className="pb-hero-1-desc animate-slide-in-fix" style={{ animationDelay: '0.2s' }}>
               {t('description')}
             </p>
             
-            <div className="hero-cta-wrapper animate-slide-in" style={{ animationDelay: '0.3s' }}>
-              <Link href="#selected-projects" className="hero-cta-button">
+            <div className="pb-hero-1-cta animate-slide-in-fix" style={{ animationDelay: '0.3s' }}>
+              <Link href="#selected-projects" className="pb-hero-1-btn">
                 {t('cta')}
-                <span className="cta-arrow" aria-hidden="true">{dir === 'rtl' ? '←' : '→'}</span>
+                <span aria-hidden="true" style={{ marginInlineStart: '12px' }}>{dir === 'rtl' ? '←' : '→'}</span>
               </Link>
             </div>
             
             {/* Slider Controls Inside Content Panel */}
-            <div className="hero-slider-controls animate-slide-in" style={{ animationDelay: '0.4s' }}>
-              <div className="slide-index">
-                <span className="current-index">01</span>
-                <span className="total-index">/ 03</span>
+            <div className="pb-hero-1-controls animate-slide-in-fix" style={{ animationDelay: '0.4s' }}>
+              <div className="pb-hero-1-index">
+                <span>01</span>
+                <span className="pb-hero-1-total">/ 03</span>
               </div>
-              <div className="progress-line">
-                <div className="progress-fill"></div>
+              <div className="pb-hero-1-progress">
+                <div className="pb-hero-1-fill"></div>
               </div>
-              <div className="nav-arrows-group">
-                <button className="nav-arrow prev-arrow" aria-label="Previous slide">
+              <div className="pb-hero-1-arrows">
+                <button aria-label="Previous slide">
                   {dir === 'rtl' ? '→' : '←'}
                 </button>
-                <button className="nav-arrow next-arrow" aria-label="Next slide">
+                <button aria-label="Next slide">
                   {dir === 'rtl' ? '←' : '→'}
                 </button>
               </div>
@@ -56,20 +56,23 @@ export default function HomeHero() {
         </div>
 
         {/* Image Panel (Right/End) */}
-        <div className="hero-image-panel">
-          <div className="hero-image-wrapper animate-fade-in-image">
-            <Image
-              src="/assets/banner1.png"
-              alt={t('title')}
-              width={1920}
-              height={1080}
-              sizes="(max-width: 767px) 100vw, (max-width: 1199px) 55vw, 60vw"
-              quality={95}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-              priority
-              fetchPriority="high"
-            />
-          </div>
+        <div className="pb-hero-1-image animate-fade-in-fix">
+          <Image
+            src="/assets/banner1.png"
+            alt={t('title')}
+            width={1920}
+            height={1080}
+            sizes="(max-width: 767px) 100vw, (max-width: 1024px) 56vw, 60vw"
+            quality={95}
+            priority
+            fetchPriority="high"
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'contain', 
+              display: 'block' 
+            }}
+          />
         </div>
 
       </div>
