@@ -1470,17 +1470,22 @@ a {
   flex: 0 0 45%;
   padding: 5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center; /* vertically center wrapper */
+  justify-content: flex-start;
   position: relative;
   background-color: var(--pb-surface-raised);
   overflow: hidden;
 }
 
+.ol-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensure shared start edge */
+  max-width: 500px;
+  width: 100%;
+}
+
 .ol-decorative-word {
-  position: absolute;
-  top: 15%;
-  inset-inline-start: 5%;
   font-size: 8rem;
   font-weight: 800;
   color: transparent;
@@ -1489,12 +1494,8 @@ a {
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
-}
-
-.ol-content-body {
-  position: relative;
-  z-index: 1;
-  max-width: 500px;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .ol-title {
@@ -1503,6 +1504,7 @@ a {
   font-weight: 700;
   margin-bottom: 2.5rem;
   line-height: 1.3;
+  text-align: start;
 }
 
 .ol-cta-button {
@@ -1554,7 +1556,6 @@ a {
   
   .ol-decorative-word {
     font-size: 5rem;
-    top: 5%;
   }
 }
 

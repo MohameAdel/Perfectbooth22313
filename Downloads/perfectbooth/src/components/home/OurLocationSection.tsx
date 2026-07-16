@@ -35,12 +35,12 @@ export default function OurLocationSection() {
         
         {/* Content Panel */}
         <div className="ol-content-panel">
-          {/* Decorative Location Word */}
-          <div className="ol-decorative-word" aria-hidden="true">
-            {t('decorativeText')}
-          </div>
-          
-          <div className="ol-content-body">
+          <div className="ol-inner-wrapper">
+            {/* Decorative Location Word */}
+            <div className="ol-decorative-word" aria-hidden="true">
+              {t('decorativeText')}
+            </div>
+            
             <h2 className="ol-title">{t('title')}</h2>
             
             <a 
