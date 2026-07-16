@@ -17,11 +17,11 @@ export default function Button({ children, variant = 'primary', href, icon, clas
   
   let variantClass = "";
   if (variant === 'primary') {
-    variantClass = "bg-[#cfa856] text-white hover:bg-[#b8954c] px-8 py-3";
+    variantClass = "bg-[var(--pb-primary)] text-[var(--pb-text)] hover:bg-[var(--pb-primary-hover)] px-8 py-3";
   } else if (variant === 'secondary') {
-    variantClass = "bg-transparent text-[#cfa856] border-2 border-[#cfa856] hover:bg-[#cfa856] hover:text-white px-8 py-3";
+    variantClass = "bg-transparent text-[var(--pb-primary)] border-2 border-[var(--pb-primary)] hover:bg-[var(--pb-primary)] hover:text-[var(--pb-text)] px-8 py-3";
   } else if (variant === 'outline') {
-    variantClass = "bg-transparent text-white border-2 border-white hover:bg-white hover:text-black px-8 py-3";
+    variantClass = "bg-transparent text-[var(--pb-text)] border-2 border-[var(--pb-text)] hover:bg-[var(--pb-text)] hover:text-[var(--pb-bg)] px-8 py-3";
   }
 
   const customClass = `${baseClass} ${variantClass} ${className}`;

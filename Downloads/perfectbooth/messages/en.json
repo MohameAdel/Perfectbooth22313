@@ -65,5 +65,14 @@
         "desc": "Introducing new ideas and concepts to highlight the event and provide a unique experience for attendees."
       }
     }
+  },
+  "MobileMenu": {
+    "close": "Close",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "copyright": "© 2026 Perfect Booth. All rights reserved.",
+    "addressPlaceholder": "Cairo, Egypt (Address to be verified)",
+    "phonePlaceholder": "+20 123 456 7890 (To be verified)",
+    "emailPlaceholder": "info@perfectbooth.com (To be verified)"
   }
 }

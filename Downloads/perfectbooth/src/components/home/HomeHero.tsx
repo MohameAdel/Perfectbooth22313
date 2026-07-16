@@ -19,11 +19,11 @@ export default function HomeHero() {
           priority // Hero image is above the fold
         />
         {/* Overlay for readability */}
-        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 10 }}></div>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.48) 50%, rgba(0, 0, 0, 0.22) 100%)', zIndex: 10 }}></div>
       </div>
 
       <div className="hero-content">
-        <h1 style={{ color: '#e72288', fontSize: '4rem', fontWeight: 'bold', lineHeight: '1.1', textShadow: '2px 2px 4px rgba(0,0,0,0.5)', fontFamily: 'serif' }}>
+        <h1 style={{ color: 'var(--pb-text)', fontSize: '4rem', fontWeight: 'bold', lineHeight: '1.1', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
           {t('title')}
         </h1>
         <div className="hero-subtitle">

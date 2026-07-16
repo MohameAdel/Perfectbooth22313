@@ -65,5 +65,14 @@
         "desc": "تقديم أفكار ومفاهيم جديدة لإبراز الحدث وتقديم تجربة فريدة للحضور."
       }
     }
+  },
+  "MobileMenu": {
+    "close": "إغلاق",
+    "contactInfo": "معلومات التواصل",
+    "followUs": "تابعنا",
+    "copyright": "© 2026 بيرفكت بوث. جميع الحقوق محفوظة.",
+    "addressPlaceholder": "القاهرة، مصر (العنوان قيد التحقق)",
+    "phonePlaceholder": "+20 123 456 7890 (رقم قيد التحقق)",
+    "emailPlaceholder": "info@perfectbooth.com (بريد قيد التحقق)"
   }
 }
