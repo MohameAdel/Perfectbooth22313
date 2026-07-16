@@ -32,12 +32,38 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Column */}
-        <div className="footer-col contact-col">
-          <h4 className="footer-heading">{t('contactTitle')}</h4>
-          <div className="footer-divider"></div>
-          
-          <address className="contact-info-content">
+        {/* Navigation & Contact Column */}
+        <div className="footer-col links-contact-col">
+          <div className="footer-links-group">
+            <h4 className="footer-heading">{t('quickLinksTitle')}</h4>
+            <div className="footer-divider"></div>
+            <ul className="contact-links-list">
+              <li>
+                <Link href="/" className="footer-link">
+                  {tHeader('nav.home')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="footer-link">
+                  {tHeader('nav.about')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/#services" className="footer-link">
+                  {tHeader('nav.services')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/#portfolio" className="footer-link">
+                  {tHeader('nav.media')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-links-group">
+            <h4 className="footer-heading">{t('contactTitle')}</h4>
+            <div className="footer-divider"></div>
             <ul className="contact-links-list">
               <li>
                 <Link href="/#contact" className="footer-link">
@@ -48,7 +74,7 @@ export default function Footer() {
             {/* TODO: Add verified phone number (tel:) when available */}
             {/* TODO: Add verified email address (mailto:) when available */}
             {/* TODO: Add verified social media links when available */}
-          </address>
+          </div>
         </div>
 
       </div>
