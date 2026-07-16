@@ -7,7 +7,7 @@ export default function Header() {
   const t = useTranslations('Header');
 
   return (
-    <>
+    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 100 }}>
       {/* Top Bar - Hidden on mobile */}
       <div className="top-bar">
         <div className="top-bar-right">
@@ -29,7 +29,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="main-header" style={{ position: 'relative' }}>
+      <header className="main-header">
         <div className="logo-container">
           {/* Mock Logo using Next Image */}
           <div style={{ position: 'relative', width: '60px', height: '60px' }}>
@@ -66,6 +66,6 @@ export default function Header() {
           <MobileNavigation />
         </div>
       </header>
-    </>
+    </div>
   );
 }

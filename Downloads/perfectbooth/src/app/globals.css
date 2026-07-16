@@ -54,9 +54,9 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 5%;
-  background-color: var(--pb-bg-soft);
+  background-color: transparent;
   font-size: 0.85rem;
-  border-bottom: 1px solid var(--pb-divider);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-bar-left {
@@ -95,12 +95,12 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: rgba(9, 10, 12, 0.88);
+  background-color: transparent;
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--pb-divider);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-container {
@@ -179,7 +179,7 @@ a {
 /* Hero Section */
 .hero {
   position: relative;
-  height: calc(100vh - 120px);
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -730,7 +730,7 @@ a {
 
   /* Hero Adjustments */
   .hero-section {
-    min-height: 70vh;
+    min-height: 100vh;
     padding-top: 120px;
   }
 
