@@ -7,7 +7,7 @@ export default function Header() {
   const t = useTranslations('Header');
 
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 100 }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}>
       {/* Top Bar - Hidden on mobile */}
       <div className="top-bar">
         <div className="top-bar-right">
