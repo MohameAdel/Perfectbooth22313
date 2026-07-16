@@ -83,5 +83,14 @@
     "proof2": "Corporate polish",
     "proof3": "Execution confidence",
     "proof4": "Content-ready spaces"
+  },
+  "SelectedProjects": {
+    "eyebrow": "Our Work",
+    "title": "Selected Projects",
+    "viewAll": "View All Projects",
+    "project1": "Exhibition Space",
+    "project2": "Exhibition Concept",
+    "project3": "Custom Exhibition Environment",
+    "project4": "Brand Exhibition Space"
   }
 }
