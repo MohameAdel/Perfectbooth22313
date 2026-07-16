@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface LogoProps {
   size?: number;
@@ -7,23 +8,15 @@ interface LogoProps {
 
 export default function Logo({ size = 60, className = '' }: LogoProps) {
   return (
-    <div className={`brand-logo ${className}`} style={{ position: 'relative', width: `${size}px`, height: `${size}px` }}>
-      <div style={{ 
-        width: '100%', 
-        height: '100%', 
-        border: '2px solid var(--pb-accent)', 
-        borderRadius: '50%', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        color: 'var(--pb-accent)', 
-        fontWeight: 'bold', 
-        fontSize: `${Math.max(12, size / 3.5)}px`, 
-        textAlign: 'center', 
-        lineHeight: '1' 
-      }}>
-        PB
-      </div>
+    <div className={`brand-logo ${className}`} style={{ position: 'relative', width: `${size}px`, height: `${size}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Image
+        src="/logo.png"
+        alt="Perfect Booth Logo"
+        width={size}
+        height={size}
+        style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '100%' }}
+        priority
+      />
     </div>
   );
 }
