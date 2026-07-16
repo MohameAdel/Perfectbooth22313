@@ -30,10 +30,12 @@ function AccordionItem({ question, answer, isOpen, onClick, id }: AccordionItemP
         className={`faq-accordion-panel ${isOpen ? 'open' : ''}`}
         role="region"
         aria-labelledby={`faq-btn-${id}`}
-        hidden={!isOpen}
+        aria-hidden={!isOpen}
       >
-        <div className="faq-accordion-content">
-          {answer}
+        <div className="faq-accordion-content-wrapper">
+          <div className="faq-accordion-content">
+            {answer}
+          </div>
         </div>
       </div>
     </div>

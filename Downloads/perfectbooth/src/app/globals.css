@@ -3146,11 +3146,15 @@ a {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
-  overflow: hidden;
 }
 
 .faq-accordion-panel.open {
   grid-template-rows: 1fr;
+}
+
+.faq-accordion-content-wrapper {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .faq-accordion-content {
@@ -3184,3 +3188,4 @@ a {
     padding: 0 24px;
   }
 }
+
