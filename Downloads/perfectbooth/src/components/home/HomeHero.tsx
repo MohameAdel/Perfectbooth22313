@@ -36,13 +36,6 @@ export default function HomeHero() {
             
             {/* Slider Controls Inside Content Panel */}
             <div className="pb-hero-1-controls animate-slide-in-fix" style={{ animationDelay: '0.4s' }}>
-              <div className="pb-hero-1-index">
-                <span>01</span>
-                <span className="pb-hero-1-total">/ 03</span>
-              </div>
-              <div className="pb-hero-1-progress">
-                <div className="pb-hero-1-fill"></div>
-              </div>
               <div className="pb-hero-1-arrows">
                 <button aria-label="Previous slide">
                   {dir === 'rtl' ? '→' : '←'}
@@ -51,26 +44,28 @@ export default function HomeHero() {
                   {dir === 'rtl' ? '←' : '→'}
                 </button>
               </div>
+              <div className="pb-hero-1-progress">
+                <div className="pb-hero-1-fill"></div>
+              </div>
+              <div className="pb-hero-1-index">
+                <span>01</span>
+                <span className="pb-hero-1-total">/ 03</span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Image Panel (Right/End) */}
-        <div className="pb-hero-1-image animate-fade-in-fix">
+        <div className="pb-hero-1-image animate-fade-in-fix" style={{ position: 'relative', width: '100%', minHeight: '300px' }}>
           <Image
             src="/assets/banner1.png"
             alt={t('title')}
-            width={1920}
-            height={1080}
+            fill
             sizes="(max-width: 767px) 100vw, (max-width: 1024px) 56vw, 60vw"
             quality={95}
             priority
-            fetchPriority="high"
             style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'contain', 
-              display: 'block' 
+              objectFit: 'cover'
             }}
           />
         </div>
