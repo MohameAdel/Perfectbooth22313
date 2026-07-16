@@ -1677,6 +1677,7 @@ a {
 
 
 
+
 /* --- Premium Global Footer --- */
 .pb-footer-premium {
   background-color: var(--pb-bg);
@@ -1684,13 +1685,13 @@ a {
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--pb-border);
-  padding-top: 4rem;
+  padding-top: 3.5rem;
 }
 
 .premium-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   padding: 0 5%;
   max-width: 1400px;
   margin: 0 auto;
@@ -1700,7 +1701,7 @@ a {
 @media (max-width: 768px) {
   .premium-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
 
@@ -1710,61 +1711,82 @@ a {
 }
 
 .footer-heading {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--pb-text);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-divider {
   height: 1px;
-  background-color: var(--pb-accent-muted);
+  background-color: var(--pb-border-strong);
   width: 100%;
-  margin-bottom: 2rem;
-  opacity: 0.5;
+  margin-bottom: 1.5rem;
 }
 
 .company-info-content,
 .contact-info-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .footer-logo-wrapper {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .company-name {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--pb-text);
 }
 
 .company-desc {
-  color: var(--pb-text-muted);
+  color: var(--pb-text-soft);
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.6;
   font-style: normal;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+
+.location-text {
+  color: var(--pb-text-muted);
 }
 
 .contact-info-content {
   font-style: normal;
-  color: var(--pb-text-muted);
+  color: var(--pb-text-soft);
 }
 
-.unverified-note {
-  font-size: 0.9rem;
-  font-style: italic;
+.contact-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  color: var(--pb-text-soft);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--pb-primary-light);
+  outline: none;
 }
 
 .footer-bottom-row {
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 0 5% 2rem;
   max-width: 1400px;
   margin-inline: auto;
@@ -1772,10 +1794,9 @@ a {
 
 .footer-bottom-divider {
   height: 1px;
-  background-color: var(--pb-accent-muted);
+  background-color: var(--pb-border-strong);
   width: 100%;
-  margin-bottom: 2rem;
-  opacity: 0.5;
+  margin-bottom: 1.5rem;
 }
 
 .footer-legal {

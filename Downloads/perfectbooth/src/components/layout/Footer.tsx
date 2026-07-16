@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
@@ -20,12 +21,13 @@ export default function Footer() {
           
           <div className="company-info-content">
             <div className="footer-logo-wrapper">
-              <Logo />
+              {/* Intentional larger logo presentation for the footer */}
+              <Logo size={90} />
             </div>
             <p className="company-name">{tHeader('title')}</p>
             <address className="company-desc">
-              <p>{t('description')}</p>
-              <p>{t('address')}</p>
+              <p className="desc-text">{t('description')}</p>
+              <p className="location-text">{t('address')}</p>
             </address>
           </div>
         </div>
@@ -36,12 +38,16 @@ export default function Footer() {
           <div className="footer-divider"></div>
           
           <address className="contact-info-content">
-            {/* TODO: Add verified phone number here when available */}
-            {/* TODO: Add verified email address here when available */}
-            {/* TODO: Add verified social media links here when available */}
-            <p className="unverified-note" aria-hidden="true" style={{ display: 'none' }}>
-              No verified contact information available yet.
-            </p>
+            <ul className="contact-links-list">
+              <li>
+                <Link href="/#contact" className="footer-link">
+                  {tHeader('nav.contact')}
+                </Link>
+              </li>
+            </ul>
+            {/* TODO: Add verified phone number (tel:) when available */}
+            {/* TODO: Add verified email address (mailto:) when available */}
+            {/* TODO: Add verified social media links when available */}
           </address>
         </div>
 

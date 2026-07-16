@@ -1,19 +1,24 @@
 import React from 'react';
 
-export default function Logo() {
+interface LogoProps {
+  size?: number;
+  className?: string;
+}
+
+export default function Logo({ size = 60, className = '' }: LogoProps) {
   return (
-    <div style={{ position: 'relative', width: '60px', height: '60px' }}>
+    <div className={`brand-logo ${className}`} style={{ position: 'relative', width: `${size}px`, height: `${size}px` }}>
       <div style={{ 
         width: '100%', 
         height: '100%', 
-        border: '2px solid var(--primary-gold, #C0A080)', 
+        border: '2px solid var(--pb-accent)', 
         borderRadius: '50%', 
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'center', 
-        color: 'var(--primary-gold, #C0A080)', 
+        color: 'var(--pb-accent)', 
         fontWeight: 'bold', 
-        fontSize: '12px', 
+        fontSize: `${Math.max(12, size / 3.5)}px`, 
         textAlign: 'center', 
         lineHeight: '1' 
       }}>
