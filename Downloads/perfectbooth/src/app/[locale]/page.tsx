@@ -9,7 +9,6 @@ const SelectedProjectsSection = dynamic(() => import('@/components/home/Selected
 const FaqSection = dynamic(() => import('@/components/home/FaqSection'));
 const WhyPerfectBoothSection = dynamic(() => import('@/components/home/WhyPerfectBoothSection'));
 const PartnersSection = dynamic(() => import('@/components/home/PartnersSection'));
-const OurLocationSection = dynamic(() => import('@/components/home/OurLocationSection'));
 
 export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
   const { locale } = await params;
@@ -25,7 +24,6 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <SelectedProjectsSection />
       <FaqSection />
       <PartnersSection />
-      <OurLocationSection />
     </main>
   );
 }

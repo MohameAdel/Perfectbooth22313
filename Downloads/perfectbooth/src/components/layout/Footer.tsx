@@ -52,11 +52,7 @@ export default function Footer() {
                   {tHeader('nav.services')}
                 </Link>
               </li>
-              <li>
-                <Link href="/#portfolio" className="footer-link">
-                  {tHeader('nav.media')}
-                </Link>
-              </li>
+              
             </ul>
           </div>
 

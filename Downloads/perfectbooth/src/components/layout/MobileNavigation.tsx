@@ -40,10 +40,7 @@ export default function MobileNavigation() {
     { key: 'home', href: '/' },
     { key: 'about', href: '/about' },
     { key: 'services', href: '#services' },
-    { key: 'media', href: '#media' },
     { key: 'partners', href: '#partners' },
-    { key: 'blog', href: '#blog' },
-    { key: 'registration', href: '#registration' },
     { key: 'contact', href: '#contact' },
   ];
 

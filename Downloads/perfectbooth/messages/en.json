@@ -4,13 +4,10 @@
     "subtitle": "To organize conferences and exhibitions",
     "nav": {
       "home": "Home",
-      "about": "Who We Are",
       "services": "Services",
-      "media": "Media",
       "partners": "Partners",
-      "blog": "Blog",
-      "registration": "Registration",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "about": "Who We Are"
     }
   },
   "Hero": {
@@ -97,11 +94,6 @@
   "Partners": {
     "eyebrow": "Partners in delivery",
     "title": "Selected collaborations"
-  },
-  "OurLocation": {
-    "decorativeText": "Our Location",
-    "title": "Your closest partner for organizing your events",
-    "cta": "View our location"
   },
   "Footer": {
     "companyInfoTitle": "Company Information",

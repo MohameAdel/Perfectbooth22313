@@ -4,13 +4,10 @@
     "subtitle": "لتنظيم المؤتمرات والمعارض",
     "nav": {
       "home": "الرئيسية",
-      "about": "من نحن",
       "services": "الخدمات",
-      "media": "المركز الإعلامي",
-      "partners": "شركاؤنا",
-      "blog": "المدونة",
-      "registration": "التسجيل",
-      "contact": "اتصل بنا"
+      "partners": "شركاء النجاح",
+      "contact": "اتصل بنا",
+      "about": "من نحن"
     }
   },
   "Hero": {
@@ -97,11 +94,6 @@
   "Partners": {
     "eyebrow": "شركاء النجاح",
     "title": "شراكات مختارة"
-  },
-  "OurLocation": {
-    "decorativeText": "موقعنا",
-    "title": "شريكك الأقرب لتنظيم فعالياتك",
-    "cta": "موقعنا"
   },
   "Footer": {
     "companyInfoTitle": "معلومات الشركة",

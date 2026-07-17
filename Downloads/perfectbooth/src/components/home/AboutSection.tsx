@@ -82,7 +82,7 @@ export default function AboutSection() {
         <VideoModal 
           isOpen={isVideoOpen} 
           onClose={() => setIsVideoOpen(false)} 
-          videoSrc="/assets/vid2.mp4" 
+          videoSrc="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/videos/vid2.mp4" 
         />
       )}
     </section>
