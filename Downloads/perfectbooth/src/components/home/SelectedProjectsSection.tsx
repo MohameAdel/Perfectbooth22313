@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { selectedProjects } from '@/data/collaborations';
 
 export default function SelectedProjectsSection() {
   const t = useTranslations('SelectedProjects');
@@ -12,28 +13,11 @@ export default function SelectedProjectsSection() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const projects = [
-    {
-      id: 1,
-      title: t('project1'),
-      image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/co1X3sNRqpx9Kdnicliy0dmKe5puz1phE7CYyV8l.jpg',
-    },
-    {
-      id: 2,
-      title: t('project2'),
-      image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/IatwT74DySD8ZSpWbgvabYzkYO9qffWWvK1kYzXL.jpg',
-    },
-    {
-      id: 3,
-      title: t('project3'),
-      image: 'https://admin.perfectbooth-events.com/storage/services/images/fVoSlHLlnIqOMCs6IWYAKHabGZ2fmhAu2gWtigdE.jpg',
-    },
-    {
-      id: 4,
-      title: t('project4'),
-      image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg',
-    }
-  ];
+  // Project data comes from collaborations.ts, but we map the title dynamically
+  const projects = selectedProjects.map(p => ({
+    ...p,
+    title: t(p.titleKey as 'project1' | 'project2' | 'project3' | 'project4')
+  }));
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;

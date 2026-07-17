@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { partnersLogos } from '@/data/collaborations';
 
 export default function PartnersSection() {
   const t = useTranslations('Partners');
@@ -12,18 +13,7 @@ export default function PartnersSection() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Verified Perfect Booth logo data from the API's marquee section
-  const partners = [
-    { id: 1, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/LNqMe6pqnkrShQ4LqOHCXwUl8UUHufg0angYGMEE.jpg' },
-    { id: 2, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/Rmkc7QaaCe8XlyXXmyEAwEjUiGVeBnbR89HGz9NI.jpg' },
-    { id: 3, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/rhBu302I5Aj0lYydXzwVxl9YXUFXbVyR7pDn8jjS.jpg' },
-    { id: 4, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/XVtbnDDwpl4VhQhHhmPRcc3i2kC3MDI6ZVYKuqbL.jpg' },
-    { id: 5, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/m0aHdhxpylE9CLSsvGPaS7NKkoiCJ0iUhN5sjmoL.jpg' },
-    { id: 6, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/8LlhgK6irwqbLbzhihYZK5jkRBpvTr5yrxj97ULQ.jpg' },
-    { id: 7, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/F1z10WGYkP387OLbYBwPH9ovBewY73gPIvatmqTm.jpg' },
-    { id: 8, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/qodcfXqF5judSBpiZLG3bdckUYCH4SZuZaD01Zcw.jpg' },
-    { id: 9, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/kT7gHkkr4Hh4FF9hko2Fz9Cg6yoIMlK14bFWofWp.jpg' }
-  ];
+  const partners = partnersLogos;
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;

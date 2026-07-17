@@ -65,7 +65,7 @@ export default function AboutApproach() {
               <p className="closing-desc">{t('closingDesc')}</p>
             </div>
             <div>
-              <Link href="/#contact" className="about-hero-btn-primary closing-btn">
+              <Link href="/contact" className="about-hero-btn-primary closing-btn">
                 {t('closingCta')}
               </Link>
             </div>

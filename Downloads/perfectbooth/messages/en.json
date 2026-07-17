@@ -87,9 +87,13 @@
     "title": "Selected Projects",
     "viewAll": "View All Projects",
     "project1": "Exhibition Space",
-    "project2": "Exhibition Concept",
+    "project1Desc": "A vibrant exhibition space that presents products clearly and supports smooth visitor movement.",
+    "project2": "Architectural Exhibition Concept",
+    "project2Desc": "An open, structured concept balancing product display, storage, and visitor circulation.",
     "project3": "Custom Exhibition Environment",
-    "project4": "Brand Exhibition Space"
+    "project3Desc": "A custom environment integrating display zones, meeting areas, and digital touchpoints.",
+    "project4": "Brand Exhibition Space",
+    "project4Desc": "A spacious modular setting designed for reception, presentation, and guided visitor flow."
   },
   "Partners": {
     "eyebrow": "Partners in delivery",
@@ -148,6 +152,97 @@
       "closingHeading": "Bring us the idea. We will shape the space.",
       "closingDesc": "Whether you have a complete brief or an early direction, we can turn it into an exhibition environment designed and delivered as one complete experience.",
       "closingCta": "Book a Consultation"
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "eyebrow": "Start a project",
+      "title": "Turn your exhibition brief into a delivered experience",
+      "intro": "Share your project objectives, timeline, services, and requirements. We'll guide the direction from concept to on-site execution.",
+      "cta": "Start Your Project",
+      "whatsappCta": "Chat on WhatsApp",
+      "support": "Clear communication in English and Arabic."
+    },
+    "info": {
+      "eyebrow": "Direct Contact",
+      "title": "Let's build something exceptional together",
+      "emailLabel": "Email Us",
+      "phoneLabel": "Call Us",
+      "whatsappLabel": "WhatsApp Us",
+      "locationLabel": "Visit Us",
+      "emailValue": "info@perfectbooth-events.com",
+      "phoneValue": "+20 111 601 3011",
+      "whatsappValue": "+20 111 601 3011",
+      "locationValue": "Cairo, Egypt",
+      "desc": "Whether you have a complete project brief or only an initial idea, send us what you have and our team will guide the next step."
+    },
+    "form": {
+      "title": "Tell us about your project",
+      "subtext": "We’ll use these details only to respond to your project inquiry.",
+      "submitBtn": "Send Inquiry",
+      "submitBtnLoading": "Sending...",
+      "successMsg": "Thank you! Your project inquiry has been sent successfully. We will contact you soon.",
+      "errorMsg": "Something went wrong. Please check your inputs and try again.",
+      "fields": {
+        "fullName": "Full Name",
+        "company": "Company or Organization",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "service": "Required Service",
+        "location": "Event Location",
+        "timeline": "Event Date or Timeline",
+        "details": "Project Details"
+      },
+      "services": {
+        "booths": "Exhibition Booths",
+        "planning": "Event Planning and Coordination",
+        "tents": "Tents and Outdoor Equipment",
+        "printing": "Publications and Visual Identity",
+        "audio": "Sound and Lighting Systems",
+        "registration": "Registration Solutions",
+        "conferences": "Conferences and Workshops",
+        "other": "Other"
+      },
+      "timelines": {
+        "urgent": "Urgent",
+        "weeks": "Within 2–4 Weeks",
+        "months1": "Within 1–2 Months",
+        "months2": "More Than 2 Months",
+        "planning": "Still Planning"
+      },
+      "validation": {
+        "required": "This field is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneInvalid": "Please enter a valid phone number"
+      }
+    },
+    "process": {
+      "eyebrow": "What Happens Next",
+      "title": "A clear process from the first conversation to delivery",
+      "desc": "We guide your project through a structured workflow, moving seamlessly from understanding the initial brief to final on-site execution.",
+      "step1Title": "Discovery",
+      "step1Desc": "We review the event goals, venue, timeline, audience, and technical requirements.",
+      "step2Title": "Proposal",
+      "step2Desc": "We prepare the recommended direction, scope of work, timeline, and production approach.",
+      "step3Title": "Execution",
+      "step3Desc": "Our teams coordinate production, installation, testing, and on-site delivery."
+    }
+  },
+  "PartnersPage": {
+    "hero": {
+      "eyebrow": "PARTNERS IN PROGRESS",
+      "title": "Strong partnerships turn ambitious ideas into remarkable spaces.",
+      "body": "At Perfect Booth, collaboration is built into every stage—from planning and design to fabrication, installation, and on-site delivery. We work closely with every project stakeholder to keep each exhibition experience aligned, precise, and ready to perform.",
+      "support": "Built together. Delivered with precision.",
+      "ctaPrimary": "Explore Collaborations",
+      "ctaSecondary": "Start a Project"
+    },
+    "collaborations": {
+      "eyebrow": "SELECTED COLLABORATIONS",
+      "title": "Partnerships shaped through shared standards and precise execution.",
+      "intro": "A curated selection of documented partnerships from our current portfolio, presented in a visual style that reflects the Perfect Booth identity.",
+      "networkEyebrow": "COLLABORATION NETWORK",
+      "networkTitle": "Relationships built across every stage of delivery."
     }
   }
 }
