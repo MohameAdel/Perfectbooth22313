@@ -1,9 +1,16 @@
+'use client';
+
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { useState } from 'react';
+import Image from 'next/image';
+import VideoModal from '@/components/ui/VideoModal';
 
 export default function AboutSection() {
   const t = useTranslations('About');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section id="about" className="about-section">
@@ -23,34 +30,57 @@ export default function AboutSection() {
           <p className="about-description">
             {t('description2')}
           </p>
-          <a href="#" className="read-more-btn">
+          <Link href="/about" className="read-more-btn">
             {t('readMore')} <span style={{ marginInlineStart: '10px' }}>{dir === 'rtl' ? '←' : '→'}</span>
-          </a>
+          </Link>
         </div>
 
         {/* Media Content */}
-        <div className="about-media">
-          <div className="media-frame">
-            <div className="media-content">
-              <div className="iso-badge">
-                <div className="iso-text">ISO 9001<br/>CERTIFIED</div>
-              </div>
-              <div className="corner corner-tr"></div>
-              <div className="corner corner-bl"></div>
+        <div className="about-media-wrapper">
+          <div className="about-media-3d-scene">
+            {/* Offset Yellow Frame */}
+            <div className="about-media-offset-frame" aria-hidden="true"></div>
+            
+            <div className="about-media-card">
+              <Image 
+                src="/assets/section2.jpeg" 
+                alt={t('title') || "About Perfect Booth"} 
+                fill 
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Dark gradient overlay */}
+              <div className="about-media-overlay" aria-hidden="true"></div>
               
-              <div className="media-logo-area">
-                <div style={{ width: '150px', height: '150px', border: '1px solid var(--pb-border-strong)', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'var(--pb-text-muted)', fontWeight: 'bold', fontSize: '2rem', marginBottom: '1rem' }}>
-                  PB
-                </div>
-                <h3 className="media-company-name">Perfect Booth</h3>
-                <p className="media-company-desc">Event Production & Exhibition Booths</p>
+              {/* Thin inner border & corners */}
+              <div className="about-media-inner-border" aria-hidden="true">
+                <div className="corner corner-tl"></div>
+                <div className="corner corner-tr"></div>
+                <div className="corner corner-bl"></div>
+                <div className="corner corner-br"></div>
               </div>
-              
-              <div className="play-button">▶</div>
+
+              <button 
+                className="about-play-button" 
+                onClick={() => setIsVideoOpen(true)}
+                aria-label={locale === 'ar' ? 'تشغيل الفيديو التعريفي' : 'Play promotional video'}
+              >
+                <span className="play-icon">▶</span>
+              </button>
+
+              <div className="about-media-caption">
+                {locale === 'ar' ? 'تنفيذ دقيق وفعاليات متكاملة' : 'Precision Delivery & Integrated Events'}
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <VideoModal 
+        isOpen={isVideoOpen} 
+        onClose={() => setIsVideoOpen(false)} 
+        videoSrc="/assets/vid2.mp4" 
+      />
     </section>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuContactItem from './MobileMenuContactItem';
@@ -10,6 +10,7 @@ import MobileMenuContactItem from './MobileMenuContactItem';
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
   
@@ -19,6 +20,7 @@ export default function MobileNavigation() {
   const menuT = useTranslations('MobileMenu');
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -36,7 +38,7 @@ export default function MobileNavigation() {
 
   const navLinks = [
     { key: 'home', href: '/' },
-    { key: 'about', href: '#about' },
+    { key: 'about', href: '/about' },
     { key: 'services', href: '#services' },
     { key: 'media', href: '#media' },
     { key: 'partners', href: '#partners' },
@@ -106,16 +108,21 @@ export default function MobileNavigation() {
 
               {/* Navigation */}
               <nav className="drawer-nav">
-                {navLinks.map((link) => (
-                  <Link 
-                    key={link.key} 
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="drawer-nav-link"
-                  >
-                    {navT(link.key)}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  // If href is '/about' and pathname is '/about', it's active. If it's '/' and pathname is '/', it's active.
+                  // Since all hashes map to the homepage (except about), we'll do simple checking.
+                  const isActive = (link.href === '/' && pathname === '/') || (link.href === '/about' && pathname === '/about');
+                  return (
+                    <Link 
+                      key={link.key} 
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`drawer-nav-link ${isActive ? 'active' : ''}`}
+                    >
+                      {navT(link.key)}
+                    </Link>
+                  );
+                })}
               </nav>
 
               {/* Contact Info */}

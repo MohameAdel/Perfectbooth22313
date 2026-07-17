@@ -21,8 +21,8 @@
   },
   "About": {
     "subtitle": "Who We Are",
-    "title": "perfect booth",
-    "description1": "perfect booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
+    "title": "Perfect Booth",
+    "description1": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
     "description2": "From planning to production, we deliver complete event solutions, custom booth manufacturing, and on-site support for organizations, ministries, corporations, and institutions across Egypt.",
     "readMore": "Read More"
   },
@@ -133,5 +133,29 @@
         "a": "Yes. Perfect Booth supports project communication and coordination in both English and Arabic throughout the project stages."
       }
     ]
+  },
+  "AboutPage": {
+    "hero": {
+      "eyebrow": "About Perfect Booth",
+      "title": "We create spaces that make brands <highlight>impossible to overlook</highlight>",
+      "intro": "Perfect Booth transforms brand ideas into exhibition booths and spatial experiences that unite purposeful design, precise fabrication, and controlled on-site execution.",
+      "support": "Designed to make an impact. Built to perform in the real world.",
+      "cta": "Start Your Project",
+      "secondaryLink": "Explore Our Approach"
+    },
+    "approach": {
+      "eyebrow": "Our Approach",
+      "title": "One clear idea. Precise production. Controlled delivery.",
+      "intro": "We manage every project as one connected system, protecting the brand idea through design, fabrication, installation, and final handover.",
+      "cap1Title": "Brand-Led Direction",
+      "cap1Desc": "We begin with the audience, objectives, venue, and brand character, then shape a spatial direction that communicates with clarity.",
+      "cap2Title": "Precision Fabrication",
+      "cap2Desc": "We turn the approved concept into durable structures, considered materials, refined finishes, and production-ready details.",
+      "cap3Title": "Disciplined On-Site Delivery",
+      "cap3Desc": "We coordinate installation, testing, finishing, and handover so the completed space is polished, dependable, and ready for the event.",
+      "closingHeading": "Bring us the idea. We will shape the space.",
+      "closingDesc": "Whether you have a complete brief or an early direction, we can turn it into an exhibition environment designed and delivered as one complete experience.",
+      "closingCta": "Book a Consultation"
+    }
   }
 }

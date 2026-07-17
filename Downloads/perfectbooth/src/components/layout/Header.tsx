@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileNavigation from './MobileNavigation';
 import Logo from '@/components/ui/Logo';
@@ -10,6 +10,7 @@ import Logo from '@/components/ui/Logo';
 export default function Header() {
   const t = useTranslations('Header');
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,14 +49,14 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="nav-links">
-          <Link href="/" className="active">{t('nav.home')}</Link>
-          <Link href="#about">{t('nav.about')}</Link>
-          <Link href="#services">{t('nav.services')}</Link>
-          <Link href="#media">{t('nav.media')}</Link>
-          <Link href="#partners">{t('nav.partners')}</Link>
-          <Link href="#blog">{t('nav.blog')}</Link>
-          <Link href="#registration">{t('nav.registration')}</Link>
-          <Link href="#contact">{t('nav.contact')}</Link>
+          <Link href="/" className={pathname === '/' ? 'active' : ''}>{t('nav.home')}</Link>
+          <Link href="/about" className={pathname === '/about' ? 'active' : ''}>{t('nav.about')}</Link>
+          <Link href="/#services" className={pathname === '/#services' ? 'active' : ''}>{t('nav.services')}</Link>
+          <Link href="/#media" className={pathname === '/#media' ? 'active' : ''}>{t('nav.media')}</Link>
+          <Link href="/#partners" className={pathname === '/#partners' ? 'active' : ''}>{t('nav.partners')}</Link>
+          <Link href="/#blog" className={pathname === '/#blog' ? 'active' : ''}>{t('nav.blog')}</Link>
+          <Link href="/#registration" className={pathname === '/#registration' ? 'active' : ''}>{t('nav.registration')}</Link>
+          <Link href="/#contact" className={pathname === '/#contact' ? 'active' : ''}>{t('nav.contact')}</Link>
         </nav>
 
         {/* Actions & Mobile Nav */}
