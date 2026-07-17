@@ -48,7 +48,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="footer-link">
+                <Link href="/services" className="footer-link">
                   {tHeader('nav.services')}
                 </Link>
               </li>

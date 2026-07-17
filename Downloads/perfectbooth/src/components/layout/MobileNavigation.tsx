@@ -39,7 +39,7 @@ export default function MobileNavigation() {
   const navLinks = [
     { key: 'home', href: '/' },
     { key: 'about', href: '/about' },
-    { key: 'services', href: '#services' },
+    { key: 'services', href: '/services' },
     { key: 'partners', href: '/partners' },
     { key: 'contact', href: '/contact' },
   ];

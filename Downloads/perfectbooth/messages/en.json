@@ -244,5 +244,150 @@
       "networkEyebrow": "COLLABORATION NETWORK",
       "networkTitle": "Relationships built across every stage of delivery."
     }
+  },
+  "ServicesPage": {
+    "meta": {
+      "title": "Exhibition Booth Services | Perfect Booth",
+      "description": "Explore Perfect Booth services for exhibition booth design, custom manufacturing, execution, brand activations, wooden structures, installation, on-site support, and project management."
+    },
+    "hero": {
+      "eyebrow": "EXHIBITION SERVICES",
+      "title": "From the first idea to final handover, every detail stays connected.",
+      "body": "Perfect Booth brings design, fabrication, execution, and on-site coordination into one disciplined service path—helping your brand arrive with clarity, impact, and confidence.",
+      "support": "One team. One standard. One accountable delivery path.",
+      "ctaPrimary": "Discuss Your Project",
+      "ctaSecondary": "Explore Our Services"
+    },
+    "vpStrip": {
+      "item01": {
+        "title": "Brand-led thinking",
+        "desc": "Every spatial decision begins with what the brand needs to communicate."
+      },
+      "item02": {
+        "title": "Production-ready decisions",
+        "desc": "Design direction stays grounded in materials, fabrication, and venue realities."
+      },
+      "item03": {
+        "title": "Controlled delivery",
+        "desc": "Installation, finishing, and final readiness remain coordinated through handover."
+      }
+    },
+    "intro": {
+      "eyebrow": "CORE SERVICES",
+      "title": "Everything your exhibition environment needs to look resolved and perform with purpose.",
+      "body": "Choose a complete turnkey path or engage Perfect Booth for one focused stage. In both cases, every decision is approached with the same attention to brand clarity, production quality, and real-world delivery."
+    },
+    "services": {
+      "s01": {
+        "title": "Exhibition Booth Design",
+        "statement": "Turn your brief into a space people understand at a glance.",
+        "description": "We shape the spatial concept around your audience, objectives, and brand priorities. Layout, visual hierarchy, materials, lighting, and visitor movement are considered together so the booth feels distinctive, clear, and ready for meaningful conversations.",
+        "cap1": "Creative and spatial direction",
+        "cap2": "Layout and visitor-flow planning",
+        "cap3": "Material, lighting, and brand integration"
+      },
+      "s02": {
+        "title": "Custom Booth Manufacturing",
+        "statement": "Approved ideas, translated into precise built reality.",
+        "description": "We turn the approved design direction into durable, detail-led built work. Production decisions remain aligned with the visual concept so surfaces, edges, structures, and finishes support the intended brand experience.",
+        "cap1": "Production and fabrication planning",
+        "cap2": "Custom booth and display construction",
+        "cap3": "Finishing and quality review"
+      },
+      "s03": {
+        "title": "Exhibition Execution",
+        "statement": "A clear execution plan that keeps every stage moving together.",
+        "description": "We coordinate the practical requirements that bring the approved concept to life. Production, logistics, venue considerations, installation planning, and final readiness remain connected to reduce friction and protect the intended finish.",
+        "cap1": "Execution and readiness planning",
+        "cap2": "Schedule and delivery coordination",
+        "cap3": "Final presentation control"
+      },
+      "s04": {
+        "title": "Brand Activations",
+        "statement": "Create a branded environment that invites people to engage.",
+        "description": "We develop spatial activations that translate the brand message into a physical visitor experience. Every zone is shaped to support interaction, product presentation, communication, and a more memorable presence.",
+        "cap1": "Experience and activation concepts",
+        "cap2": "Product and communication zones",
+        "cap3": "Visitor journey planning"
+      },
+      "s05": {
+        "title": "Custom Wooden Structures",
+        "statement": "Bespoke architectural elements built around the needs of the space.",
+        "description": "We design and manufacture custom wooden structures for exhibition booths, branded displays, and spatial installations. Each element is developed to support the concept, the required function, and the visual quality of the finished environment.",
+        "cap1": "Bespoke wooden structures",
+        "cap2": "Custom display and presentation units",
+        "cap3": "Branded architectural elements"
+      },
+      "s06": {
+        "title": "Installation and On-Site Support",
+        "statement": "Careful installation, practical adjustments, and a confident handover.",
+        "description": "Our team manages installation, finishing checks, testing, and final adjustments at the venue. The goal is a composed, functional, and launch-ready environment before the first visitor arrives.",
+        "cap1": "On-site installation",
+        "cap2": "Finishing checks and adjustments",
+        "cap3": "Final readiness and handover support"
+      },
+      "s07": {
+        "title": "Exhibition Project Management",
+        "statement": "One connected coordination layer from scope to handover.",
+        "description": "We keep the project stages, stakeholders, priorities, and delivery requirements aligned. Clear coordination helps the design intent survive production realities and gives the client greater visibility throughout the project.",
+        "cap1": "Scope and timeline coordination",
+        "cap2": "Stakeholder and supplier alignment",
+        "cap3": "Progress, issue, and handover coordination"
+      }
+    },
+    "process": {
+      "intro": {
+        "eyebrow": "HOW WE DELIVER",
+        "title": "A disciplined process keeps the original idea intact through every stage.",
+        "body": "Clear transitions between planning, design, production, and on-site delivery reduce uncertainty and help the final environment arrive as intended."
+      },
+      "steps": {
+        "p01": {
+          "title": "01 — Discover",
+          "desc": "We align on the audience, objectives, venue, priorities, and practical constraints."
+        },
+        "p02": {
+          "title": "02 — Define",
+          "desc": "We establish the service scope, responsibilities, direction, and delivery path."
+        },
+        "p03": {
+          "title": "03 — Design",
+          "desc": "We develop the spatial language, hierarchy, materials, and visitor experience."
+        },
+        "p04": {
+          "title": "04 — Fabricate",
+          "desc": "We translate the approved direction into detailed, production-ready built work."
+        },
+        "p05": {
+          "title": "05 — Install",
+          "desc": "We coordinate installation, finishing, testing, and venue readiness."
+        },
+        "p06": {
+          "title": "06 — Handover",
+          "desc": "We complete final checks and hand over a launch-ready exhibition environment."
+        }
+      }
+    },
+    "engagement": {
+      "option01": {
+        "label": "TURNKEY DELIVERY",
+        "title": "One connected team from concept to handover.",
+        "body": "For projects that need a fully coordinated path, Perfect Booth can connect design, fabrication, execution, installation, and final readiness under one clear delivery structure.",
+        "cta": "Discuss Full Delivery"
+      },
+      "option02": {
+        "label": "FOCUSED SERVICE",
+        "title": "Bring in the right capability at the right stage.",
+        "body": "When part of the project is already defined, engage Perfect Booth for a focused service such as design, fabrication, wooden structures, installation, or on-site coordination.",
+        "cta": "Define the Service Scope"
+      }
+    },
+    "cta": {
+      "eyebrow": "READY TO DEFINE THE SCOPE?",
+      "title": "Bring us the brief. We will shape the right service path.",
+      "body": "Whether you have a complete specification or an early idea, start with the objective, venue, and timeline you already know. We will help organize the next step.",
+      "primary": "Book a Consultation",
+      "secondary": "View Our Work"
+    }
   }
 }

@@ -51,7 +51,7 @@ export default function Header() {
         <nav className="nav-links">
           <Link href="/" className={pathname === '/' ? 'active' : ''}>{t('nav.home')}</Link>
           <Link href="/about" className={pathname === '/about' ? 'active' : ''}>{t('nav.about')}</Link>
-          <Link href="/#services" className={pathname === '/#services' ? 'active' : ''}>{t('nav.services')}</Link>
+          <Link href="/services" className={pathname === '/services' ? 'active' : ''}>{t('nav.services')}</Link>
           <Link href="/partners" className={pathname === '/partners' ? 'active' : ''}>{t('nav.partners')}</Link>
           <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>{t('nav.contact')}</Link>
         </nav>
