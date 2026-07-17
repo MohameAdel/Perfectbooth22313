@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
@@ -21,6 +21,10 @@ const cairo = Cairo({
   variable: '--font-cairo',
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params
@@ -33,6 +37,8 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
+  
+  setRequestLocale(locale);
  
   const messages = await getMessages();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
@@ -40,7 +46,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} className={cairo.variable}>
       <head>
-        <link rel="preload" as="image" href="/assets/banner2-mobile.webp" fetchPriority="high" media="(max-width: 768px)" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" />
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
       </head>

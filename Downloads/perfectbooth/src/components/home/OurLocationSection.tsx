@@ -1,16 +1,10 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 
 export default function OurLocationSection() {
   const t = useTranslations('OurLocation');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
-
-  // TODO: A verified map URL or address is required. 
-  // Currently falling back to an approved architectural exhibition image.
-  // Replace this visual fallback with a responsive iframe embed once a location is verified.
-  const visualFallback = 'https://admin.perfectbooth-events.com/storage/home-banner-slides/RsSpXrV3I3WLKRHtxPITuoYKkFuWshOWKsiaplDR.jpg';
 
   // TODO: Update this href when a verified Google Maps link is available.
   const mapLinkHref = "#"; 

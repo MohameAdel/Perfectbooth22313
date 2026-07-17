@@ -1,5 +1,4 @@
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 
 export default function HomeHero() {
@@ -9,6 +8,9 @@ export default function HomeHero() {
 
   return (
     <section className="pb-hero-1-section">
+      {/* Page-specific image preloads hoisted to head */}
+      <link rel="preload" as="image" href="/assets/banner2-mobile.webp" fetchPriority="high" media="(max-width: 768px)" />
+      <link rel="preload" as="image" href="/assets/banner2.png" fetchPriority="high" media="(min-width: 769px)" />
       <div className="pb-hero-1-container">
         
         {/* Content Panel (Left/Start) */}
