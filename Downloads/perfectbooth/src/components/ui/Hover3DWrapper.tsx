@@ -20,36 +20,42 @@ export default function Hover3DWrapper({ children, className = '', maxRotation =
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsTouch(isTouchDevice || prefersReducedMotion);
   }, []);
+  const rectRef = useRef<DOMRect | null>(null);
+
+  const handleMouseEnter = () => {
+    if (isTouch) return;
+    setIsHovering(true);
+    if (containerRef.current) {
+      rectRef.current = containerRef.current.getBoundingClientRect();
+    }
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isTouch || !containerRef.current) return;
     
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left; // x position within the element
-    const y = e.clientY - rect.top;  // y position within the element
+    const rect = rectRef.current || containerRef.current.getBoundingClientRect();
+    if (!rectRef.current) {
+      rectRef.current = rect;
+    }
+    
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
     
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    // Calculate rotation between -maxRotation and +maxRotation
     const rotateX = ((y - centerY) / centerY) * -maxRotation;
     const rotateY = ((x - centerX) / centerX) * maxRotation;
     
     setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
   };
 
-  const handleMouseEnter = () => {
-    if (isTouch) return;
-    setIsHovering(true);
-  };
-
   const handleMouseLeave = () => {
     if (isTouch) return;
     setIsHovering(false);
+    rectRef.current = null;
     setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg)');
-  };
-
-  return (
+  };  return (
     <div
       ref={containerRef}
       className={`hover-3d-container ${className} ${isHovering ? 'is-hovering' : ''}`}

@@ -26,6 +26,8 @@ export default function Logo({ width = 150, height = 82, className = '' }: LogoP
         alt="Perfect Booth Logo"
         fill
         style={{ objectFit: 'contain' }}
+        sizes="(max-width: 768px) 120px, 150px"
+        priority
       />
     </div>
   );

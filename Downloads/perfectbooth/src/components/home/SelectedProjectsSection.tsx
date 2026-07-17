@@ -117,7 +117,6 @@ export default function SelectedProjectsSection() {
                   fill 
                   sizes="(max-width: 768px) 85vw, 60vw"
                   className="portfolio-img" 
-                  unoptimized // External admin domain might not be in Next config
                 />
                 <div className="portfolio-overlay">
                   <h3 className="portfolio-item-title">{project.title}</h3>

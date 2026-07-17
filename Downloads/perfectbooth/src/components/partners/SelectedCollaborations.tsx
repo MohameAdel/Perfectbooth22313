@@ -39,7 +39,6 @@ export default function SelectedCollaborations() {
                       fill
                       sizes="(max-width: 768px) 100vw, 65vw"
                       className="collaboration-image"
-                      unoptimized
                     />
                   </div>
                 </div>
@@ -76,7 +75,6 @@ export default function SelectedCollaborations() {
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="collaboration-logo-image"
-                      unoptimized
                     />
                   </div>
                 </div>

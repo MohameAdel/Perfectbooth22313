@@ -107,7 +107,6 @@ export default function PartnersSection() {
                 fill 
                 sizes="(max-width: 768px) 60vw, 25vw"
                 className="partner-img" 
-                unoptimized
               />
             </div>
           ))}

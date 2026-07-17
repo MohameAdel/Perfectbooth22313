@@ -1,18 +1,12 @@
-'use client';
-
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { useState } from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-
-const VideoModal = dynamic(() => import('@/components/ui/VideoModal'), { ssr: false });
+import PromotionalVideoPlayer from './PromotionalVideoPlayer';
 
 export default function AboutSection() {
   const t = useTranslations('About');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section id="about" className="about-section">
@@ -62,13 +56,10 @@ export default function AboutSection() {
                 <div className="corner corner-br"></div>
               </div>
 
-              <button 
-                className="about-play-button" 
-                onClick={() => setIsVideoOpen(true)}
-                aria-label={locale === 'ar' ? 'تشغيل الفيديو التعريفي' : 'Play promotional video'}
-              >
-                <span className="play-icon">▶</span>
-              </button>
+              <PromotionalVideoPlayer 
+                videoSrc="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/videos/vid2.mp4"
+                playLabel={locale === 'ar' ? 'تشغيل الفيديو التعريفي' : 'Play promotional video'}
+              />
 
               <div className="about-media-caption">
                 {locale === 'ar' ? 'تنفيذ دقيق وفعاليات متكاملة' : 'Precision Delivery & Integrated Events'}
@@ -77,14 +68,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-
-      {isVideoOpen && (
-        <VideoModal 
-          isOpen={isVideoOpen} 
-          onClose={() => setIsVideoOpen(false)} 
-          videoSrc="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/videos/vid2.mp4" 
-        />
-      )}
     </section>
   );
 }
