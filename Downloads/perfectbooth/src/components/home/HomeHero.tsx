@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 export default function HomeHero() {
   const t = useTranslations('Hero');
@@ -58,21 +59,21 @@ export default function HomeHero() {
         </div>
 
         {/* Image Panel (Right/End) */}
-        <picture className="pb-hero-1-image" style={{ display: 'block', width: '100%', height: '100%' }}>
-          <source srcSet="/assets/banner2-mobile.webp" media="(max-width: 768px)" width="750" height="422" />
-          <img
+        <div className="pb-hero-1-image" style={{ display: 'block', width: '100%', height: '100%' }}>
+          <Image
             src="/assets/banner2.png"
             alt={t('title')}
-            width="1920"
-            height="1080"
-            fetchPriority="high"
+            width={1920}
+            height={1080}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             style={{ 
               width: '100%',
               height: 'auto',
               objectFit: 'contain'
             }}
           />
-        </picture>
+        </div>
 
       </div>
     </section>
