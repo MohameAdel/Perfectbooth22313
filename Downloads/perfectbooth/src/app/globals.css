@@ -5808,26 +5808,38 @@ html {
 
 /* Services Intro */
 .services-intro-section {
-  padding: 8rem 0 4rem;
+  padding: 5rem 0 3rem;
   background-color: var(--pb-bg);
+  position: relative;
 }
 .services-intro-container {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 5%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 5rem;
+  align-items: start;
+  text-align: start;
 }
 .services-intro-eyebrow-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .services-intro-eyebrow-line {
   width: 30px;
   height: 2px;
   background-color: var(--pb-accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: servicesHeroLineDrawX 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+[dir="rtl"] .services-intro-eyebrow-line {
+  transform-origin: right;
 }
 .services-intro-eyebrow {
   font-size: 0.875rem;
@@ -5838,16 +5850,67 @@ html {
   margin: 0;
 }
 .services-intro-title {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 500;
   color: var(--pb-text);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  margin-bottom: 0;
+  line-height: 1.25;
+  max-width: 18ch;
+}
+[dir="rtl"] .services-intro-title {
+  line-height: 1.35;
 }
 .services-intro-body {
   font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--pb-text-dim);
+  line-height: 1.75;
+  color: var(--pb-text-soft);
+  max-width: 48ch;
+  margin: 0;
+}
+.services-intro-architectural-line {
+  width: 60px;
+  height: 1px;
+  background-color: rgba(197, 143, 45, 0.25);
+  margin-top: 2rem;
+}
+.services-intro-connecting-line {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--pb-accent) 0%, transparent 100%);
+  margin: 4rem auto 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: servicesHeroLineDraw 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.8s;
+}
+@media (max-width: 1024px) {
+  .services-intro-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .services-intro-title {
+    max-width: 100%;
+  }
+  .services-intro-body {
+    max-width: 100%;
+  }
+  .services-intro-architectural-line {
+    display: none;
+  }
+  .services-intro-connecting-line {
+    height: 60px;
+    margin-top: 3rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-intro-eyebrow-line {
+    transform: scaleX(1) !important;
+    animation: none !important;
+  }
+  .services-intro-connecting-line {
+    transform: scaleY(1) !important;
+    animation: none !important;
+  }
 }
 
 /* Core Services */
