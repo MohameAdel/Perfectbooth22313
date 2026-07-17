@@ -4,7 +4,9 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
-import VideoModal from '@/components/ui/VideoModal';
+import dynamic from 'next/dynamic';
+
+const VideoModal = dynamic(() => import('@/components/ui/VideoModal'), { ssr: false });
 
 export default function AboutSection() {
   const t = useTranslations('About');
@@ -76,11 +78,13 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <VideoModal 
-        isOpen={isVideoOpen} 
-        onClose={() => setIsVideoOpen(false)} 
-        videoSrc="/assets/vid2.mp4" 
-      />
+      {isVideoOpen && (
+        <VideoModal 
+          isOpen={isVideoOpen} 
+          onClose={() => setIsVideoOpen(false)} 
+          videoSrc="/assets/vid2.mp4" 
+        />
+      )}
     </section>
   );
 }

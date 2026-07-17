@@ -56,22 +56,21 @@ export default function HomeHero() {
         </div>
 
         {/* Image Panel (Right/End) */}
-        <div className="pb-hero-1-image animate-fade-in-fix">
-          <Image
+        <picture className="pb-hero-1-image" style={{ display: 'block', width: '100%', height: '100%' }}>
+          <source srcSet="/assets/banner2-mobile.webp" media="(max-width: 768px)" width="750" height="422" />
+          <img
             src="/assets/banner2.png"
             alt={t('title')}
-            width={1920}
-            height={1080}
-            sizes="100vw"
-            quality={95}
-            priority
+            width="1920"
+            height="1080"
+            fetchPriority="high"
             style={{ 
               width: '100%',
               height: 'auto',
-              display: 'block'
+              objectFit: 'contain'
             }}
           />
-        </div>
+        </picture>
 
       </div>
     </section>

@@ -49,7 +49,7 @@ export default function AboutHero() {
         </div>
 
         {/* Image Content */}
-        <div className="about-hero-image-wrapper animate-fade-in-fix" style={{ animationDelay: '0.2s' }}>
+        <div className="about-hero-image-wrapper">
           <Hover3DWrapper maxRotation={3}>
             <div className="hero-3d-frame">
               <div className="hero-3d-frame-image-layer">
@@ -58,7 +58,7 @@ export default function AboutHero() {
                   alt={isRtl ? 'جناح معرض معماري مخصص من تنفيذ Perfect Booth' : 'Custom architectural exhibition booth by Perfect Booth'}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  quality={90}
+                  quality={75}
                   priority
                   style={{
                     objectFit: 'cover',

@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   description: 'Event solutions, exhibition booth manufacturing and logistics.',
 };
 
+import { Cairo } from 'next/font/google';
+
+const cairo = Cairo({ 
+  subsets: ['latin', 'arabic'],
+  weight: ['400', '600', '700'],
+  display: 'optional',
+  variable: '--font-cairo',
+});
+
 export default async function LocaleLayout({
   children,
   params
@@ -29,7 +38,12 @@ export default async function LocaleLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} className={cairo.variable}>
+      <head>
+        <link rel="preload" as="image" href="/assets/banner2-mobile.webp" fetchPriority="high" media="(max-width: 768px)" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" />
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
