@@ -5738,42 +5738,72 @@ html {
 
 /* VP Strip */
 .services-vp-strip {
-  background-color: var(--pb-surface);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3.5rem 0;
+  background-color: var(--pb-bg);
 }
 .services-vp-container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--pb-surface);
 }
 .services-vp-item {
-  padding: 4rem 5%;
-  border-inline-end: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3.5rem 3rem;
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: start;
 }
 .services-vp-item:last-child {
   border-inline-end: none;
 }
 .services-vp-number {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--pb-accent);
-  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.services-vp-number::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: var(--pb-accent);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .services-vp-title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: var(--pb-text);
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+[dir="rtl"] .services-vp-title {
+  line-height: 1.4;
 }
 .services-vp-desc {
   font-size: 1rem;
-  line-height: 1.6;
-  color: var(--pb-text-dim);
+  line-height: 1.7;
+  color: var(--pb-text-soft);
   margin: 0;
+}
+@media (hover: hover) {
+  .services-vp-item:hover {
+    background-color: var(--pb-surface-hover);
+    border-inline-end-color: rgba(255, 255, 255, 0.16);
+  }
+  .services-vp-item:hover .services-vp-number::after {
+    width: 32px;
+  }
 }
 
 /* Services Intro */
@@ -6216,14 +6246,16 @@ html {
 @media (max-width: 768px) {
   .services-vp-container {
     grid-template-columns: 1fr;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--pb-surface);
   }
   .services-vp-item {
-    padding: 3rem 5%;
     border-inline-end: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 2rem;
   }
   .services-vp-item:last-child {
-    border-bottom: none;
+    border-block-end: none;
   }
   .process-timeline-wrapper {
     padding-top: 0;
