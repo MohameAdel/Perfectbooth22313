@@ -3055,7 +3055,7 @@ a {
 
 /* === PB Hero 1 Grid & Header Fix === */
 .pb-hero-1-section {
-  padding-top: 135px; /* Offset for the fixed Header */
+  padding-top: 148px; /* Offset for the fixed Header */
 }
 
 .pb-hero-1-container {
@@ -6590,7 +6590,7 @@ html {
 @media (max-width: 768px) {
   .about-page-hero,
   .partners-hero {
-    padding-top: 156px !important;
+    padding-top: 140px !important;
     padding-bottom: 3rem !important;
   }
 }
