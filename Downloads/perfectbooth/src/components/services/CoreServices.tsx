@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { servicesData } from '@/data/services';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function CoreServices() {
   const t = useTranslations('ServicesPage.services');
@@ -16,7 +17,11 @@ export default function CoreServices() {
           const number = `0${index + 1}`;
           
           return (
-            <div key={service.id} className={`core-service-row ${isEven ? 'row-even' : 'row-odd'}`}>
+            <ScrollReveal
+              key={service.id}
+              className={`core-service-row ${isEven ? 'row-even' : 'row-odd'}`}
+              delay={80}
+            >
               <div className="core-service-content">
                 <div className="core-service-header">
                   <span className="core-service-number">{number}</span>
@@ -62,7 +67,7 @@ export default function CoreServices() {
                   </div>
                 )}
               </div>
-            </div>
+            </ScrollReveal>
           );
         })}
       </div>

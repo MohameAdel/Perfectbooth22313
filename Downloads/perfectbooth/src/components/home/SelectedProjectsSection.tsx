@@ -75,6 +75,7 @@ export default function SelectedProjectsSection() {
 
   return (
     <section 
+      id="selected-projects"
       className="portfolio-section" 
       dir={dir}
       onMouseEnter={() => setIsHovered(true)}

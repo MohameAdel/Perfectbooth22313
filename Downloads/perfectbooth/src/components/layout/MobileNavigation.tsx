@@ -133,12 +133,12 @@ export default function MobileNavigation() {
                   <MobileMenuContactItem 
                     icon={<i className="fa-solid fa-phone"></i>} 
                     text={menuT('phonePlaceholder')} 
-                    href="tel:+201234567890" 
+                    href="tel:+201116013011" 
                   />
                   <MobileMenuContactItem 
                     icon={<i className="fa-regular fa-envelope"></i>} 
                     text={menuT('emailPlaceholder')} 
-                    href="mailto:info@perfectbooth.com" 
+                    href="mailto:info@perfectbooth-events.com" 
                   />
                 </div>
               </div>
@@ -148,11 +148,11 @@ export default function MobileNavigation() {
               <div>
                 <div className="drawer-section-title" style={{ marginBottom: '0.5rem' }}>{menuT('followUs')}</div>
                 <div className="drawer-social">
-                  <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-                  <a href="#" aria-label="X (Twitter)"><i className="fa-brands fa-x-twitter"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                  <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i className="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
                 </div>
               </div>
               <div className="drawer-copyright">

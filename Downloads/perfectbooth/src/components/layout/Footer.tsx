@@ -52,7 +52,11 @@ export default function Footer() {
                   {tHeader('nav.services')}
                 </Link>
               </li>
-              
+              <li>
+                <Link href="/partners" className="footer-link">
+                  {tHeader('nav.partners')}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -64,6 +68,16 @@ export default function Footer() {
                 <Link href="/contact" className="footer-link">
                   {tHeader('nav.contact')}
                 </Link>
+              </li>
+              <li>
+                <a href="tel:+201116013011" className="footer-link">
+                  <i className="fa-solid fa-phone" style={{ marginInlineEnd: '8px' }}></i> +20 111 601 3011
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@perfectbooth-events.com" className="footer-link">
+                  <i className="fa-solid fa-envelope" style={{ marginInlineEnd: '8px' }}></i> info@perfectbooth-events.com
+                </a>
               </li>
             </ul>
             {/* TODO: Add verified phone number (tel:) when available */}

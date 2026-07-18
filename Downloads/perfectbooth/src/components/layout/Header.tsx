@@ -28,15 +28,25 @@ export default function Header() {
         </div>
         <div className="top-bar-left">
           <div className="social-icons">
-            <a href="#">f</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i className="fa-brands fa-facebook-f"></i>
+            </a>
             <div className="divider"></div>
-            <a href="#">X</a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
             <div className="divider"></div>
-            <a href="#">in</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
             <div className="divider"></div>
-            <a href="#">📷</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
             <div className="divider"></div>
-            <a href="#">▶</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i className="fa-brands fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>

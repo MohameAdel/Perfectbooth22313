@@ -12,6 +12,18 @@ export default function ServicesHero() {
   return (
     <section className="services-hero" dir={dir}>
       <div className="services-hero-grid-line" />
+      <div className="services-hero-grid-pattern" aria-hidden="true" />
+      <div className="services-hero-glow" aria-hidden="true" />
+      
+      <div className="services-hero-decorations" aria-hidden="true">
+        <svg className="services-hero-svg-deco" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="198" stroke="rgba(255,255,255,0.02)" strokeWidth="1" strokeDasharray="6 6" />
+          <path d="M200 2 A198 198 0 0 1 398 200" stroke="var(--pb-accent)" strokeWidth="1" opacity="0.15" />
+          <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(255,255,255,0.02)" strokeWidth="1" />
+          <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(255,255,255,0.02)" strokeWidth="1" />
+        </svg>
+      </div>
+
       <div className="services-hero-container">
         <div className="services-hero-content">
           <div className="services-hero-eyebrow-wrapper services-hero-reveal" style={{ animationDelay: '0.1s' }}>
