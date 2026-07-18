@@ -18,10 +18,8 @@ export default function ServicesIntro() {
         </div>
         <div className="services-intro-secondary">
           <p className="services-intro-body">{t('body')}</p>
-          <div className="services-intro-architectural-line" />
         </div>
       </div>
-      <div className="services-intro-connecting-line" />
     </section>
   );
 }
