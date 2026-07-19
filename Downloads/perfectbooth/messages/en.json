@@ -21,7 +21,9 @@
     "title": "Perfect Booth",
     "description1": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
     "description2": "From planning to production, we deliver complete event solutions, custom booth manufacturing, and on-site support for organizations, ministries, corporations, and institutions across Egypt.",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "videoModalTitle": "Perfect Booth Promotional Video",
+    "closeVideo": "Close Video"
   },
   "Services": {
     "subtitle": "Delivering Excellence in Every Event",
