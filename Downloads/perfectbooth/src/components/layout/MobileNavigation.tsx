@@ -6,6 +6,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuContactItem from './MobileMenuContactItem';
+import Logo from '@/components/ui/Logo';
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +16,10 @@ export default function MobileNavigation() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
   
   const navT = useTranslations('Header.nav');
-  const headerT = useTranslations('Header');
   const aboutT = useTranslations('About');
   const menuT = useTranslations('MobileMenu');
 
+  // Set mounted on client
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
@@ -73,14 +74,8 @@ export default function MobileNavigation() {
           >
             {/* Header */}
             <div className="drawer-header">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <div style={{ width: '40px', height: '40px', border: '2px solid var(--pb-accent)', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'var(--pb-accent)', fontWeight: 'bold', fontSize: '10px' }}>
-                  PB
-                </div>
-                <div>
-                  <div style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'var(--pb-text)' }}>{headerT('title')}</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--pb-text-muted)' }}>{headerT('subtitle')}</div>
-                </div>
+              <div onClick={() => setIsOpen(false)} style={{ cursor: 'pointer' }}>
+                <Logo width={120} height={50} className="drawer-logo" />
               </div>
               
               <button 

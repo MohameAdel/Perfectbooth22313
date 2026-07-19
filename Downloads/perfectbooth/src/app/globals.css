@@ -976,7 +976,7 @@ a {
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow: hidden;
   border-inline-end: 1px solid var(--pb-border);
 }
 
@@ -1020,6 +1020,7 @@ a {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .drawer-intro {
@@ -1123,7 +1124,7 @@ a {
 
 .hamburger-menu { display: flex; }
 
-@media (min-width: 769px) { .drawer-nav { display: none !important; } }
+/* Navigation links inside drawer are always visible if drawer is opened */
 
 
 
