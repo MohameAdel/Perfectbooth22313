@@ -86,16 +86,17 @@ export default function BeforeAfterSection() {
                 <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <div className="before-after-progress-wrapper">
-              <div className="before-after-counter">
-                <span className="counter-current">{String(activeIndex + 1).padStart(2, '0')}</span>
-                <span className="counter-divider">/</span>
-                <span className="counter-total">{String(beforeAfterProjects.length).padStart(2, '0')}</span>
-              </div>
-              <div className="before-after-progress-bar">
-                <div className="progress-fill" style={{ width: `${((activeIndex + 1) / beforeAfterProjects.length) * 100}%` }}></div>
-              </div>
+            
+            <div className="before-after-nav-line"></div>
+
+            <div className="before-after-counter">
+              <span className="counter-current">{String(activeIndex + 1).padStart(2, '0')}</span>
+              <span className="counter-divider">/</span>
+              <span className="counter-total">{String(beforeAfterProjects.length).padStart(2, '0')}</span>
             </div>
+
+            <div className="before-after-nav-line"></div>
+
             <button className="portfolio-nav-btn next" onClick={scrollNext} aria-label={t('nextProject')}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -109,7 +110,11 @@ export default function BeforeAfterSection() {
             <div key={project.id} className={`before-after-slide ${activeIndex === index ? 'is-active' : ''}`}>
               <div className="case-study-box">
                 <div className="case-study-header">
+                  <span className="case-study-caption">{t('caseStudyLabel')}</span>
                   <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
+                  {project.categoryKey && (
+                    <p className="case-study-subtitle">{t(project.categoryKey as Parameters<typeof t>[0])}</p>
+                  )}
                   <div className="case-study-divider"></div>
                 </div>
                 <BeforeAfterPair 
@@ -118,17 +123,6 @@ export default function BeforeAfterSection() {
                   beforeAlt={t(project.beforeAltKey)}
                   afterAlt={t(project.afterAltKey)}
                 />
-                { (project.categoryKey || project.locationKey || project.year) && (
-                  <div className="before-after-metadata-container">
-                    <div className="before-after-metadata">
-                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                      {project.categoryKey && <span>{t(project.categoryKey as any)}</span>}
-                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                      {project.locationKey && <span>{t(project.locationKey as any)}</span>}
-                      {project.year && <span>{project.year}</span>}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           ))}
