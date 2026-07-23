@@ -42,6 +42,7 @@ export default function MobileNavigation() {
     { key: 'about', href: '/about' },
     { key: 'services', href: '/services' },
     { key: 'partners', href: '/partners' },
+    { key: 'projects', href: '/projects' },
     { key: 'contact', href: '/contact' },
   ];
 
@@ -101,9 +102,8 @@ export default function MobileNavigation() {
               {/* Navigation */}
               <nav className="drawer-nav">
                 {navLinks.map((link) => {
-                  // If href is '/about' and pathname is '/about', it's active. If it's '/' and pathname is '/', it's active.
-                  // Since all hashes map to the homepage (except about), we'll do simple checking.
-                  const isActive = (link.href === '/' && pathname === '/') || (link.href === '/about' && pathname === '/about') || (link.href === '/contact' && pathname === '/contact');
+                  // Check if link is active
+                  const isActive = pathname === link.href;
                   return (
                     <Link 
                       key={link.key} 

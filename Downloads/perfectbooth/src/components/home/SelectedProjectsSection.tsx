@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { selectedProjects } from '@/data/collaborations';
 
@@ -93,6 +94,9 @@ export default function SelectedProjectsSection() {
             <h2 className="portfolio-title">{t('title')}</h2>
           </div>
           <div className="portfolio-actions">
+            <Link href="/projects" className="view-all-projects-link" style={{ fontSize: '0.9rem', color: '#C4972D', textDecoration: 'none', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+              {t('viewAll')}
+            </Link>
             <div className="portfolio-nav-buttons">
               <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label="Previous Project">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
