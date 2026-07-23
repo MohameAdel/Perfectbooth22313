@@ -31,7 +31,7 @@ export default function WhyChooseUsSection() {
     },
     {
       id: 3,
-      number: '94%',
+      number: '4.9/5',
       label: t('stats.satisfaction'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
