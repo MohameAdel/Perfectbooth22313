@@ -31,16 +31,16 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
                 src={featuredProject.image}
                 alt={t(featuredProject.altKey as Parameters<typeof t>[0])}
                 fill
-                sizes="(max-width: 1024px) 100vw, 66vw"
+                sizes="(max-width: 1024px) 100vw, 70vw"
                 className="featured-project-image"
                 priority
               />
             </div>
             <div className="featured-project-content">
-              <span className="featured-project-index">01</span>
+              <span className="project-gallery-index featured-index">01</span>
               <h2 className="featured-project-title">{t(featuredProject.titleKey as Parameters<typeof t>[0])}</h2>
               {featuredProject.categoryKey && (
-                <p className="featured-project-category">{t(featuredProject.categoryKey as Parameters<typeof t>[0])}</p>
+                <p className="project-gallery-category">{t(featuredProject.categoryKey as Parameters<typeof t>[0])}</p>
               )}
             </div>
           </div>
@@ -63,11 +63,9 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="project-gallery-image"
                   />
-                  <div className="project-gallery-hover-overlay">
-                    <span className="project-gallery-index">{displayIndex}</span>
-                  </div>
                 </div>
                 <div className="project-gallery-meta">
+                  <span className="project-gallery-index">{displayIndex}</span>
                   <h3 className="project-gallery-title">{t(project.titleKey as Parameters<typeof t>[0])}</h3>
                   {project.categoryKey && (
                     <span className="project-gallery-category">{t(project.categoryKey as Parameters<typeof t>[0])}</span>

@@ -54,7 +54,7 @@ export const projectsGallery: ProjectGalleryItem[] = [
   {
     id: 'proj-7',
     titleKey: 'genericTitle1',
-    image: `${BLOB_BASE_URL}/E1DB6987-9B3B-4B83-9568-D4A294FB1F6.webp`,
+    image: `${BLOB_BASE_URL}/E1DB6987-9B3B-4B83-9568-D4A294FB11F6.webp`,
     altKey: 'genericAlt7',
     categoryKey: 'categoryCustomSpace',
   },
