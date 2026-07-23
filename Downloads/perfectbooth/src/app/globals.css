@@ -7222,3 +7222,89 @@ html[dir='rtl'] .projects-hero-watermark {
 html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
   transform: translateX(-4px);
 }
+
+/* Premium View All Button */
+.portfolio-footer-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.pb-btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 32px;
+  background-color: transparent;
+  color: #C4972D;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(196, 151, 45, 0.4);
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pb-btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(196, 151, 45, 0.1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+[dir='rtl'] .pb-btn-premium::before {
+  transform-origin: left;
+}
+
+.pb-btn-premium:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+[dir='rtl'] .pb-btn-premium:hover::before {
+  transform-origin: right;
+}
+
+.pb-btn-premium span, .pb-btn-premium svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.pb-btn-premium:hover {
+  border-color: #C4972D;
+  box-shadow: 0 4px 14px rgba(196, 151, 45, 0.15);
+}
+
+.pb-btn-premium:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+[dir='rtl'] .pb-btn-premium:hover .btn-arrow {
+  transform: translateX(-4px);
+}
+
+@media (max-width: 768px) {
+  .portfolio-footer-cta {
+    margin-top: 2rem;
+    padding: 0 5%;
+  }
+  .pb-btn-premium {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}
+
