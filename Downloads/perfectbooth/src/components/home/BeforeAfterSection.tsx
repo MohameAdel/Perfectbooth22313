@@ -3,7 +3,7 @@
 import React, { useRef, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { beforeAfterProjects } from '@/data/collaborations';
-import BeforeAfterComparison from '@/components/ui/BeforeAfterComparison';
+import BeforeAfterPair from '@/components/ui/BeforeAfterPair';
 
 export default function BeforeAfterSection() {
   const t = useTranslations('BeforeAfter');
@@ -84,16 +84,18 @@ export default function BeforeAfterSection() {
           {beforeAfterProjects.map((project) => (
             <div key={project.id} className="portfolio-item before-after-item">
               <div className="portfolio-img-wrapper">
-                <BeforeAfterComparison 
+                <BeforeAfterPair 
                   beforeImage={project.beforeImage}
                   afterImage={project.afterImage}
                   beforeAlt={t(project.beforeAltKey)}
                   afterAlt={t(project.afterAltKey)}
-                  ariaLabel={t('sliderAriaLabel')}
                 />
-                <div className="portfolio-overlay" style={{ pointerEvents: 'none' }}>
-                  <h3 className="portfolio-item-title">{t(project.titleKey)}</h3>
+              </div>
+              <div className="portfolio-content before-after-content">
+                <div className="visually-hidden">
+                  {t('eyebrow')} - {t('title')}
                 </div>
+                <h3 className="portfolio-item-title">{t(project.titleKey)}</h3>
               </div>
             </div>
           ))}
