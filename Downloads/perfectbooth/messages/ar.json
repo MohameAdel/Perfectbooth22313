@@ -407,13 +407,12 @@
     }
   },
   "BeforeAfter": {
-    "eyebrow": "قبل وبعد",
+    "eyebrow": "دراسة حالة: تحول المشروع",
     "title": "من الفكرة إلى الواقع",
-    "description": "استعرض مراحل كل مشروع من بدايته حتى اكتمال النتيجة النهائية.",
-    "conceptToReality": "من الفكرة إلى الواقع",
+    "description": "تعرض مراحل كل مشروع من بدايته حتى اكتمال النتيجة النهائية.",
     "caseStudyLabel": "دراسة حالة: تحول المشروع",
-    "beforeLabel": "قبل",
-    "afterLabel": "بعد",
+    "beforeLabel": "التصميم",
+    "afterLabel": "الحقيقة",
     "prevProject": "المشروع السابق",
     "nextProject": "المشروع التالي",
     "sliderAriaLabel": "اسحب للمقارنة بين قبل وبعد",
