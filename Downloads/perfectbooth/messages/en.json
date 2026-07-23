@@ -12,16 +12,19 @@
     }
   },
   "Hero": {
-    "title": "Your #1 Trusted Exhibition Partner in Egypt",
-    "description": "From 3D Design to Flawless Execution — Trusted by Tesla, Huawei, Lenovo & Leading Global Brands",
+    "title": "Your Trusted Partner for Exhibitions & Events in Egypt",
+    "description": "We deliver end-to-end solutions with global standards and professional execution that brings your vision to life.",
     "cta": "Book Your Consultation",
     "eyebrow": "Exhibition Design & Execution"
   },
   "About": {
     "subtitle": "Who We Are",
     "title": "Perfect Booth",
-    "description1": "Perfect Booth is an integrated company specializing in organizing events, exhibitions, incentive conferences, and workshops based in the Republic of Egypt with 20 years of experience.",
-    "description2": "From planning to production, we deliver complete event solutions, custom booth manufacturing, and on-site support for organizations, ministries, corporations, and institutions across Egypt.",
+    "description1": "At Perfect Booth, we transform ideas into exceptional real-world experiences. Since 2015, we have specialized in designing and executing exhibition booths and events, offering integrated solutions that combine creativity, quality, and precision in execution.",
+    "description2": "With over 9 years of experience, we have successfully delivered dozens of projects for local and international brands, providing comprehensive services that include 3D design, manufacturing, installation, and full project supervision through to final handover.",
+    "description3": "We are proud to be trusted by global companies like Tesla, Huawei, Ericsson, and others. We constantly strive to provide a seamless experience for our clients by adhering to the highest standards of quality and professionalism at every stage of the work.",
+    "description4": "At Perfect Booth, we don't just design exhibition booths; we create spaces that highlight your brand identity and leave a strong impression on your audience.",
+    "description5": "Perfect Booth — Your trusted partner for exhibitions and events in Egypt.",
     "readMore": "Read More",
     "videoModalTitle": "Perfect Booth Promotional Video",
     "closeVideo": "Close Video"

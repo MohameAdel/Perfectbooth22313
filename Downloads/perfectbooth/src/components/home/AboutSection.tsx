@@ -26,6 +26,15 @@ export default function AboutSection() {
           <p className="about-description">
             {t('description2')}
           </p>
+          <p className="about-description">
+            {t('description3')}
+          </p>
+          <p className="about-description">
+            {t('description4')}
+          </p>
+          <p className="about-description" style={{ fontWeight: '600', color: '#fff', marginTop: '1rem' }}>
+            {t('description5')}
+          </p>
           <div style={{ marginTop: '2.5rem' }}>
             <Link href="/about" className="pb-btn-premium">
               <span>{t('readMore')}</span>
