@@ -82,20 +82,15 @@ export default function BeforeAfterSection() {
 
         <div className="portfolio-track" ref={trackRef}>
           {beforeAfterProjects.map((project) => (
-            <div key={project.id} className="portfolio-item before-after-item">
-              <div className="portfolio-img-wrapper">
-                <BeforeAfterPair 
-                  beforeImage={project.beforeImage}
-                  afterImage={project.afterImage}
-                  beforeAlt={t(project.beforeAltKey)}
-                  afterAlt={t(project.afterAltKey)}
-                />
-              </div>
-              <div className="portfolio-content before-after-content">
-                <div className="visually-hidden">
-                  {t('eyebrow')} - {t('title')}
-                </div>
-                <h3 className="portfolio-item-title">{t(project.titleKey)}</h3>
+            <div key={project.id} className="before-after-slide">
+              <BeforeAfterPair 
+                beforeImage={project.beforeImage}
+                afterImage={project.afterImage}
+                beforeAlt={t(project.beforeAltKey)}
+                afterAlt={t(project.afterAltKey)}
+              />
+              <div className="before-after-title-wrapper">
+                <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
               </div>
             </div>
           ))}
