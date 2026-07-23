@@ -88,6 +88,16 @@
     "proof3": "ثقة في التنفيذ",
     "proof4": "مساحات جاهزة للمحتوى"
   },
+  "WhyChooseUs": {
+    "eyebrow": "موثوق به من قبل المنظمات الرائدة",
+    "title": "لماذا تختارنا",
+    "stats": {
+      "years": "سنوات",
+      "projects": "مشروع",
+      "satisfaction": "رضا عملاء",
+      "team": "أعضاء الفريق"
+    }
+  },
   "SelectedProjects": {
     "eyebrow": "أعمالنا",
     "title": "مشاريع مختارة",

@@ -88,6 +88,16 @@
     "proof3": "Execution confidence",
     "proof4": "Content-ready spaces"
   },
+  "WhyChooseUs": {
+    "eyebrow": "Trusted by Leading Organizations",
+    "title": "Why Choose Us",
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Projects Delivered",
+      "satisfaction": "Customer Satisfaction",
+      "team": "Team Members"
+    }
+  },
   "SelectedProjects": {
     "eyebrow": "Our Work",
     "title": "Selected Projects",
