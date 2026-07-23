@@ -36,14 +36,16 @@ export default function BeforeAfterPair({
         />
       </div>
 
-      {/* Transition Marker */}
-      <div className="before-after-marker" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="marker-icon-desktop">
+      {/* Subtle Transition Marker */}
+      <div className="before-after-elegant-marker" aria-hidden="true">
+        <div className="elegant-line"></div>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="elegant-arrow-desktop">
           <path d={isRtl ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="marker-icon-mobile">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="elegant-arrow-mobile">
           <path d="M12 5v14M19 12l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
+        <div className="elegant-line"></div>
       </div>
 
       {/* After Image Frame */}

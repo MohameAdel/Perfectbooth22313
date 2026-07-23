@@ -40,6 +40,11 @@ export interface BeforeAfterProject {
   afterImage: string;
   beforeAltKey: string;
   afterAltKey: string;
+  beforeObjectPosition?: string;
+  afterObjectPosition?: string;
+  categoryKey?: string;
+  locationKey?: string;
+  year?: string;
 }
 
 export const beforeAfterProjects: BeforeAfterProject[] = [

@@ -11,6 +11,22 @@ export default function BeforeAfterSection() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = React.useState(0);
+
+  const handleScroll = useCallback(() => {
+    if (!trackRef.current) return;
+    const track = trackRef.current;
+    // Calculate which item is most visible
+    const scrollLeft = Math.abs(track.scrollLeft);
+    const itemWidth = track.clientWidth;
+    const index = Math.round(scrollLeft / itemWidth);
+    
+    // Safety clamp
+    const safeIndex = Math.max(0, Math.min(index, beforeAfterProjects.length - 1));
+    if (activeIndex !== safeIndex) {
+      setActiveIndex(safeIndex);
+    }
+  }, [activeIndex]);
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;
@@ -60,11 +76,16 @@ export default function BeforeAfterSection() {
       <div className="portfolio-container">
         <div className="portfolio-header">
           <div>
-            <p className="portfolio-eyebrow">{t('eyebrow')}</p>
+            <p className="portfolio-eyebrow tracking-widest">{t('eyebrow')}</p>
             <h2 className="portfolio-title">{t('title')}</h2>
             <p className="before-after-desc">{t('description')}</p>
           </div>
-          <div className="portfolio-actions">
+          <div className="portfolio-actions before-after-actions">
+            <div className="before-after-counter">
+              <span className="counter-current">{String(activeIndex + 1).padStart(2, '0')}</span>
+              <span className="counter-divider">/</span>
+              <span className="counter-total">{String(beforeAfterProjects.length).padStart(2, '0')}</span>
+            </div>
             <div className="portfolio-nav-buttons">
               <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +101,7 @@ export default function BeforeAfterSection() {
           </div>
         </div>
 
-        <div className="portfolio-track" ref={trackRef}>
+        <div className="portfolio-track" ref={trackRef} onScroll={handleScroll}>
           {beforeAfterProjects.map((project) => (
             <div key={project.id} className="before-after-slide">
               <BeforeAfterPair 
@@ -89,6 +110,18 @@ export default function BeforeAfterSection() {
                 beforeAlt={t(project.beforeAltKey)}
                 afterAlt={t(project.afterAltKey)}
               />
+              <div className="before-after-metadata-container">
+                <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
+                { (project.categoryKey || project.locationKey || project.year) && (
+                  <div className="before-after-metadata">
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                    {project.categoryKey && <span>{t(project.categoryKey as any)}</span>}
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                    {project.locationKey && <span>{t(project.locationKey as any)}</span>}
+                    {project.year && <span>{project.year}</span>}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
