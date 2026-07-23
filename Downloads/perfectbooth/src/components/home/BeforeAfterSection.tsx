@@ -81,44 +81,52 @@ export default function BeforeAfterSection() {
             <p className="before-after-desc">{t('description')}</p>
           </div>
           <div className="portfolio-actions before-after-actions">
-            <div className="before-after-counter">
-              <span className="counter-current">{String(activeIndex + 1).padStart(2, '0')}</span>
-              <span className="counter-divider">/</span>
-              <span className="counter-total">{String(beforeAfterProjects.length).padStart(2, '0')}</span>
+            <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="before-after-progress-wrapper">
+              <div className="before-after-counter">
+                <span className="counter-current">{String(activeIndex + 1).padStart(2, '0')}</span>
+                <span className="counter-divider">/</span>
+                <span className="counter-total">{String(beforeAfterProjects.length).padStart(2, '0')}</span>
+              </div>
+              <div className="before-after-progress-bar">
+                <div className="progress-fill" style={{ width: `${((activeIndex + 1) / beforeAfterProjects.length) * 100}%` }}></div>
+              </div>
             </div>
-            <div className="portfolio-nav-buttons">
-              <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button className="portfolio-nav-btn next" onClick={scrollNext} aria-label={t('nextProject')}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
+            <button className="portfolio-nav-btn next" onClick={scrollNext} aria-label={t('nextProject')}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
 
         <div className="portfolio-track" ref={trackRef} onScroll={handleScroll}>
-          {beforeAfterProjects.map((project) => (
-            <div key={project.id} className="before-after-slide">
-              <BeforeAfterPair 
-                beforeImage={project.beforeImage}
-                afterImage={project.afterImage}
-                beforeAlt={t(project.beforeAltKey)}
-                afterAlt={t(project.afterAltKey)}
-              />
-              <div className="before-after-metadata-container">
-                <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
+          {beforeAfterProjects.map((project, index) => (
+            <div key={project.id} className={`before-after-slide ${activeIndex === index ? 'is-active' : ''}`}>
+              <div className="case-study-box">
+                <div className="case-study-header">
+                  <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
+                  <div className="case-study-divider"></div>
+                </div>
+                <BeforeAfterPair 
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  beforeAlt={t(project.beforeAltKey)}
+                  afterAlt={t(project.afterAltKey)}
+                />
                 { (project.categoryKey || project.locationKey || project.year) && (
-                  <div className="before-after-metadata">
-                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                    {project.categoryKey && <span>{t(project.categoryKey as any)}</span>}
-                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                    {project.locationKey && <span>{t(project.locationKey as any)}</span>}
-                    {project.year && <span>{project.year}</span>}
+                  <div className="before-after-metadata-container">
+                    <div className="before-after-metadata">
+                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                      {project.categoryKey && <span>{t(project.categoryKey as any)}</span>}
+                      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                      {project.locationKey && <span>{t(project.locationKey as any)}</span>}
+                      {project.year && <span>{project.year}</span>}
+                    </div>
                   </div>
                 )}
               </div>

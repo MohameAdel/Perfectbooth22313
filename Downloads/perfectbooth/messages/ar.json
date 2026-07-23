@@ -393,9 +393,10 @@
     }
   },
   "BeforeAfter": {
-    "eyebrow": "تحولات المشاريع",
-    "title": "قبل وبعد",
+    "eyebrow": "قبل وبعد",
+    "title": "من الفكرة إلى الواقع",
     "description": "استعرض مراحل كل مشروع من بدايته حتى اكتمال النتيجة النهائية.",
+    "conceptToReality": "من الفكرة إلى الواقع",
     "beforeLabel": "قبل",
     "afterLabel": "بعد",
     "prevProject": "المشروع السابق",

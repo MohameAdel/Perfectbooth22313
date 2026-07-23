@@ -393,9 +393,10 @@
     }
   },
   "BeforeAfter": {
-    "eyebrow": "PROJECT TRANSFORMATIONS",
-    "title": "Before & After",
+    "eyebrow": "BEFORE & AFTER",
+    "title": "From Concept to Reality",
     "description": "Explore each project from its initial stage to the completed result.",
+    "conceptToReality": "Concept → Reality",
     "beforeLabel": "Before",
     "afterLabel": "After",
     "prevProject": "Previous project",
