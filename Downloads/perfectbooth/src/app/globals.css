@@ -6657,9 +6657,6 @@ html {
   flex: 0 0 100%;
   min-width: 100%;
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .before-after-pair {
@@ -6685,7 +6682,7 @@ html {
   height: 350px;
   overflow: hidden;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(196, 151, 45, 0.55);
   background-color: var(--pb-surface-raised, #1a1a1a);
 }
 
@@ -6693,18 +6690,6 @@ html {
   .before-after-frame {
     height: 450px;
   }
-}
-
-/* Title */
-.before-after-title-wrapper {
-  padding: 0 0.5rem;
-  text-align: center;
-}
-
-.before-after-project-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--pb-text-primary, #ffffff);
 }
 
 /* Images */

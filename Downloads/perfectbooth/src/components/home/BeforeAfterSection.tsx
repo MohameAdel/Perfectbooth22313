@@ -89,9 +89,6 @@ export default function BeforeAfterSection() {
                 beforeAlt={t(project.beforeAltKey)}
                 afterAlt={t(project.afterAltKey)}
               />
-              <div className="before-after-title-wrapper">
-                <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
-              </div>
             </div>
           ))}
         </div>
