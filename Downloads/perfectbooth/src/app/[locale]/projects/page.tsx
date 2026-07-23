@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { projectsGallery } from '@/data/projects';
+import ProjectSlider from '@/components/ui/ProjectSlider';
 
 export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -14,6 +15,18 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
   // Separate featured from the rest
   const featuredProject = projectsGallery.find(p => p.featured);
   const galleryProjects = projectsGallery.filter(p => !p.featured);
+
+  // Group gallery projects by titleKey
+  const projectGroups: Record<string, typeof galleryProjects> = {};
+  galleryProjects.forEach(p => {
+    if (!projectGroups[p.titleKey]) {
+      projectGroups[p.titleKey] = [];
+    }
+    projectGroups[p.titleKey].push(p);
+  });
+
+  const multiImageProjectsGroups = Object.values(projectGroups).filter(group => group.length > 1);
+  const singleImageProjects = Object.values(projectGroups).filter(group => group.length === 1).map(group => group[0]);
 
   return (
     <main className="projects-page-wrapper" dir={dir}>
@@ -66,12 +79,25 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
         </section>
       )}
 
-      {/* 3. Project Gallery */}
-      <section className="projects-gallery-section">
+      {/* 3. Multi-image Project Sliders */}
+      <section className="projects-sliders-section" style={{ padding: '4rem 5%', maxWidth: '1400px', margin: '0 auto' }}>
+        {multiImageProjectsGroups.map((group, index) => (
+          <div key={`slider-group-${index}`} className="reveal-animate" style={{ animationDelay: `${0.1 * index}s` }}>
+            <ProjectSlider 
+              titleKey={group[0].titleKey} 
+              categoryKey={group[0].categoryKey} 
+              images={group} 
+            />
+          </div>
+        ))}
+      </section>
+
+      {/* 4. Single-image Project Gallery */}
+      <section className="projects-gallery-section" style={{ paddingTop: '2rem' }}>
         <div className="projects-gallery-grid">
-          {galleryProjects.map((project, index) => {
-            // Index offset by 2 because 01 is the featured project
-            const displayIndex = (index + 2).toString().padStart(2, '0');
+          {singleImageProjects.map((project, index) => {
+            // Index offset by multiImageProjectsGroups.length + featured to keep numbers going
+            const displayIndex = (index + multiImageProjectsGroups.length + (featuredProject ? 1 : 0) + 1).toString().padStart(2, '0');
             return (
               <div 
                 key={project.id} 
