@@ -5867,16 +5867,28 @@ html {
   .services-vp-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .services-vp-item {
-    border-inline-end: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
   .services-vp-item:nth-child(2) {
     border-inline-end: none;
   }
   .services-vp-item:nth-child(3) {
-    grid-column: span 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-vp-container {
+    grid-template-columns: 1fr;
+  }
+  .services-vp-item {
     border-inline-end: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .services-vp-item:nth-child(3) {
+    border-top: none;
+    grid-column: 1 / -1;
+  }
+  .services-vp-item:last-child {
     border-bottom: none;
   }
 }
