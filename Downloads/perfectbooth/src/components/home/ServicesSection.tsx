@@ -9,8 +9,7 @@ export default function ServicesSection() {
   const services = [
     { key: 'tents', image: 'https://admin.perfectbooth-events.com/storage/services/images/fVoSlHLlnIqOMCs6IWYAKHabGZ2fmhAu2gWtigdE.jpg' },
     { key: 'booths', image: 'https://admin.perfectbooth-events.com/storage/services/images/rSnPkmMGit7HfXkPcGTPZ8bVdYdFwJnOF2UkiQbt.jpg' },
-    { key: 'printing', image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg' },
-    { key: 'audio', image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/RsSpXrV3I3WLKRHtxPITuoYKkFuWshOWKsiaplDR.jpg' }
+    { key: 'printing', image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg' }
   ];
 
   return (
@@ -24,18 +23,6 @@ export default function ServicesSection() {
               <path d="M0,10 Q10,0 20,10 T40,10 T60,10 T80,10 T100,10" fill="none" stroke="var(--pb-primary)" strokeWidth="2"/>
             </svg>
           </div>
-        </div>
-        <div className="services-arrows">
-          <button className="portfolio-nav-btn prev" aria-label="Previous Service">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-          <button className="portfolio-nav-btn next" aria-label="Next Service">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
         </div>
       </div>
 

@@ -101,6 +101,22 @@ export default function BeforeAfterSection() {
             <h2 className="portfolio-title">{t('title')}</h2>
             <p className="before-after-desc">{t('description')}</p>
           </div>
+        </div>
+
+        <div 
+          className="before-after-controls-row" 
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}
+          onMouseEnter={stopAutoplay} 
+          onMouseLeave={startAutoplay}
+        >
+          <div className="case-study-header" style={{ marginBottom: 0, textAlign: dir === 'rtl' ? 'right' : 'left', alignItems: dir === 'rtl' ? 'flex-end' : 'flex-start' }}>
+            <span className="case-study-caption">{t('caseStudyLabel')}</span>
+            <h3 className="before-after-project-title">{t(beforeAfterProjects[activeIndex].titleKey)}</h3>
+            {beforeAfterProjects[activeIndex].categoryKey && (
+              <p className="case-study-subtitle">{t(beforeAfterProjects[activeIndex].categoryKey as Parameters<typeof t>[0])}</p>
+            )}
+          </div>
+
           <div className="portfolio-actions before-after-actions">
             <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,14 +154,6 @@ export default function BeforeAfterSection() {
           {beforeAfterProjects.map((project, index) => (
             <div key={project.id} className={`before-after-slide ${activeIndex === index ? 'is-active' : ''}`}>
               <div className="case-study-box">
-                <div className="case-study-header">
-                  <span className="case-study-caption">{t('caseStudyLabel')}</span>
-                  <h3 className="before-after-project-title">{t(project.titleKey)}</h3>
-                  {project.categoryKey && (
-                    <p className="case-study-subtitle">{t(project.categoryKey as Parameters<typeof t>[0])}</p>
-                  )}
-                  <div className="case-study-divider"></div>
-                </div>
                 <BeforeAfterPair 
                   beforeImage={project.beforeImage}
                   afterImage={project.afterImage}
