@@ -126,6 +126,32 @@ export const projectsGallery: ProjectGalleryItem[] = [
     image: `${BLOB_BASE_URL}/IMG_7416.jpg.webp`,
     altKey: 'genericAlt15',
     categoryKey: 'categoryCustomSpace',
-    shape: 'square',
+  },
+  {
+    id: 'proj-16',
+    titleKey: 'genericTitle1',
+    image: `${BLOB_BASE_URL}/IMG_7418.jpg.webp`,
+    altKey: 'genericAlt1',
+    categoryKey: 'categoryExhibition',
+  },
+  {
+    id: 'proj-17',
+    titleKey: 'genericTitle2',
+    image: `${BLOB_BASE_URL}/IMG_7420.jpg.webp`,
+    altKey: 'genericAlt2',
+    categoryKey: 'categoryBrandEnvironment',
+  },
+  {
+    id: 'proj-18',
+    titleKey: 'genericTitle3',
+    image: `${BLOB_BASE_URL}/IMG_7426.jpg.webp`,
+    altKey: 'genericAlt3',
+    categoryKey: 'categoryCustomSpace',
+  },
+  {
+    id: 'proj-19',
+    titleKey: 'genericTitle4',
+    image: `${BLOB_BASE_URL}/IMG_7427.jpg.webp`,
+    altKey: 'genericAlt4',
   }
 ];
