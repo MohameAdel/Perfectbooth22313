@@ -6825,7 +6825,24 @@ html {
 }
 
 /* Premium Badges */
-.before-after-badge {\n  position: absolute;\n  top: 1.5rem;\n  inset-inline-start: 1.5rem;\n  padding: 8px 24px;\n  background-color: rgba(196, 151, 45, 0.9);\n  color: #fff;\n  font-size: 1.1rem;\n  font-weight: 700;\n  border-radius: 30px;\n  border: 2px solid rgba(255, 255, 255, 0.8);\n  pointer-events: none;\n  z-index: 5;\n  text-transform: uppercase;\n  letter-spacing: 1.5px;\n  backdrop-filter: blur(4px);\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n}
+.before-after-badge {
+  position: absolute;
+  top: 1.5rem;
+  inset-inline-start: 1.5rem;
+  padding: 8px 24px;
+  background-color: rgba(196, 151, 45, 0.9);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 5;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
 
 /* Navigation & Counter */
 .before-after-actions {
