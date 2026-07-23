@@ -451,6 +451,12 @@
     "genericAlt12": "Corporate exhibition space design",
     "genericAlt13": "Exhibition booth design project",
     "genericAlt14": "Custom exhibition space execution",
-    "genericAlt15": "Brand environment implementation"
+    "genericAlt15": "Brand environment implementation",
+    "brandTesla": "Tesla Event Booth",
+    "brandAUO": "AUO Exhibition Space",
+    "brandUmbrella": "Umbrella Installation",
+    "brandInnovo": "Innovo Brand Pavilion",
+    "featuredProjectLabel": "Featured Project",
+    "exploreProject": "Explore Project"
   }
 }

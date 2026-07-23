@@ -451,6 +451,12 @@
     "genericAlt12": "تصميم مساحة عرض للشركات",
     "genericAlt13": "مشروع تصميم جناح معرض",
     "genericAlt14": "تنفيذ مساحة عرض مخصصة",
-    "genericAlt15": "إنشاء بيئة علامة تجارية"
+    "genericAlt15": "إنشاء بيئة علامة تجارية",
+    "brandTesla": "جناح معرض تسلا",
+    "brandAUO": "مساحة عرض AUO",
+    "brandUmbrella": "منصة Umbrella",
+    "brandInnovo": "جناح Innovo",
+    "featuredProjectLabel": "مشروع مميز",
+    "exploreProject": "اكتشف المشروع"
   }
 }
