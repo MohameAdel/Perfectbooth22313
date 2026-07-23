@@ -1267,7 +1267,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 3rem;
+  margin-bottom: 20px;
   padding-inline-end: 5%;
 }
 
@@ -1458,7 +1458,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 3rem;
+  margin-bottom: 20px;
   padding-inline-end: 5%;
 }
 

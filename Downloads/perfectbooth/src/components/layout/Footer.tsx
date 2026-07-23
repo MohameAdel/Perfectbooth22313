@@ -80,7 +80,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@perfectbooth-events.com" className="footer-link">
+                <a href="mailto:info@perfectbooth-events.com" className="footer-link" style={{ whiteSpace: 'nowrap' }}>
                   <i className="fa-solid fa-envelope" style={{ marginInlineEnd: '8px' }}></i> info@perfectbooth-events.com
                 </a>
               </li>
