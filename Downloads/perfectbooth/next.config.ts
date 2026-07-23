@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'admin.perfectbooth-events.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'vqknbbjrosel3hr8.public.blob.vercel-storage.com',
+        pathname: '/photos/image-work-home-badge/**',
+      },
     ],
   },
 };

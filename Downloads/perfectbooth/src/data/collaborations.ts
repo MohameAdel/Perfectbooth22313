@@ -32,3 +32,66 @@ export const selectedProjects = [
     image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg',
   }
 ];
+
+export interface BeforeAfterProject {
+  id: number;
+  titleKey: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeAltKey: string;
+  afterAltKey: string;
+}
+
+export const beforeAfterProjects: BeforeAfterProject[] = [
+  {
+    id: 1,
+    titleKey: 'project1Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/DCA12578-A18E-49BD-9AAA-8B21365A6C72.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/12173EA7-1190-4F52-BBFF-1E7D8D922C67.webp',
+    beforeAltKey: 'project1BeforeAlt',
+    afterAltKey: 'project1AfterAlt',
+  },
+  {
+    id: 2,
+    titleKey: 'project2Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/736AEA72-FDA2-4D45-86D0-324186382647.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/6DAF203B-C090-43C7-A637-C9065D2A3846.webp',
+    beforeAltKey: 'project2BeforeAlt',
+    afterAltKey: 'project2AfterAlt',
+  },
+  {
+    id: 3,
+    titleKey: 'project3Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7396.jpg.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7397.jpg.webp',
+    beforeAltKey: 'project3BeforeAlt',
+    afterAltKey: 'project3AfterAlt',
+  },
+  {
+    id: 4,
+    titleKey: 'project4Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7404.jpg.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7406.jpg.webp',
+    beforeAltKey: 'project4BeforeAlt',
+    afterAltKey: 'project4AfterAlt',
+  },
+  {
+    id: 5,
+    titleKey: 'project5Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7427.jpg.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7418.jpg.webp',
+    beforeAltKey: 'project5BeforeAlt',
+    afterAltKey: 'project5AfterAlt',
+  }
+];
+
+// Unmatched images (TODO: Verify visually before using)
+// - 8190832C-15D1-41AB-9EAE-3F926F0D6410.webp
+// - 8A703CDC-F978-4210-B2F5-8BDBA890A8BC.webp
+// - E1DB6987-9B3B-4B83-9568-D4A294FB11F6.webp
+// - IMG_7395.jpg.webp
+// - IMG_7398.jpg.webp
+// - IMG_7401.jpg.webp
+// - IMG_7416.jpg.webp
+// - IMG_7420.jpg.webp
+// - IMG_7426.jpg.webp

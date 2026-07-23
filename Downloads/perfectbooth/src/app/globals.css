@@ -6644,3 +6644,132 @@ html {
   }
 }
 
+/* ==========================================================================
+   BEFORE & AFTER SECTION
+   ========================================================================== */
+
+.before-after-section {
+  padding-top: 5rem; /* Additional padding if needed */
+}
+
+/* Base comparison container */
+.before-after-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  border-radius: var(--pb-radius);
+}
+
+.before-after-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* By default images are centered/covered */
+.before-after-image {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Labels */
+.before-after-label {
+  position: absolute;
+  top: 20px;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.label-before {
+  inset-inline-start: 20px;
+}
+
+.label-after {
+  inset-inline-end: 20px;
+}
+
+/* The vertical divider line */
+.before-after-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #fff;
+  z-index: 10;
+  pointer-events: none;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* The draggable handle */
+.before-after-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.before-after-container:hover .before-after-handle {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Invisible range input for accessibility and dragging */
+.before-after-slider-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 20;
+  appearance: none;
+  background: transparent;
+}
+
+.before-after-slider-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 44px;
+  height: 100vh; /* Large height so it is easily draggable across the vertical span */
+  background: transparent;
+  cursor: ew-resize;
+}
+
+.before-after-slider-input::-moz-range-thumb {
+  width: 44px;
+  height: 100vh;
+  background: transparent;
+  cursor: ew-resize;
+  border: none;
+}
+
+/* Focus visibility for accessibility */
+.before-after-slider-input:focus-visible ~ .before-after-divider .before-after-handle {
+  outline: 3px solid var(--pb-accent, #c58f2d);
+  outline-offset: 2px;
+}

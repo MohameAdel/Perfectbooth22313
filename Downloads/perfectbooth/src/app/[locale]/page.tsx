@@ -8,6 +8,7 @@ import WhyPerfectBoothSection from '@/components/home/WhyPerfectBoothSection';
 import FaqSection from '@/components/home/FaqSection';
 
 const SelectedProjectsSection = dynamic(() => import('@/components/home/SelectedProjectsSection'));
+const BeforeAfterSection = dynamic(() => import('@/components/home/BeforeAfterSection'));
 const PartnersSection = dynamic(() => import('@/components/home/PartnersSection'));
 
 export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
@@ -22,6 +23,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <SolutionsSection />
       <WhyPerfectBoothSection />
       <SelectedProjectsSection />
+      <BeforeAfterSection />
       <FaqSection />
       <PartnersSection />
     </main>

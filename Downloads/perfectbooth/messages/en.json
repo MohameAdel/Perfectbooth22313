@@ -13,7 +13,7 @@
   "Hero": {
     "title": "Your #1 Trusted Exhibition Partner in Egypt",
     "description": "From 3D Design to Flawless Execution — Trusted by Tesla, Huawei, Lenovo & Leading Global Brands",
-    "cta": "Explore Our Work",
+    "cta": "Book Your Consultation",
     "eyebrow": "Exhibition Design & Execution"
   },
   "About": {
@@ -391,5 +391,30 @@
       "primary": "Book a Consultation",
       "secondary": "View Our Work"
     }
+  },
+  "BeforeAfter": {
+    "eyebrow": "PROJECT TRANSFORMATIONS",
+    "title": "Before & After",
+    "description": "Explore each project from its initial stage to the completed result.",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "prevProject": "Previous project",
+    "nextProject": "Next project",
+    "sliderAriaLabel": "Drag the slider to compare before and after stages",
+    "project1Title": "Exhibition Booth",
+    "project1BeforeAlt": "Exhibition booth concept before execution",
+    "project1AfterAlt": "Completed exhibition booth after execution",
+    "project2Title": "Architectural Booth Concept",
+    "project2BeforeAlt": "Exhibition booth concept before execution",
+    "project2AfterAlt": "Completed exhibition booth after execution",
+    "project3Title": "Tesla Event Booth",
+    "project3BeforeAlt": "Exhibition booth during the construction stage",
+    "project3AfterAlt": "Completed exhibition booth ready for the event",
+    "project4Title": "Custom Exhibition Environment",
+    "project4BeforeAlt": "Exhibition booth concept before execution",
+    "project4AfterAlt": "Completed exhibition booth after execution",
+    "project5Title": "Exhibition Space",
+    "project5BeforeAlt": "Exhibition booth concept before execution",
+    "project5AfterAlt": "Completed exhibition booth after execution"
   }
 }
