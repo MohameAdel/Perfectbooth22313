@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface BeforeAfterPairProps {
   beforeImage: string;
@@ -18,6 +17,7 @@ export default function BeforeAfterPair({
   className = '',
 }: BeforeAfterPairProps) {
   const t = useTranslations('BeforeAfter');
+  const locale = useLocale();
 
   return (
     <div className={`before-after-pair ${className}`}>
@@ -35,12 +35,15 @@ export default function BeforeAfterPair({
           />
         </div>
 
-        {/* Unified Center Divider & Concept Marker */}
+        {/* Unified Center Divider & Arrow Marker */}
         <div className="center-divider">
           <div className="center-divider-line"></div>
-          <div className="center-divider-badge">
-            <span className="center-divider-text">{t('conceptToReality')}</span>
+          <div className="center-divider-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d={locale === 'ar' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
+          <div className="center-divider-line"></div>
         </div>
 
         {/* After Image Frame */}
