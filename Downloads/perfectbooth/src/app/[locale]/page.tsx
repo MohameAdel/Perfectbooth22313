@@ -4,7 +4,7 @@ import HomeHero from '@/components/home/HomeHero';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import SolutionsSection from '@/components/home/SolutionsSection';
-import WhyPerfectBoothSection from '@/components/home/WhyPerfectBoothSection';
+import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import FaqSection from '@/components/home/FaqSection';
 
 const SelectedProjectsSection = dynamic(() => import('@/components/home/SelectedProjectsSection'));
@@ -21,7 +21,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <AboutSection />
       <ServicesSection />
       <SolutionsSection />
-      <WhyPerfectBoothSection />
+      <WhyChooseUsSection />
       <SelectedProjectsSection />
       <BeforeAfterSection />
       <FaqSection />
