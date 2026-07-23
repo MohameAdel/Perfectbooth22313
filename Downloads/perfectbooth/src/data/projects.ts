@@ -30,7 +30,7 @@ export const projectsGallery: ProjectGalleryItem[] = [
   {
     id: 'proj-4-1',
     titleKey: 'brandTesla',
-    image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/mD8Tohj79e6SDRkK3NfXJgH1OesvYhV8Z8sXmXQO.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp',
     altKey: 'genericAlt4',
     categoryKey: 'categoryBrandEnvironment',
     shape: 'wide',
@@ -38,7 +38,7 @@ export const projectsGallery: ProjectGalleryItem[] = [
   {
     id: 'proj-4-2',
     titleKey: 'brandTesla',
-    image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/yE5wS5f73kC8E2p1zPqgNlVbXhZpW1dM0JmS3T2F.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp',
     altKey: 'genericAlt4',
     categoryKey: 'categoryBrandEnvironment',
     shape: 'wide',
