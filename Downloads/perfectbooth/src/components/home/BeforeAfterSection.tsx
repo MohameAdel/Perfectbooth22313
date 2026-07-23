@@ -67,6 +67,27 @@ export default function BeforeAfterSection() {
     }
   }, [dir]);
 
+  // Autoplay Logic
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+
+  const stopAutoplay = useCallback(() => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+  }, []);
+
+  const startAutoplay = useCallback(() => {
+    stopAutoplay();
+    autoplayRef.current = setInterval(() => {
+      scrollNext();
+    }, 4000); // 4 seconds delay
+  }, [scrollNext, stopAutoplay]);
+
+  React.useEffect(() => {
+    startAutoplay();
+    return stopAutoplay;
+  }, [startAutoplay, stopAutoplay]);
+
   return (
     <section 
       id="before-after-projects"
@@ -74,7 +95,7 @@ export default function BeforeAfterSection() {
       dir={dir}
     >
       <div className="portfolio-container">
-        <div className="portfolio-header">
+        <div className="portfolio-header" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
           <div>
             <p className="portfolio-eyebrow tracking-widest">{t('eyebrow')}</p>
             <h2 className="portfolio-title">{t('title')}</h2>
@@ -105,7 +126,15 @@ export default function BeforeAfterSection() {
           </div>
         </div>
 
-        <div className="portfolio-track" ref={trackRef} onScroll={handleScroll}>
+        <div 
+          className="portfolio-track" 
+          ref={trackRef} 
+          onScroll={handleScroll}
+          onMouseEnter={stopAutoplay}
+          onMouseLeave={startAutoplay}
+          onTouchStart={stopAutoplay}
+          onTouchEnd={startAutoplay}
+        >
           {beforeAfterProjects.map((project, index) => (
             <div key={project.id} className={`before-after-slide ${activeIndex === index ? 'is-active' : ''}`}>
               <div className="case-study-box">
