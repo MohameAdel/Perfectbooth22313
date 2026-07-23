@@ -1,10 +1,13 @@
-import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { projectsGallery } from '@/data/projects';
 
-export default function ProjectsPage({ params: { locale } }: { params: { locale: string } }) {
-  const t = useTranslations('Projects');
+export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('Projects');
   const isAr = locale === 'ar';
   const dir = isAr ? 'rtl' : 'ltr';
 
@@ -118,7 +121,8 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
   );
 }
 
-export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const isAr = locale === 'ar';
   
   return {
