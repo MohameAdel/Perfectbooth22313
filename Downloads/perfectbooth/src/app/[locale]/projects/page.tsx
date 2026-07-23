@@ -5,7 +5,8 @@ import { projectsGallery } from '@/data/projects';
 
 export default function ProjectsPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations('Projects');
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  const isAr = locale === 'ar';
+  const dir = isAr ? 'rtl' : 'ltr';
 
   // Separate featured from the rest
   const featuredProject = projectsGallery.find(p => p.featured);
@@ -108,7 +109,7 @@ export default function ProjectsPage({ params: { locale } }: { params: { locale:
           <div className="projects-cta-actions">
             <Link href="/contact" className="pb-btn-primary projects-cta-btn">
               {t('ctaAction')} 
-              <span className="cta-arrow" dir="ltr">→</span>
+              <span className="cta-arrow">{isAr ? '←' : '→'}</span>
             </Link>
           </div>
         </div>
