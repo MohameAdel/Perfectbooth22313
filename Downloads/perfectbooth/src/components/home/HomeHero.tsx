@@ -12,7 +12,7 @@ export default function HomeHero() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slidesCount = 2;
+  const slidesCount = 3;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,16 +52,16 @@ export default function HomeHero() {
       <div 
         style={{ 
           display: 'flex', 
-          width: '200%', 
+          width: '300%', 
           flexShrink: 0,
           alignItems: 'stretch',
           minHeight: 'clamp(560px, 38vw, 700px)',
-          transform: `translateX(${dir === 'rtl' ? currentSlide * 50 : -currentSlide * 50}%)`, 
+          transform: `translateX(${dir === 'rtl' ? currentSlide * (100 / 3) : -currentSlide * (100 / 3)}%)`, 
           transition: 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' 
         }}
       >
         {/* SLIDE 1: Original Hero */}
-        <div className="pb-hero-1-container" style={{ flex: '0 0 50%', width: '50%', height: '100%', position: 'relative', display: 'flex' }}>
+        <div className="pb-hero-1-container" style={{ flex: '0 0 33.333333%', width: '33.333333%', height: '100%', position: 'relative', display: 'flex' }}>
           <div className="pb-hero-1-content">
             <div className="pb-hero-1-inner" dir={dir}>
               <div className="pb-hero-1-eyebrow animate-slide-in-fix">
@@ -99,7 +99,7 @@ export default function HomeHero() {
         </div>
 
         {/* SLIDE 2: Before/After Card */}
-        <div style={{ flex: '0 0 50%', width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5%' }}>
+        <div style={{ flex: '0 0 33.333333%', width: '33.333333%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5%' }}>
           <div className="case-study-box" style={{ width: '100%', maxWidth: '1400px' }}>
             <BeforeAfterPair 
               beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp"
@@ -110,6 +110,17 @@ export default function HomeHero() {
           </div>
         </div>
 
+        {/* SLIDE 3: Before/After Card (Duplicate) */}
+        <div style={{ flex: '0 0 33.333333%', width: '33.333333%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5%' }}>
+          <div className="case-study-box" style={{ width: '100%', maxWidth: '1400px' }}>
+            <BeforeAfterPair 
+              beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp"
+              afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp"
+              beforeAlt="التصميم"
+              afterAlt="الحقيقة"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
