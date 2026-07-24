@@ -57,10 +57,10 @@ export default function WhyChooseUsSection() {
   return (
     <section className="why-choose-us-section" dir={dir}>
       <div className="why-choose-us-container">
-        <div className="why-choose-us-header" style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }}>
+        <div className="why-choose-us-header" style={{ textAlign: 'center' }}>
           <p className="why-choose-us-eyebrow">{t('eyebrow')}</p>
           <h2 className="why-choose-us-title">{t('title')}</h2>
-          <div className="why-choose-us-wavy" style={{ margin: dir === 'rtl' ? '0 0 0 auto' : '0' }}>
+          <div className="why-choose-us-wavy" style={{ margin: '0 auto' }}>
             <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 6C3.96 6 6.04 1 10 1C13.96 1 16.04 11 20 11C23.96 11 26.04 1 30 1C33.96 1 36.04 11 40 11C43.96 11 46.04 1 50 1C53.96 1 56.04 6 60 6" stroke="#C4972D" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
