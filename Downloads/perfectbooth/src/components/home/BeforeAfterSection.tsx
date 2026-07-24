@@ -105,11 +105,10 @@ export default function BeforeAfterSection() {
 
         <div 
           className="before-after-controls-row" 
-          style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem', minHeight: '80px', padding: '0 5%' }}
           onMouseEnter={stopAutoplay} 
           onMouseLeave={startAutoplay}
         >
-          <div className="case-study-header" style={{ marginBottom: 0, textAlign: 'center', alignItems: 'center' }}>
+          <div className="case-study-header">
             <span className="case-study-caption">{t('caseStudyLabel')}</span>
             <h3 className="before-after-project-title">{t(beforeAfterProjects[activeIndex].titleKey)}</h3>
             {beforeAfterProjects[activeIndex].categoryKey && (
@@ -117,15 +116,7 @@ export default function BeforeAfterSection() {
             )}
           </div>
 
-          <div 
-            className="portfolio-actions before-after-actions" 
-            style={{ 
-              position: 'absolute', 
-              [dir === 'rtl' ? 'left' : 'right']: '5%', 
-              transform: 'scale(0.85)',
-              transformOrigin: dir === 'rtl' ? 'left center' : 'right center'
-            }}
-          >
+          <div className="portfolio-actions before-after-actions">
             <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
