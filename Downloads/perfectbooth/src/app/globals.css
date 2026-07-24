@@ -7508,6 +7508,8 @@ html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
   }
 }
 
+
+
 .why-choose-us-section::before {
   content: '';
   position: absolute;
@@ -7516,7 +7518,7 @@ html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
   right: 0;
   bottom: 0;
   background-image: url('https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/map.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.15;
