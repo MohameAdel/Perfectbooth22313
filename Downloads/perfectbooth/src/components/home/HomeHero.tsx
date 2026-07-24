@@ -52,7 +52,6 @@ export default function HomeHero() {
         style={{ 
           display: 'flex', 
           width: '200%', 
-          flex: 1,
           flexShrink: 0,
           alignItems: 'stretch',
           minHeight: 'clamp(560px, 38vw, 700px)',
