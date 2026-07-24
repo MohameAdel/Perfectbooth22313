@@ -6,7 +6,6 @@ export default function SolutionsSection() {
   const cards = [
     { key: 'planning', icon: 'fa-clipboard-list' },
     { key: 'evaluation', icon: 'fa-chart-pie' },
-    { key: 'coordination', icon: 'fa-handshake' },
     { key: 'marketing', icon: 'fa-bullhorn' },
     { key: 'networking', icon: 'fa-users' },
     { key: 'innovation', icon: 'fa-lightbulb' }
