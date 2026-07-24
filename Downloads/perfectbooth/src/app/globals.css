@@ -155,6 +155,8 @@ a {
   transition: width 0.3s ease;
 }
 
+
+
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
@@ -7332,20 +7334,7 @@ html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
 }
 
 /* World map dotted background pattern */
-.why-choose-us-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 16px 16px;
-  background-position: center;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 1;
-}
+
 
 .why-choose-us-section::after {
   content: '';
@@ -7517,4 +7506,20 @@ html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
   .why-choose-us-title {
     font-size: 1.8rem;
   }
+}
+
+.why-choose-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/map.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
 }
