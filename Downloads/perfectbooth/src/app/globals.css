@@ -2829,7 +2829,8 @@ a {
 
 /* --- Left Content Panel --- */
 .pb-hero-1-content {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
+  width: 40% !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2978,7 +2979,8 @@ a {
 
 /* --- Image Panel --- */
 .pb-hero-1-image {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
+  width: 60% !important;
   background-color: #030405; /* Deep dark background */
   position: relative;
   display: flex;
