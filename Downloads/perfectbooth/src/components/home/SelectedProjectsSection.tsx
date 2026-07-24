@@ -120,9 +120,6 @@ export default function SelectedProjectsSection() {
                   sizes="(max-width: 768px) 85vw, 60vw"
                   className="portfolio-img" 
                 />
-                <div className="portfolio-overlay">
-                  <h3 className="portfolio-item-title">{project.title}</h3>
-                </div>
               </div>
             </div>
           ))}
