@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import BeforeAfterPair from '@/components/ui/BeforeAfterPair';
 
 export default function HomeHero() {
   const t = useTranslations('Hero');
@@ -98,16 +99,14 @@ export default function HomeHero() {
         </div>
 
         {/* SLIDE 2: Before/After Card */}
-        <div style={{ flex: '0 0 50%', width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '5%', position: 'relative' }}>
-          <div style={{ width: '100%', maxWidth: '1400px', height: '80%', display: 'flex', gap: '20px', flexDirection: 'row' }}>
-            <div style={{ flex: 1, position: 'relative', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
-              <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '8px 25px', borderRadius: '30px', fontSize: '1.2rem', fontWeight: 'bold' }}>الحقيقة</span>
-              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp" fill style={{ objectFit: 'cover' }} alt="After" sizes="(max-width: 768px) 100vw, 50vw" />
-            </div>
-            <div style={{ flex: 1, position: 'relative', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
-              <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '8px 25px', borderRadius: '30px', fontSize: '1.2rem', fontWeight: 'bold' }}>التصميم</span>
-              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp" fill style={{ objectFit: 'cover' }} alt="Before" sizes="(max-width: 768px) 100vw, 50vw" />
-            </div>
+        <div style={{ flex: '0 0 50%', width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5%' }}>
+          <div className="case-study-box" style={{ width: '100%', maxWidth: '1400px' }}>
+            <BeforeAfterPair 
+              beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp"
+              afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp"
+              beforeAlt="التصميم"
+              afterAlt="الحقيقة"
+            />
           </div>
         </div>
 
