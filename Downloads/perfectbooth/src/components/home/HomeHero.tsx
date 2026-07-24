@@ -1,11 +1,27 @@
+"use client";
+
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function HomeHero() {
   const t = useTranslations('Hero');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesCount = 2;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slidesCount);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesCount);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesCount) % slidesCount);
 
   return (
     <section className="pb-hero-1-section">
@@ -40,39 +56,61 @@ export default function HomeHero() {
             {/* Slider Controls Inside Content Panel */}
             <div className="pb-hero-1-controls animate-slide-in-fix" style={{ animationDelay: '0.4s' }}>
               <div className="pb-hero-1-arrows">
-                <button aria-label="Previous slide">
+                <button aria-label="Previous slide" onClick={prevSlide}>
                   {dir === 'rtl' ? '→' : '←'}
                 </button>
-                <button aria-label="Next slide">
+                <button aria-label="Next slide" onClick={nextSlide}>
                   {dir === 'rtl' ? '←' : '→'}
                 </button>
               </div>
               <div className="pb-hero-1-progress">
-                <div className="pb-hero-1-fill"></div>
+                <div className="pb-hero-1-fill" style={{ width: `${((currentSlide + 1) / slidesCount) * 100}%`, transition: 'width 0.3s ease' }}></div>
               </div>
               <div className="pb-hero-1-index">
-                <span>01</span>
-                <span className="pb-hero-1-total">/ 03</span>
+                <span>{String(currentSlide + 1).padStart(2, '0')}</span>
+                <span className="pb-hero-1-total">/ {String(slidesCount).padStart(2, '0')}</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Image Panel (Right/End) */}
-        <div className="pb-hero-1-image" style={{ display: 'block', width: '100%', height: '100%' }}>
-          <Image
-            src="/assets/banner2.png"
-            alt={t('title')}
-            width={1920}
-            height={1080}
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+        <div className="pb-hero-1-image" style={{ display: 'block', width: '100%', height: '100%', overflow: 'hidden' }}>
+          <div 
             style={{ 
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
+              display: 'flex', 
+              width: '200%', 
+              height: '100%',
+              transform: `translateX(${dir === 'rtl' ? currentSlide * 50 : -currentSlide * 50}%)`, 
+              transition: 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' 
             }}
-          />
+          >
+            {/* Slide 1 */}
+            <div style={{ width: '50%', height: '100%', position: 'relative' }}>
+              <Image
+                src="/assets/banner2.png"
+                alt={t('title')}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+            
+            {/* Slide 2: Before/After Component layout */}
+            <div style={{ width: '50%', height: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10%' }}>
+              <div style={{ width: '100%', height: '85%', display: 'flex', gap: '15px' }}>
+                <div style={{ flex: 1, position: 'relative', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
+                  <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '6px 20px', borderRadius: '30px', fontSize: '1rem', fontWeight: 'bold' }}>الحقيقة</span>
+                  <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp" fill style={{ objectFit: 'cover' }} alt="After" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+                <div style={{ flex: 1, position: 'relative', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
+                  <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '6px 20px', borderRadius: '30px', fontSize: '1rem', fontWeight: 'bold' }}>التصميم</span>
+                  <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp" fill style={{ objectFit: 'cover' }} alt="Before" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
