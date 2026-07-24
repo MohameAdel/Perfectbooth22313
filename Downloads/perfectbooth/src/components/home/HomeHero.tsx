@@ -50,11 +50,12 @@ export default function HomeHero() {
 
       <div 
         style={{ 
+          position: 'absolute',
+          top: 0,
+          left: 0,
           display: 'flex', 
           width: '200%', 
           height: '100%',
-          flex: 1,
-          minHeight: '100%',
           transform: `translateX(${dir === 'rtl' ? currentSlide * 50 : -currentSlide * 50}%)`, 
           transition: 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' 
         }}
