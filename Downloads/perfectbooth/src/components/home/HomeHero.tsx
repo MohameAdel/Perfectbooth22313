@@ -53,6 +53,7 @@ export default function HomeHero() {
           display: 'flex', 
           width: '200%', 
           flex: 1,
+          flexShrink: 0,
           alignItems: 'stretch',
           minHeight: 'clamp(560px, 38vw, 700px)',
           transform: `translateX(${dir === 'rtl' ? currentSlide * 50 : -currentSlide * 50}%)`, 
@@ -102,11 +103,11 @@ export default function HomeHero() {
           <div style={{ width: '100%', maxWidth: '1400px', height: '80%', display: 'flex', gap: '20px', flexDirection: 'row' }}>
             <div style={{ flex: 1, position: 'relative', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
               <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '8px 25px', borderRadius: '30px', fontSize: '1.2rem', fontWeight: 'bold' }}>الحقيقة</span>
-              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp" fill style={{ objectFit: 'cover' }} alt="After" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp" fill style={{ objectFit: 'cover' }} alt="After" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <div style={{ flex: 1, position: 'relative', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
               <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '8px 25px', borderRadius: '30px', fontSize: '1.2rem', fontWeight: 'bold' }}>التصميم</span>
-              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp" fill style={{ objectFit: 'cover' }} alt="Before" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp" fill style={{ objectFit: 'cover' }} alt="Before" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
