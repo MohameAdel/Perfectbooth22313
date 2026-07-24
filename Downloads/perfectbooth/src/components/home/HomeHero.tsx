@@ -61,7 +61,7 @@ export default function HomeHero() {
         }}
       >
         {/* SLIDE 1: Original Hero */}
-        <div className="pb-hero-1-container" style={{ width: '50%', height: '100%', position: 'relative', display: 'flex' }}>
+        <div className="pb-hero-1-container" style={{ flex: '0 0 50%', width: '50%', height: '100%', position: 'relative', display: 'flex' }}>
           <div className="pb-hero-1-content">
             <div className="pb-hero-1-inner" dir={dir}>
               <div className="pb-hero-1-eyebrow animate-slide-in-fix">
@@ -99,7 +99,7 @@ export default function HomeHero() {
         </div>
 
         {/* SLIDE 2: Before/After Card */}
-        <div style={{ width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '5%', position: 'relative' }}>
+        <div style={{ flex: '0 0 50%', width: '50%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '5%', position: 'relative' }}>
           <div style={{ width: '100%', maxWidth: '1400px', height: '80%', display: 'flex', gap: '20px', flexDirection: 'row' }}>
             <div style={{ flex: 1, position: 'relative', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
               <span style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10, background: '#cfa856', color: 'white', padding: '8px 25px', borderRadius: '30px', fontSize: '1.2rem', fontWeight: 'bold' }}>الحقيقة</span>
