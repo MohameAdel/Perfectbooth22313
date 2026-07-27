@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://perfectbooth22313-yywa.vercel.app'),
   title: 'Perfect Booth - To organize conferences and exhibitions',
   description: 'Event solutions, exhibition booth manufacturing and logistics.',
 };

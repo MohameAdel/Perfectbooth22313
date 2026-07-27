@@ -5756,12 +5756,12 @@ html {
   animation-delay: 0.8s;
 }
 .services-hero-reveal {
-  opacity: 0;
+  opacity: 0.01;
   transform: translateY(24px);
   animation: servicesHeroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .services-hero-media-reveal {
-  opacity: 0;
+  opacity: 0.01;
   transform: scale(0.98) translateY(12px);
   animation: servicesHeroReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -6907,7 +6907,7 @@ html {
   }
 }
 .reveal-animate {
-  opacity: 0;
+  opacity: 0.01;
   animation: editorialReveal 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 

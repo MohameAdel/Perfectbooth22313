@@ -110,6 +110,7 @@ export default function HeroVideoController({ videoSrc }: HeroVideoControllerPro
         src={videoSrc}
         className="hero-video"
         poster="/assets/partners-hero-poster.webp"
+        autoPlay
         loop
         muted
         playsInline

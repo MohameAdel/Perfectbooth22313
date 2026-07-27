@@ -86,7 +86,8 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
             <ProjectSlider 
               titleKey={group[0].titleKey} 
               categoryKey={group[0].categoryKey} 
-              images={group} 
+              images={group}
+              priorityFirstImage={index === 0}
             />
           </div>
         ))}
