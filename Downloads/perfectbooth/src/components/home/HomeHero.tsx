@@ -95,7 +95,7 @@ export default function HomeHero() {
               </div>
             </div>
 
-            <div className="pb-hero-1-image" style={{ width: '100%', position: 'relative', minHeight: '300px' }}>
+            <div className="pb-hero-1-image" style={{ width: '100%', position: 'relative', minHeight: '200px' }}>
               <picture style={{ display: 'block', width: '100%', height: '100%' }}>
                 <source srcSet="/assets/banner2-mobile.webp" media="(max-width: 768px)" />
                 <img
