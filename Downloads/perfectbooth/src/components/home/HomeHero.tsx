@@ -16,7 +16,7 @@ export default function HomeHero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesCount);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
