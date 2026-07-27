@@ -93,43 +93,6 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
         ))}
       </section>
 
-      {/* 4. Single-image Project Gallery */}
-      <section className="projects-gallery-section" style={{ paddingTop: '2rem' }}>
-        <div className="projects-gallery-grid">
-          {singleImageProjects.map((project, index) => {
-            // Index offset by multiImageProjectsGroups.length + featured to keep numbers going
-            const displayIndex = (index + multiImageProjectsGroups.length + (featuredProject ? 1 : 0) + 1).toString().padStart(2, '0');
-            return (
-              <div 
-                key={project.id} 
-                className={`project-gallery-card project-shape-${project.shape || 'landscape'} reveal-animate`}
-                style={{ animationDelay: `${(index % 4) * 0.15 + 0.1}s` }}
-              >
-                <div className="project-gallery-image-wrapper">
-                  <Image
-                    src={project.image}
-                    alt={t(project.altKey as Parameters<typeof t>[0])}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="project-gallery-image"
-                  />
-                </div>
-                <div className="project-gallery-meta">
-                  <span className="project-gallery-index">{displayIndex}</span>
-                  <h3 className="project-gallery-title">{t(project.titleKey as Parameters<typeof t>[0])}</h3>
-                  {project.categoryKey && (
-                    <div className="project-gallery-category-wrapper">
-                      <div className="project-gallery-divider"></div>
-                      <span className="project-gallery-category">{t(project.categoryKey as Parameters<typeof t>[0])}</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
       {/* 4. Project CTA */}
       <section className="projects-cta-section reveal-animate" style={{ animationDelay: '0.2s' }}>
         <div className="projects-cta-container">
