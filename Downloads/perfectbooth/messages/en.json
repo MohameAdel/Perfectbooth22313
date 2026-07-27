@@ -295,60 +295,36 @@
     },
     "services": {
       "s01": {
-        "title": "Exhibition Booth Design",
-        "statement": "Turn your brief into a space people understand at a glance.",
-        "description": "We shape the spatial concept around your audience, objectives, and brand priorities. Layout, visual hierarchy, materials, lighting, and visitor movement are considered together so the booth feels distinctive, clear, and ready for meaningful conversations.",
-        "cap1": "Creative and spatial direction",
-        "cap2": "Layout and visitor-flow planning",
-        "cap3": "Material, lighting, and brand integration"
+        "title": "3D Exhibition Design",
+        "statement": "Developing an architectural vision that reflects your identity and maximizes space efficiency.",
+        "description": "",
+        "cap1": "Highly precise and innovative 3D architectural designs.",
+        "cap2": "Strategic space allocation to ease visitor flow and attract attention.",
+        "cap3": "Dedicated reception areas and private meeting rooms for privacy."
       },
       "s02": {
-        "title": "Custom Booth Manufacturing",
-        "statement": "Approved ideas, translated into precise built reality.",
-        "description": "We turn the approved design direction into durable, detail-led built work. Production decisions remain aligned with the visual concept so surfaces, edges, structures, and finishes support the intended brand experience.",
-        "cap1": "Production and fabrication planning",
-        "cap2": "Custom booth and display construction",
-        "cap3": "Finishing and quality review"
+        "title": "Custom Stand Fabrication",
+        "statement": "Professional custom manufacturing transforming designs into tangible reality with high craftsmanship.",
+        "description": "",
+        "cap1": "Advanced wood manufacturing techniques (MDF, natural veneer, premium finishes).",
+        "cap2": "Extreme precision in executing dimensions and details to the plans.",
+        "cap3": "Sturdy structural solutions ensuring safety and booth aesthetics."
       },
       "s03": {
-        "title": "Exhibition Execution",
-        "statement": "A clear execution plan that keeps every stage moving together.",
-        "description": "We coordinate the practical requirements that bring the approved concept to life. Production, logistics, venue considerations, installation planning, and final readiness remain connected to reduce friction and protect the intended finish.",
-        "cap1": "Execution and readiness planning",
-        "cap2": "Schedule and delivery coordination",
-        "cap3": "Final presentation control"
+        "title": "Technical & AV Setup",
+        "statement": "Integrating interactive and visual elements to create an engaging experience for visitors.",
+        "description": "",
+        "cap1": "Installing decorative and direct lighting systems to highlight products.",
+        "cap2": "Integrating professional screens and audio-visual equipment.",
+        "cap3": "Managing electrical installations to the highest safety standards."
       },
       "s04": {
-        "title": "Brand Activations",
-        "statement": "Create a branded environment that invites people to engage.",
-        "description": "We develop spatial activations that translate the brand message into a physical visitor experience. Every zone is shaped to support interaction, product presentation, communication, and a more memorable presence.",
-        "cap1": "Experience and activation concepts",
-        "cap2": "Product and communication zones",
-        "cap3": "Visitor journey planning"
-      },
-      "s05": {
-        "title": "Custom Wooden Structures",
-        "statement": "Bespoke architectural elements built around the needs of the space.",
-        "description": "We design and manufacture custom wooden structures for exhibition booths, branded displays, and spatial installations. Each element is developed to support the concept, the required function, and the visual quality of the finished environment.",
-        "cap1": "Bespoke wooden structures",
-        "cap2": "Custom display and presentation units",
-        "cap3": "Branded architectural elements"
-      },
-      "s06": {
-        "title": "Installation and On-Site Support",
-        "statement": "Careful installation, practical adjustments, and a confident handover.",
-        "description": "Our team manages installation, finishing checks, testing, and final adjustments at the venue. The goal is a composed, functional, and launch-ready environment before the first visitor arrives.",
-        "cap1": "On-site installation",
-        "cap2": "Finishing checks and adjustments",
-        "cap3": "Final readiness and handover support"
-      },
-      "s07": {
-        "title": "Exhibition Project Management",
-        "statement": "One connected coordination layer from scope to handover.",
-        "description": "We keep the project stages, stakeholders, priorities, and delivery requirements aligned. Clear coordination helps the design intent survive production realities and gives the client greater visibility throughout the project.",
-        "cap1": "Scope and timeline coordination",
-        "cap2": "Stakeholder and supplier alignment",
-        "cap3": "Progress, issue, and handover coordination"
+        "title": "On-site Management",
+        "statement": "Comprehensive management of transport, assembly, and operations to ensure client comfort.",
+        "description": "",
+        "cap1": "On-schedule shipping, transportation, and booth assembly.",
+        "cap2": "Technical support and on-site presence throughout the event.",
+        "cap3": "Booth dismantling and site restoration after the exhibition."
       }
     },
     "process": {

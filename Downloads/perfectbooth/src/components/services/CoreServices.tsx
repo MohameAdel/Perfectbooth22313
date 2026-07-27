@@ -23,11 +23,10 @@ export default function CoreServices() {
               delay={80}
             >
               <div className="core-service-content">
-                <div className="core-service-header">
-                  <span className="core-service-number">{number}</span>
-                  <div className="core-service-line"></div>
-                </div>
-                <h3 className="core-service-title">{t(`${service.id}.title`)}</h3>
+                <h3 className="core-service-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ color: 'var(--pb-accent)' }}>{number}.</span>
+                  <span>{t(`${service.id}.title`)}</span>
+                </h3>
                 <p className="core-service-statement">{t(`${service.id}.statement`)}</p>
                 <p className="core-service-description">{t(`${service.id}.description`)}</p>
                 <ul className="core-service-capabilities">
