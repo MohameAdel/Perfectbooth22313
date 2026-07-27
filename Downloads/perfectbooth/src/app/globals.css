@@ -7682,3 +7682,34 @@ html[dir="rtl"] .before-after-actions {
     padding-bottom: 100px !important; /* Safe area for controls on mobile */
   }
 }
+
+/* Hero Track and Banners 2/3 Mobile Normalization */
+@media (max-width: 768px) {
+  .pb-hero-1-track {
+    padding-block-start: 15px !important;
+    padding-block-end: 15px !important;
+    box-sizing: border-box;
+  }
+  .pb-hero-case-slide {
+    align-items: stretch !important;
+  }
+  .pb-hero-case-box {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .before-after-pair {
+    height: 100% !important;
+  }
+  .before-after-images-wrapper {
+    height: 100% !important;
+  }
+  .before-after-frame {
+    min-height: auto !important;
+    aspect-ratio: auto !important;
+    flex: 1;
+  }
+  .before-after-img {
+    object-fit: cover !important;
+  }
+}
