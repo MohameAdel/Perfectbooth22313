@@ -21,48 +21,14 @@ export default function SelectedCollaborations() {
           <div className="collaborations-divider"></div>
         </div>
 
-        {/* Projects Sequence (Large Editorial Cards) */}
+        {/* Projects Sequence (Large Editorial Cards) - Removed upon request */}
         <div className="collaborations-projects">
-          {selectedProjects.map((project, index) => {
-            const sequenceNumber = (index + 1).toString().padStart(2, '0');
-            // Using global translations to resolve the nested key
-            const translatedTitle = tGlobal(`SelectedProjects.${project.titleKey}`);
-            const translatedDesc = tGlobal(`SelectedProjects.${project.titleKey}Desc`);
-
-            return (
-              <div key={project.id} className="collaboration-card">
-                <div className="collaboration-media-panel">
-                  <div className="collaboration-media-inner">
-                    <Image
-                      src={project.image}
-                      alt={translatedTitle}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 65vw"
-                      className="collaboration-image"
-                    />
-                  </div>
-                </div>
-                <div className="collaboration-info-panel">
-                  <div className="collaboration-sequence-header">
-                    <div className="animated-yellow-line card-edge-line"></div>
-                    <span className="collaboration-sequence">{sequenceNumber}</span>
-                  </div>
-                  <h3 className="collaboration-project-title">{translatedTitle}</h3>
-                  <p className="collaboration-project-desc">{translatedDesc}</p>
-                  <div className="collaboration-accent-line"></div>
-                </div>
-              </div>
-            );
-          })}
+          {/* Projects 01 to 04 have been removed from this page */}
         </div>
 
-        {/* Logos Grid (Compact Logo Wall for Partners without verified project details) */}
+
+        {/* Logos Grid (Compact Logo Wall for Partners) */}
         <div className="collaborations-logos-wrapper">
-          <div className="animated-yellow-line line-horizontal divider-line" aria-hidden="true"></div>
-          <div className="collaborations-network-header">
-            <p className="network-eyebrow">{t('networkEyebrow')}</p>
-            <h3 className="network-title">{t('networkTitle')}</h3>
-          </div>
           
           <div className="collaborations-logos-grid-container">
             <div className="collaborations-logos-grid">

@@ -3351,7 +3351,6 @@ a {
   .pb-hero-1-container {
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
   }
 
   .pb-hero-1-image {
@@ -3559,7 +3558,7 @@ a {
   }
   
   .pb-hero-1-image img {
-    object-fit: contain !important; /* Ensure no cropping */
+    object-fit: cover !important; /* Ensure full width coverage */
     height: auto !important;
   }
 
@@ -5124,8 +5123,13 @@ html[dir="rtl"] .video-controls-group {
 }
 
 .collaborations-header {
-  margin-bottom: 6rem;
+  margin-bottom: 0rem;
   max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .collaborations-eyebrow {
@@ -5321,14 +5325,14 @@ html[dir="rtl"] .card-edge-line {
 
 .collaborations-logos-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   background-color: transparent;
   gap: 1px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .collaboration-logo-item {
-  height: 160px;
+  height: 260px;
   position: relative;
   background: var(--pb-surface);
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -5349,8 +5353,8 @@ html[dir="rtl"] .card-edge-line {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 120px;
-  max-height: 80px;
+  max-width: 220px;
+  max-height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5359,19 +5363,6 @@ html[dir="rtl"] .card-edge-line {
 .collaboration-logo-image {
   object-fit: contain;
   transition: all 0.3s ease;
-}
-
-/* Responsive Grid for Logos */
-@media (max-width: 1200px) {
-  .collaborations-logos-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 1024px) {
-  .collaborations-logos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* Reduced Motion Override for Partners Page */
@@ -7698,18 +7689,24 @@ html[dir="rtl"] .before-after-actions {
     display: flex;
     flex-direction: column;
   }
-  .before-after-pair {
+  .pb-hero-1-section .before-after-pair {
     height: 100% !important;
   }
-  .before-after-images-wrapper {
+  .pb-hero-1-section .before-after-images-wrapper {
     height: 100% !important;
   }
-  .before-after-frame {
+  .pb-hero-1-section .before-after-frame {
     min-height: auto !important;
     aspect-ratio: auto !important;
     flex: 1;
   }
-  .before-after-img {
+  .pb-hero-1-section .before-after-img {
     object-fit: cover !important;
+  }
+
+  /* Center align BeforeAfterSection header on mobile */
+  .before-after-section .portfolio-header {
+    align-items: center !important;
+    text-align: center !important;
   }
 }

@@ -23,6 +23,54 @@ export default function HomeHero() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesCount);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesCount) % slidesCount);
 
+  // Swipe and Drag states
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
+    setTouchEnd(null);
+    setIsDragging(true);
+    if ('touches' in e) {
+      setTouchStart(e.targetTouches[0].clientX);
+    } else {
+      setTouchStart(e.clientX);
+    }
+  };
+
+  const onTouchMove = (e: React.TouchEvent | React.MouseEvent) => {
+    if (!isDragging) return;
+    if ('touches' in e) {
+      setTouchEnd(e.targetTouches[0].clientX);
+    } else {
+      setTouchEnd(e.clientX);
+    }
+  };
+
+  const onTouchEndHandler = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe || isRightSwipe) {
+      if (dir === 'rtl') {
+        if (isLeftSwipe) prevSlide();
+        else nextSlide();
+      } else {
+        if (isLeftSwipe) nextSlide();
+        else prevSlide();
+      }
+    }
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   return (
     <section className="pb-hero-1-section">
       {/* Page-specific image preloads hoisted to head */}
@@ -60,7 +108,23 @@ export default function HomeHero() {
         </div>
       </div>
 
-      <div className="pb-hero-1-viewport" style={{ width: '100%', overflow: 'hidden' }}>
+      <div 
+        className="pb-hero-1-viewport" 
+        style={{ 
+          width: '100%', 
+          overflow: 'hidden', 
+          cursor: isDragging ? 'grabbing' : 'grab',
+          touchAction: 'pan-y'
+        }}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEndHandler}
+        onMouseDown={onTouchStart}
+        onMouseMove={onTouchMove}
+        onMouseUp={onTouchEndHandler}
+        onMouseLeave={onTouchEndHandler}
+        onDragStart={(e) => e.preventDefault()}
+      >
         <div 
           className="pb-hero-1-track"
           style={{ 
@@ -101,7 +165,7 @@ export default function HomeHero() {
                 <img
                   src="/assets/banner2.png"
                   alt={t('title')}
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </picture>
             </div>
