@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^16.2.12",
     "next": "16.2.10",
     "next-intl": "^4.13.2",
     "puppeteer": "^25.3.0",
