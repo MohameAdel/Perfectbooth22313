@@ -1,4 +1,5 @@
 :root {
+  --header-height: 144px;
   color-scheme: dark;
   --header-height: 80px;
   --pb-bg: #090A0C;
@@ -3344,7 +3345,7 @@ a {
     display: flex !important;
     flex-direction: column !important;
     background-color: var(--pb-bg) !important;
-    padding-top: 0 !important; /* ensure no weird gap below header */
+    padding-top: 144px !important;
   }
 
   .pb-hero-1-container {
@@ -3581,9 +3582,7 @@ a {
 
 /* === HERO BANNER IMAGE MARGIN FIX === */
 @media (max-width: 768px) {
-  .pb-hero-1-image {
-    margin-top: 9rem !important;
-  }
+  
 }
 
 
