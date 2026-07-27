@@ -43,14 +43,8 @@ export default async function LocaleLayout({
  
   const allMessages = (await getMessages()) as Record<string, any>;
   
-  // Slice only the namespaces actually used by Client Components
-  const messages = {
-    MobileMenu: allMessages.MobileMenu,
-    About: allMessages.About,
-    ContactPage: allMessages.ContactPage,
-    Projects: allMessages.Projects,
-    Services: allMessages.Services
-  };
+  // Pass all messages to ensure no Client Components are missing their translations
+  const messages = allMessages;
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (

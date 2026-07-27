@@ -187,8 +187,8 @@ export default function HomeHero() {
           <div className="pb-hero-1-slide pb-hero-case-slide" style={{ flex: '0 0 33.333333%', width: '33.333333%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem' }}>
             <div className="case-study-box pb-hero-case-box" style={{ width: '100%', maxWidth: '1400px' }}>
               <BeforeAfterPair 
-                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp"
-                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp"
+                beforeImage="https://perfectbooth22313-yywa.vercel.app/_next/image?url=https%3A%2F%2Fvqknbbjrosel3hr8.public.blob.vercel-storage.com%2Fphotos%2Fprojects%2FC2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg&w=1200&q=75"
+                afterImage="https://perfectbooth22313-yywa.vercel.app/_next/image?url=https%3A%2F%2Fvqknbbjrosel3hr8.public.blob.vercel-storage.com%2Fphotos%2Fprojects%2FIMG_9430.jpg.jpeg&w=1200&q=75"
                 beforeAlt="التصميم"
                 afterAlt="الحقيقة"
               />
