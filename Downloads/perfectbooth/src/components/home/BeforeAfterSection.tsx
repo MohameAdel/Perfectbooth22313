@@ -80,7 +80,7 @@ export default function BeforeAfterSection() {
     stopAutoplay();
     autoplayRef.current = setInterval(() => {
       scrollNext();
-    }, 4000); // 4 seconds delay
+    }, 8000); // 8 seconds delay
   }, [scrollNext, stopAutoplay]);
 
   React.useEffect(() => {

@@ -13,12 +13,15 @@ export default function HomeHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesCount = 3;
 
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
+    if (isHovered) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesCount);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered, slidesCount]);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesCount);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slidesCount) % slidesCount);
@@ -122,7 +125,11 @@ export default function HomeHero() {
         onMouseDown={onTouchStart}
         onMouseMove={onTouchMove}
         onMouseUp={onTouchEndHandler}
-        onMouseLeave={onTouchEndHandler}
+        onMouseLeave={(e) => {
+          setIsHovered(false);
+          onTouchEndHandler();
+        }}
+        onMouseEnter={() => setIsHovered(true)}
         onDragStart={(e) => e.preventDefault()}
       >
         <div 
@@ -187,8 +194,8 @@ export default function HomeHero() {
           <div className="pb-hero-1-slide pb-hero-case-slide" style={{ flex: '0 0 33.333333%', width: '33.333333%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem' }}>
             <div className="case-study-box pb-hero-case-box" style={{ width: '100%', maxWidth: '1400px' }}>
               <BeforeAfterPair 
-                beforeImage="https://perfectbooth22313-yywa.vercel.app/_next/image?url=https%3A%2F%2Fvqknbbjrosel3hr8.public.blob.vercel-storage.com%2Fphotos%2Fprojects%2FC2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg&w=1200&q=75"
-                afterImage="https://perfectbooth22313-yywa.vercel.app/_next/image?url=https%3A%2F%2Fvqknbbjrosel3hr8.public.blob.vercel-storage.com%2Fphotos%2Fprojects%2FIMG_9430.jpg.jpeg&w=1200&q=75"
+                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg"
+                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/IMG_9430%20%281%29.webp"
                 beforeAlt="التصميم"
                 afterAlt="الحقيقة"
               />

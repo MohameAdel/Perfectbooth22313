@@ -59,7 +59,7 @@ export default function PartnersSection() {
     
     const intervalId = setInterval(() => {
       scrollNext();
-    }, 4000); 
+    }, 8000); 
     
     return () => clearInterval(intervalId);
   }, [isHovered, scrollNext]);

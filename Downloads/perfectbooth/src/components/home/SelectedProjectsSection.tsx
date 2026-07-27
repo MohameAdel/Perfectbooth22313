@@ -69,7 +69,7 @@ export default function SelectedProjectsSection() {
     
     const intervalId = setInterval(() => {
       scrollNext();
-    }, 5000); // 5 seconds
+    }, 8000); // 8 seconds
     
     return () => clearInterval(intervalId);
   }, [isHovered, scrollNext]);
