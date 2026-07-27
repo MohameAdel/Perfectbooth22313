@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import ContactForm from './ContactForm';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import { FaRegEnvelope, FaPhone, FaWhatsapp, FaLocationDot } from 'react-icons/fa6';
 
 export default function ContactFormSection() {
   const t = useTranslations('ContactPage.info');
@@ -30,7 +31,7 @@ export default function ContactFormSection() {
                   {/* Email Row */}
                   <a href={`mailto:${t('emailValue')}`} className="contact-info-row">
                     <div className="contact-row-icon">
-                      <i className="fa-regular fa-envelope"></i>
+                      <FaRegEnvelope />
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('emailLabel')}</h3>
@@ -43,7 +44,7 @@ export default function ContactFormSection() {
                   {/* Phone Row */}
                   <a href={`tel:${t('phoneValue').replace(/\s+/g, '')}`} className="contact-info-row">
                     <div className="contact-row-icon">
-                      <i className="fa-solid fa-phone"></i>
+                      <FaPhone />
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('phoneLabel')}</h3>
@@ -61,7 +62,7 @@ export default function ContactFormSection() {
                     className="contact-info-row"
                   >
                     <div className="contact-row-icon">
-                      <i className="fa-brands fa-whatsapp"></i>
+                      <FaWhatsapp />
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('whatsappLabel')}</h3>
@@ -74,7 +75,7 @@ export default function ContactFormSection() {
                   {/* Location Row */}
                   <div className="contact-info-row">
                     <div className="contact-row-icon">
-                      <i className="fa-solid fa-location-dot"></i>
+                      <FaLocationDot />
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('locationLabel')}</h3>

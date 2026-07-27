@@ -2,6 +2,7 @@
 
 import React, { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
+import { FaCircleCheck, FaCircleExclamation } from 'react-icons/fa6';
 
 interface FormData {
   fullName: string;
@@ -138,14 +139,14 @@ export default function ContactForm() {
       
       {status === 'success' && (
         <div className="form-alert alert-success" role="alert" aria-live="assertive">
-          <i className="fa-solid fa-circle-check"></i>
+          <FaCircleCheck />
           <span>{serverMessage}</span>
         </div>
       )}
 
       {status === 'error' && (
         <div className="form-alert alert-error" role="alert" aria-live="assertive">
-          <i className="fa-solid fa-circle-exclamation"></i>
+          <FaCircleExclamation />
           <span>{serverMessage}</span>
         </div>
       )}

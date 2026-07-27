@@ -12,6 +12,7 @@ export default function PartnersHero() {
 
   return (
     <section className="partners-hero" dir={dir}>
+      <link rel="preload" as="image" href="/assets/partners-hero-poster.webp" fetchPriority="high" />
       <div className="partners-hero-container">
         
         <div className="partners-hero-content">

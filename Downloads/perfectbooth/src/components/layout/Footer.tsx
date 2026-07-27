@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Logo from '@/components/ui/Logo';
+import { FaPhone, FaEnvelope } from 'react-icons/fa6';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -76,12 +77,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="tel:+201116013011" className="footer-link">
-                  <i className="fa-solid fa-phone" style={{ marginInlineEnd: '8px' }}></i> <span dir="ltr" style={{ display: 'inline-block' }}>+201116013011</span>
+                  <FaPhone style={{ marginInlineEnd: '8px' }} /> <span dir="ltr" style={{ display: 'inline-block' }}>+201116013011</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:info@perfectbooth-events.com" className="footer-link" style={{ whiteSpace: 'nowrap' }}>
-                  <i className="fa-solid fa-envelope" style={{ marginInlineEnd: '8px' }}></i> info@perfectbooth-events.com
+                  <FaEnvelope style={{ marginInlineEnd: '8px' }} /> info@perfectbooth-events.com
                 </a>
               </li>
             </ul>

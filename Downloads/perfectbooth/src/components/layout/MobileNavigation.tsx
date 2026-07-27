@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuContactItem from './MobileMenuContactItem';
 import Logo from '@/components/ui/Logo';
+import { FaXmark, FaLocationDot, FaPhone, FaRegEnvelope, FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa6';
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +85,7 @@ export default function MobileNavigation() {
                 onClick={() => setIsOpen(false)}
                 aria-label={menuT('close')}
               >
-                <i className="fa-solid fa-xmark"></i>
+                <FaXmark />
               </button>
             </div>
 
@@ -122,16 +123,16 @@ export default function MobileNavigation() {
                 <div className="drawer-section-title">{menuT('contactInfo')}</div>
                 <div className="drawer-contact-list">
                   <MobileMenuContactItem 
-                    icon={<i className="fa-solid fa-location-dot"></i>} 
+                    icon={<FaLocationDot />} 
                     text={menuT('addressPlaceholder')} 
                   />
                   <MobileMenuContactItem 
-                    icon={<i className="fa-solid fa-phone"></i>} 
+                    icon={<FaPhone />} 
                     text={menuT('phonePlaceholder')} 
                     href="tel:+201116013011" 
                   />
                   <MobileMenuContactItem 
-                    icon={<i className="fa-regular fa-envelope"></i>} 
+                    icon={<FaRegEnvelope />} 
                     text={menuT('emailPlaceholder')} 
                     href="mailto:info@perfectbooth-events.com" 
                   />
@@ -143,11 +144,11 @@ export default function MobileNavigation() {
               <div>
                 <div className="drawer-section-title" style={{ marginBottom: '0.5rem' }}>{menuT('followUs')}</div>
                 <div className="drawer-social">
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i className="fa-brands fa-x-twitter"></i></a>
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
-                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter /></a>
+                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
                 </div>
               </div>
               <div className="drawer-copyright">

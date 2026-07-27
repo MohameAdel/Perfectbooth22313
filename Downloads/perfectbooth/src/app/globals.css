@@ -7710,3 +7710,43 @@ html[dir="rtl"] .before-after-actions {
     text-align: center !important;
   }
 }
+
+/* --- Header Scroll State (Hydration Optimization) --- */
+.top-bar {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 100px;
+  opacity: 1;
+}
+
+.is-scrolled .top-bar {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  border-bottom: none;
+}
+
+.logo-container {
+  transition: all 0.3s ease;
+}
+
+.logo-container .brand-logo {
+  --logo-width: 150px;
+  --logo-height: 82px;
+  transition: all 0.3s ease;
+}
+
+.is-scrolled .logo-container .brand-logo {
+  --logo-width: 120px;
+  --logo-height: 65px;
+}
+
+/* Hide logo container only on mobile when scrolled, to match old behavior */
+@media (max-width: 768px) {
+  .is-scrolled .logo-container {
+    max-height: 0 !important;
+    padding: 0 5% !important;
+    opacity: 0;
+    margin: 0;
+  }
+}

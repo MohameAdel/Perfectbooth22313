@@ -2,6 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
+import { FaGlobe } from 'react-icons/fa6';
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -30,7 +31,7 @@ export default function LanguageSwitcher() {
       }}
     >
       <span>{label}</span>
-      <i className="fa-solid fa-globe"></i>
+      <FaGlobe />
     </div>
   );
 }

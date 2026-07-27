@@ -16,9 +16,10 @@ interface ProjectSliderProps {
   titleKey: string;
   categoryKey?: string;
   images: ProjectImage[];
+  priorityFirstImage?: boolean;
 }
 
-export default function ProjectSlider({ titleKey, categoryKey, images }: ProjectSliderProps) {
+export default function ProjectSlider({ titleKey, categoryKey, images, priorityFirstImage = false }: ProjectSliderProps) {
   const t = useTranslations('Projects');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
@@ -152,7 +153,7 @@ export default function ProjectSlider({ titleKey, categoryKey, images }: Project
               fill
               sizes="(max-width: 768px) 100vw, 900px"
               style={{ objectFit: 'cover', objectPosition: img.objectPosition || 'center' }}
-              priority={index === 0}
+              priority={priorityFirstImage && index === 0}
             />
           </div>
         ))}

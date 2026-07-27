@@ -40,13 +40,21 @@ export default async function LocaleLayout({
   
   setRequestLocale(locale);
  
-  const messages = await getMessages();
+  const allMessages = (await getMessages()) as Record<string, any>;
+  
+  // Slice only the namespaces actually used by Client Components
+  const messages = {
+    MobileMenu: allMessages.MobileMenu,
+    About: allMessages.About,
+    ContactPage: allMessages.ContactPage,
+    Projects: allMessages.Projects,
+    Services: allMessages.Services
+  };
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
     <html lang={locale} dir={dir} className={cairo.variable} suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
