@@ -7583,3 +7583,102 @@ html[dir="rtl"] .before-after-actions {
     line-height: 1.3 !important;
   }
 }
+
+/* Premium Hero Navigation Controls */
+.pb-hero-slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  inset-inline-end: 5%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(10, 11, 14, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pb-hero-slider-index {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.pb-hero-slider-index .total {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.pb-hero-slider-progress {
+  position: relative;
+  width: 64px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pb-hero-slider-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  background: var(--pb-accent, #cfa856);
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pb-hero-slider-arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pb-hero-nav-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pb-hero-nav-btn:hover,
+.pb-hero-nav-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .pb-hero-slider-controls {
+    bottom: 24px;
+    inset-inline-start: 5%;
+    inset-inline-end: 5%;
+    max-width: 400px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+  }
+  
+  .pb-hero-slider-progress {
+    flex-grow: 1;
+    width: auto;
+  }
+  
+  .pb-hero-1-content {
+    padding-bottom: 100px !important; /* Safe area for controls on mobile */
+  }
+}

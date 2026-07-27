@@ -2,7 +2,6 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import BeforeAfterPair from '@/components/ui/BeforeAfterPair';
 
@@ -31,26 +30,33 @@ export default function HomeHero() {
       <link rel="preload" as="image" href="/assets/banner2.png" fetchPriority="high" media="(min-width: 769px)" />
       
       {/* Slider Controls */}
-      <div className="pb-hero-1-controls animate-slide-in-fix pb-hero-slider-controls" style={{ position: 'absolute', bottom: '5%', left: dir === 'rtl' ? '5%' : 'auto', right: dir === 'ltr' ? '5%' : 'auto', zIndex: 100, background: 'rgba(0,0,0,0.5)', padding: '15px 25px', borderRadius: '30px', backdropFilter: 'blur(10px)', display: 'flex', gap: '20px', alignItems: 'center' }}>
-        <div className="pb-hero-1-arrows pb-hero-slider-arrows" style={{ position: 'relative', display: 'flex', gap: '10px' }}>
-          <button aria-label="Previous slide" onClick={prevSlide} className="pb-hero-nav-btn" style={{ background: 'none', border: 'none', color: '#fff', fontSize: '1.5rem', cursor: 'pointer' }}>
-            {dir === 'rtl' ? '→' : '←'}
-          </button>
-          <button aria-label="Next slide" onClick={nextSlide} className="pb-hero-nav-btn" style={{ background: 'none', border: 'none', color: '#fff', fontSize: '1.5rem', cursor: 'pointer' }}>
-            {dir === 'rtl' ? '←' : '→'}
-          </button>
+      <div className="pb-hero-slider-controls">
+        <div className="pb-hero-slider-index" dir="ltr">
+          <span className="current">{String(currentSlide + 1).padStart(2, '0')}</span>
+          <span className="total">/ {String(slidesCount).padStart(2, '0')}</span>
         </div>
-        <div className="pb-hero-1-progress pb-hero-slider-progress" style={{ position: 'relative', width: '100px', height: '2px', background: 'rgba(255,255,255,0.2)' }}>
-          <div className="pb-hero-1-fill pb-hero-slider-fill" style={{ 
-            position: 'absolute', top: 0, height: '100%', background: '#cfa856', transition: 'width 0.3s ease',
-            width: `${((currentSlide + 1) / slidesCount) * 100}%`,
-            [dir === 'rtl' ? 'right' : 'left']: 0,
-            transformOrigin: dir === 'rtl' ? 'right' : 'left'
+        
+        <div className="pb-hero-slider-progress">
+          <div className="pb-hero-slider-fill" style={{ 
+            width: `${((currentSlide + 1) / slidesCount) * 100}%`
           }}></div>
         </div>
-        <div className="pb-hero-1-index pb-hero-slider-index" style={{ color: '#fff', fontWeight: 'bold' }}>
-          <span>{String(currentSlide + 1).padStart(2, '0')}</span>
-          <span className="pb-hero-1-total" style={{ opacity: 0.5 }}> / {String(slidesCount).padStart(2, '0')}</span>
+
+        <div className="pb-hero-slider-arrows">
+          <button aria-label="Previous slide" onClick={prevSlide} className="pb-hero-nav-btn">
+            {dir === 'rtl' ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            )}
+          </button>
+          <button aria-label="Next slide" onClick={nextSlide} className="pb-hero-nav-btn">
+            {dir === 'rtl' ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            )}
+          </button>
         </div>
       </div>
 

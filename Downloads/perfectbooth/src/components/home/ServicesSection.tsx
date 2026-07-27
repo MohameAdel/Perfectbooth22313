@@ -1,10 +1,8 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function ServicesSection() {
   const t = useTranslations('Services');
-  const locale = useLocale();
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   const services = [
     { key: 'tents', image: 'https://admin.perfectbooth-events.com/storage/services/images/fVoSlHLlnIqOMCs6IWYAKHabGZ2fmhAu2gWtigdE.jpg' },
