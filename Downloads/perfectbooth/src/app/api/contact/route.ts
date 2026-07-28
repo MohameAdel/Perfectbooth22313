@@ -57,7 +57,6 @@ export async function POST(request: Request) {
 
     // 2. Honeypot check
     if (website && String(website).trim() !== '') {
-      // Fake success for bots
       return NextResponse.json({ ok: true }, { status: 200 });
     }
 
@@ -107,7 +106,9 @@ export async function POST(request: Request) {
     const formSecret = process.env.CONTACT_FORM_SECRET;
 
     if (!appsScriptUrl || !formSecret) {
-      console.warn('[WARN] Missing GOOGLE_APPS_SCRIPT_WEB_APP_URL or CONTACT_FORM_SECRET env variables.');
+      console.error('[API_CONTACT_ERR] Missing environment variables!');
+      if (!appsScriptUrl) console.error(' -> GOOGLE_APPS_SCRIPT_WEB_APP_URL is not defined in environment variables.');
+      if (!formSecret) console.error(' -> CONTACT_FORM_SECRET is not defined in environment variables.');
       return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 500 });
     }
 
@@ -134,13 +135,26 @@ export async function POST(request: Request) {
 
     let gasRes: Response;
     try {
+      // First attempt with redirect: 'manual' to handle Google 302 POST redirects without dropping POST body
       gasRes = await fetch(appsScriptUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(gasPayload),
         signal: controller.signal,
-        redirect: 'follow'
+        redirect: 'manual'
       });
+
+      if (gasRes.status === 302 || gasRes.status === 301 || gasRes.status === 307 || gasRes.status === 308) {
+        const redirectUrl = gasRes.headers.get('location');
+        if (redirectUrl) {
+          gasRes = await fetch(redirectUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(gasPayload),
+            signal: controller.signal
+          });
+        }
+      }
     } catch (fetchErr: any) {
       clearTimeout(timeoutId);
       console.error('[API_CONTACT_ERR] Failed to communicate with Apps Script Web App:', fetchErr.name || fetchErr.message);
@@ -154,7 +168,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
     }
 
-    let gasData: { ok?: boolean; error?: string } = {};
+    let gasData: { ok?: boolean; error?: string; service?: string } = {};
     try {
       gasData = await gasRes.json();
     } catch (jsonErr) {
@@ -162,11 +176,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
     }
 
-    if (gasData.ok) {
+    if (gasData.ok && !gasData.service) {
       return NextResponse.json({ ok: true }, { status: 200 });
     } else if (gasData.error === 'validation_error') {
+      console.error('[API_CONTACT_ERR] Apps Script validation error');
       return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    } else if (gasData.error === 'unauthorized') {
+      console.error('[API_CONTACT_ERR] Apps Script unauthorized: CONTACT_FORM_SECRET does not match FORM_SECRET property in Apps Script!');
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
     } else {
+      console.error('[API_CONTACT_ERR] Apps Script error response:', gasData);
       return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
     }
 
