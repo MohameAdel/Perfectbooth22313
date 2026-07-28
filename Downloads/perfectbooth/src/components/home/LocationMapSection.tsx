@@ -9,46 +9,103 @@ export default function LocationMapSection() {
   const t = useTranslations('Location');
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{__html: `
-        .map-wrapper {
-          width: 100%;
-          height: 300px;
-          position: relative;
-        }
-        @media (min-width: 768px) {
-          .map-wrapper { height: 400px; }
-        }
-        @media (min-width: 1024px) {
-          .map-wrapper { height: 500px; }
-        }
-      `}} />
-      
-      <div className="w-full relative px-4 md:px-8 max-w-7xl mx-auto pt-16 pb-8 md:pt-24 md:pb-12" dir={dir}>
-        <div className="flex flex-col text-start">
-          <div className="max-w-[95%] md:max-w-2xl lg:max-w-3xl">
-            <p className="text-[var(--pb-accent)] text-sm md:text-base uppercase tracking-[0.2em] font-semibold mb-3 md:mb-4">
-              {t('eyebrow')}
-            </p>
-            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-snug md:leading-tight">
-              {t('title')}
-            </h2>
+    <section 
+      className="location-map-section-wrapper" 
+      dir={dir} 
+      style={{ 
+        backgroundColor: '#1a1a1a', 
+        paddingTop: '4.5rem',
+        width: '100%',
+        overflow: 'hidden'
+      }}
+    >
+      {/* Header Container */}
+      <div 
+        style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          padding: '0 5% 2.5rem 5%',
+          boxSizing: 'border-box'
+        }}
+      >
+        <div 
+          style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'flex-start', 
+            textAlign: 'start' 
+          }}
+        >
+          {/* Eyebrow with Accent Line */}
+          <div 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: '#cfa856',
+              marginBottom: '1rem'
+            }}
+          >
+            <span 
+              style={{ 
+                width: '28px', 
+                height: '2px', 
+                backgroundColor: '#cfa856', 
+                borderRadius: '1px',
+                display: 'inline-block'
+              }} 
+            />
+            <span>{t('eyebrow')}</span>
           </div>
+
+          {/* Main Title */}
+          <h2 
+            style={{
+              fontSize: 'clamp(1.85rem, 4vw, 3.25rem)',
+              fontWeight: 700,
+              lineHeight: 1.25,
+              color: '#ffffff',
+              margin: 0,
+              maxWidth: '850px'
+            }}
+          >
+            {t('title')}
+          </h2>
         </div>
       </div>
 
-      <section className="location-map-section map-wrapper">
+      {/* Map Embed Frame */}
+      <div 
+        className="map-iframe-container"
+        style={{
+          width: '100%',
+          height: '480px',
+          position: 'relative',
+          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          overflow: 'hidden'
+        }}
+      >
         <iframe
           src="https://maps.google.com/maps?q=30.0773392,31.3113003&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
-          style={{ border: 0, width: '100%', height: '100%' }}
+          style={{ 
+            border: 0, 
+            width: '100%', 
+            height: '100%', 
+            filter: 'contrast(105%) brightness(95%)' 
+          }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale hover:grayscale-0 transition-all duration-700"
+          title={t('title')}
         ></iframe>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
