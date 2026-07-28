@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --header-height: 80px;
   --pb-bg-page: #1a1a1a;
   --pb-bg-section: #1a1a1a;
@@ -4410,6 +4411,28 @@ html[dir="rtl"] .about-approach-closing {
   background-position: right 1rem center;
   background-size: 1.25rem;
   padding-right: 2.5rem;
+}
+
+select option,
+.form-select option {
+  background-color: #121418;
+  color: var(--pb-text);
+  padding: 10px;
+}
+
+/* Autofill Dark Theme Fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--pb-text) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #121418 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 html[dir="rtl"] .form-select {
