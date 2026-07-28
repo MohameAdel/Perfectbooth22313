@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
-import { FaXTwitter, FaFacebookF, FaInstagram, FaUser } from 'react-icons/fa6';
+import { FaXTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa6';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -18,14 +18,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function ThankYouPage({ 
-  params 
+  params,
+  searchParams
 }: { 
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('ThankYouPage');
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
+
+  const resolvedSearchParams = await searchParams;
+  const rawRef = resolvedSearchParams?.ref;
+  const refId = typeof rawRef === 'string' && rawRef.trim().length > 0 ? rawRef.trim() : undefined;
 
   return (
     <main 
@@ -51,32 +57,32 @@ export default async function ThankYouPage({
           position: 'absolute',
           inset: 0,
           pointerEvents: 'none',
-          opacity: 0.13,
+          opacity: 0.12,
           fontSize: '0.85rem',
           fontFamily: 'monospace',
           color: '#ffffff',
           zIndex: 1
         }}
       >
-        <span style={{ position: 'absolute', top: '8%', left: '4%', fontSize: '1.8rem', border: '1px solid #fff', padding: '2px 8px', borderRadius: '4px' }}>5</span>
-        <span style={{ position: 'absolute', top: '8%', left: '19%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>JS</span>
-        <span style={{ position: 'absolute', top: '18%', left: '10%' }}>SVG Filter</span>
-        <span style={{ position: 'absolute', top: '25%', left: '30%' }}>Animate</span>
-        <span style={{ position: 'absolute', top: '34%', left: '5%' }}>Velocity.js</span>
-        <span style={{ position: 'absolute', top: '62%', left: '4%' }}>React + styled-components</span>
-        <span style={{ position: 'absolute', top: '75%', left: '19%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>JS</span>
-        <span style={{ position: 'absolute', top: '90%', left: '4%', fontSize: '1.8rem', border: '1px solid #fff', padding: '2px 8px', borderRadius: '4px' }}>5</span>
+        <span style={{ position: 'absolute', top: '8%', left: '4%', fontSize: '1.8rem', border: '1px solid #fff', padding: '2px 8px', borderRadius: '4px' }}>3D</span>
+        <span style={{ position: 'absolute', top: '8%', left: '19%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>CAD</span>
+        <span style={{ position: 'absolute', top: '18%', left: '10%' }}>Exhibition Booths</span>
+        <span style={{ position: 'absolute', top: '25%', left: '30%' }}>Wood Fabrication</span>
+        <span style={{ position: 'absolute', top: '34%', left: '5%' }}>Event Engineering</span>
+        <span style={{ position: 'absolute', top: '62%', left: '4%' }}>Perfect Booth</span>
+        <span style={{ position: 'absolute', top: '75%', left: '19%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>CNC</span>
+        <span style={{ position: 'absolute', top: '90%', left: '4%', fontSize: '1.8rem', border: '1px solid #fff', padding: '2px 8px', borderRadius: '4px' }}>PB</span>
 
-        <span style={{ position: 'absolute', top: '8%', right: '23%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>5</span>
-        <span style={{ position: 'absolute', top: '8%', right: '4%', fontSize: '1.5rem' }}>⚛</span>
-        <span style={{ position: 'absolute', top: '20%', right: '35%' }}>CSS/SASS</span>
-        <span style={{ position: 'absolute', top: '20%', right: '7%' }}>Anime.js</span>
-        <span style={{ position: 'absolute', top: '34%', right: '15%' }}>HTML, Canvas</span>
-        <span style={{ position: 'absolute', top: '50%', right: '5%' }}>CSS Animation</span>
-        <span style={{ position: 'absolute', top: '65%', right: '12%' }}>GreenSock Animation</span>
-        <span style={{ position: 'absolute', top: '80%', right: '23%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>5</span>
-        <span style={{ position: 'absolute', top: '80%', right: '4%', fontSize: '1.5rem' }}>⚛</span>
-        <span style={{ position: 'absolute', top: '81%', right: '42%' }}>Front-end Dev</span>
+        <span style={{ position: 'absolute', top: '8%', right: '23%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>3D</span>
+        <span style={{ position: 'absolute', top: '8%', right: '4%', fontSize: '1.5rem' }}>★</span>
+        <span style={{ position: 'absolute', top: '20%', right: '35%' }}>Lighting & Audio</span>
+        <span style={{ position: 'absolute', top: '20%', right: '7%' }}>Field Supervision</span>
+        <span style={{ position: 'absolute', top: '34%', right: '15%' }}>Custom Pavilions</span>
+        <span style={{ position: 'absolute', top: '50%', right: '5%' }}>Spatial Experience</span>
+        <span style={{ position: 'absolute', top: '65%', right: '12%' }}>Brand Activations</span>
+        <span style={{ position: 'absolute', top: '80%', right: '23%', fontSize: '1.2rem', border: '1px solid #fff', padding: '2px 6px', borderRadius: '4px' }}>PB</span>
+        <span style={{ position: 'absolute', top: '80%', right: '4%', fontSize: '1.5rem' }}>★</span>
+        <span style={{ position: 'absolute', top: '81%', right: '42%' }}>Perfect Booth</span>
       </div>
 
       {/* Top Header Navigation */}
@@ -91,38 +97,8 @@ export default async function ThankYouPage({
         }}
       >
         <Link href="/" aria-label="Home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '1.75rem', fontWeight: 900, color: '#cfa856', fontFamily: 'monospace', letterSpacing: '-1px' }}>
-            &lt;/&gt;
-          </span>
-          <Logo width={120} height={40} />
+          <Logo width={130} height={42} />
         </Link>
-
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-          <Link href="/" style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 500, transition: 'color 0.2s' }}>
-            {t('home')}
-          </Link>
-          <Link href="/services" style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 500, transition: 'color 0.2s' }}>
-            {t('services')}
-          </Link>
-          <Link href="/contact" style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 500, transition: 'color 0.2s' }}>
-            {t('contact')}
-          </Link>
-          <div 
-            style={{
-              width: '38px',
-              height: '38px',
-              borderRadius: '50%',
-              backgroundColor: '#ffffff',
-              color: '#050505',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer'
-            }}
-          >
-            <FaUser style={{ fontSize: '0.95rem' }} />
-          </div>
-        </nav>
       </header>
 
       {/* Main Center Content */}
@@ -136,66 +112,103 @@ export default async function ThankYouPage({
           zIndex: 10,
           padding: '2rem 1.5rem',
           flex: 1,
-          maxWidth: '900px',
+          maxWidth: '850px',
           margin: '0 auto'
         }}
       >
-        {/* Styled 3D Layered Title */}
+        {/* Eyebrow Label */}
+        <div
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            letterSpacing: '0.15em',
+            color: '#cfa856',
+            marginBottom: '1.25rem',
+            backgroundColor: 'rgba(207, 168, 86, 0.1)',
+            border: '1px solid rgba(207, 168, 86, 0.25)',
+            padding: '0.35rem 1.15rem',
+            borderRadius: '9999px',
+            display: 'inline-block'
+          }}
+        >
+          {t('eyebrow')}
+        </div>
+
+        {/* Main Heading */}
         <h1 
           style={{
-            fontSize: 'clamp(3.5rem, 8vw, 7.5rem)',
-            fontWeight: 900,
-            lineHeight: 1.05,
-            letterSpacing: '-0.02em',
+            fontSize: 'clamp(2.2rem, 5vw, 4.25rem)',
+            fontWeight: 800,
+            lineHeight: 1.15,
             color: '#ffffff',
-            marginBottom: '2rem',
-            textShadow: '3px 3px 0px rgba(255, 255, 255, 0.4), 6px 6px 0px #050505, 9px 9px 0px rgba(255, 255, 255, 0.15)'
+            marginBottom: '1.75rem',
+            textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
           }}
         >
           {t('title')}
         </h1>
 
-        {/* Primary Subtitle */}
+        {/* Description */}
         <p 
           style={{
-            fontSize: 'clamp(1.15rem, 2.2vw, 1.75rem)',
-            fontWeight: 600,
-            color: '#ffffff',
-            marginBottom: '2.5rem',
-            lineHeight: 1.5,
+            fontSize: 'clamp(1.05rem, 1.8vw, 1.35rem)',
+            fontWeight: 400,
+            color: 'rgba(255, 255, 255, 0.88)',
+            marginBottom: '1.5rem',
+            lineHeight: 1.6,
             maxWidth: '750px'
           }}
         >
-          {t('subtitle')}
+          {t('description')}
         </p>
 
-        {/* Spam Folder Note */}
+        {/* Supporting Note */}
         <p 
           style={{
-            fontSize: '0.95rem',
-            color: 'rgba(255, 255, 255, 0.65)',
-            marginBottom: '1.25rem',
-            fontFamily: 'monospace'
+            fontSize: '0.98rem',
+            color: '#cfa856',
+            fontWeight: 500,
+            marginBottom: '2rem',
+            lineHeight: 1.5
           }}
         >
-          {t('spamNote')}
+          {t('supportingNote')}
         </p>
 
-        {/* Contact Support Note */}
-        <p 
-          style={{
-            fontSize: '0.9rem',
-            color: 'rgba(255, 255, 255, 0.5)',
-            fontFamily: 'monospace',
-            lineHeight: 1.6,
-            maxWidth: '650px'
+        {/* Submission Reference Number (Only displayed when valid refId exists) */}
+        {refId && (
+          <div 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              backgroundColor: 'rgba(18, 20, 24, 0.8)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              padding: '0.65rem 1.5rem',
+              borderRadius: '8px',
+              marginBottom: '2.5rem',
+              fontSize: '0.9rem',
+              fontFamily: 'monospace'
+            }}
+          >
+            <span style={{ color: 'rgba(255, 255, 255, 0.6)' }}>{t('referenceLabel')}:</span>
+            <span style={{ color: '#ffffff', fontWeight: 700, letterSpacing: '0.05em' }}>{refId}</span>
+          </div>
+        )}
+
+        {/* Action Buttons */}
+        <div 
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            gap: '1.25rem', 
+            flexWrap: 'wrap',
+            marginTop: '1rem' 
           }}
         >
-          {t('contactNote')}
-        </p>
-
-        {/* Back to Home Button */}
-        <div style={{ marginTop: '2.5rem' }}>
+          {/* Primary Button: Back to Home */}
           <Link 
             href="/" 
             style={{
@@ -205,17 +218,41 @@ export default async function ThankYouPage({
               gap: '0.75rem',
               backgroundColor: '#cfa856',
               color: '#121418',
-              padding: '0.9rem 2.5rem',
+              padding: '0.9rem 2.25rem',
               borderRadius: '8px',
               fontWeight: 700,
-              fontSize: '1.05rem',
+              fontSize: '1rem',
               transition: 'all 0.3s ease',
               textDecoration: 'none',
-              boxShadow: '0 4px 20px rgba(207, 168, 86, 0.3)'
+              boxShadow: '0 4px 20px rgba(207, 168, 86, 0.25)',
+              minHeight: '44px'
             }}
           >
-            <span>{t('button')}</span>
-            <span style={{ fontSize: '1.2rem' }}>{dir === 'rtl' ? '←' : '→'}</span>
+            <span>{t('primaryBtn')}</span>
+            <span style={{ fontSize: '1.1rem' }}>{dir === 'rtl' ? '←' : '→'}</span>
+          </Link>
+
+          {/* Secondary Button: Explore Our Projects */}
+          <Link 
+            href="/projects" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              backgroundColor: '#121418',
+              color: '#ffffff',
+              border: '2px solid #cfa856',
+              padding: '0.85rem 2.25rem',
+              borderRadius: '8px',
+              fontWeight: 600,
+              fontSize: '1rem',
+              transition: 'all 0.3s ease',
+              textDecoration: 'none',
+              minHeight: '44px'
+            }}
+          >
+            <span>{t('secondaryBtn')}</span>
           </Link>
         </div>
       </div>
@@ -294,7 +331,7 @@ export default async function ThankYouPage({
         </div>
 
         {/* Footer Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'monospace' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.6)' }}>
           <Link href="/contact" style={{ color: 'inherit' }}>{t('contact')}</Link>
           <span>•</span>
           <Link href="/privacy" style={{ color: 'inherit' }}>{t('privacy')}</Link>
