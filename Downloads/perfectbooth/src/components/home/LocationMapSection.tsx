@@ -19,6 +19,21 @@ export default function LocationMapSection() {
         overflow: 'hidden'
       }}
     >
+      <style dangerouslySetInnerHTML={{__html: `
+        .location-map-header-box {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: start;
+        }
+        @media (min-width: 768px) {
+          .location-map-header-box {
+            align-items: center !important;
+            text-align: center !important;
+          }
+        }
+      `}} />
+
       {/* Header Container */}
       <div 
         style={{
@@ -28,14 +43,7 @@ export default function LocationMapSection() {
           boxSizing: 'border-box'
         }}
       >
-        <div 
-          style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'flex-start', 
-            textAlign: 'start' 
-          }}
-        >
+        <div className="location-map-header-box">
           {/* Eyebrow with Accent Line */}
           <div 
             style={{
