@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileNavigation from './MobileNavigation';
 import Logo from '@/components/ui/Logo';
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaMagnifyingGlass } from 'react-icons/fa6';
+import { FaFacebookF, FaLinkedinIn, FaMagnifyingGlass } from 'react-icons/fa6';
 import HeaderScrollWrapper from './HeaderScrollWrapper';
 import NavLinks from './NavLinks';
 
@@ -18,24 +18,12 @@ export default function Header() {
         </div>
         <div className="top-bar-left">
           <div className="social-icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61555766881039&mibextid=wwXIfr&rdid=zHOAWbIOG4jg6CVB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DSqKZ2P3M%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookF />
             </a>
             <div className="divider"></div>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-              <FaXTwitter />
-            </a>
-            <div className="divider"></div>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/perfect-booth-46070240b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn />
-            </a>
-            <div className="divider"></div>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <FaInstagram />
-            </a>
-            <div className="divider"></div>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <FaYoutube />
             </a>
           </div>
         </div>

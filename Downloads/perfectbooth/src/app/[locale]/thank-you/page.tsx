@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
-import { FaXTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa6';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa6';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -277,26 +277,7 @@ export default async function ThankYouPage({
         {/* Social Badges */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a 
-            href="https://x.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="X"
-            style={{
-              width: '40px',
-              height: '40px',
-              borderRadius: '50%',
-              backgroundColor: '#ffffff',
-              color: '#050505',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'transform 0.2s ease'
-            }}
-          >
-            <FaXTwitter style={{ fontSize: '1rem' }} />
-          </a>
-          <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/profile.php?id=61555766881039&mibextid=wwXIfr&rdid=zHOAWbIOG4jg6CVB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DSqKZ2P3M%2F%3Fmibextid%3DwwXIfr#" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Facebook"
@@ -315,10 +296,10 @@ export default async function ThankYouPage({
             <FaFacebookF style={{ fontSize: '1rem' }} />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://www.linkedin.com/in/perfect-booth-46070240b/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            aria-label="Instagram"
+            aria-label="LinkedIn"
             style={{
               width: '40px',
               height: '40px',
@@ -331,7 +312,7 @@ export default async function ThankYouPage({
               transition: 'transform 0.2s ease'
             }}
           >
-            <FaInstagram style={{ fontSize: '1rem' }} />
+            <FaLinkedinIn style={{ fontSize: '1rem' }} />
           </a>
         </div>
 
