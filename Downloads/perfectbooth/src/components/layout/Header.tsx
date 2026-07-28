@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileNavigation from './MobileNavigation';
 import Logo from '@/components/ui/Logo';
-import { FaFacebookF, FaLinkedinIn, FaMagnifyingGlass } from 'react-icons/fa6';
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaMagnifyingGlass } from 'react-icons/fa6';
 import HeaderScrollWrapper from './HeaderScrollWrapper';
 import NavLinks from './NavLinks';
 
@@ -24,6 +24,10 @@ export default function Header() {
             <div className="divider"></div>
             <a href="https://www.linkedin.com/in/perfect-booth-46070240b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn />
+            </a>
+            <div className="divider"></div>
+            <a href="https://wa.me/201116013011" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <FaWhatsapp />
             </a>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa6';
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -313,6 +313,25 @@ export default async function ThankYouPage({
             }}
           >
             <FaLinkedinIn style={{ fontSize: '1rem' }} />
+          </a>
+          <a 
+            href="https://wa.me/201116013011" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="WhatsApp"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: '#ffffff',
+              color: '#050505',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'transform 0.2s ease'
+            }}
+          >
+            <FaWhatsapp style={{ fontSize: '1.1rem' }} />
           </a>
         </div>
 

@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuContactItem from './MobileMenuContactItem';
 import Logo from '@/components/ui/Logo';
-import { FaXmark, FaLocationDot, FaPhone, FaRegEnvelope, FaFacebookF, FaLinkedinIn } from 'react-icons/fa6';
+import { FaXmark, FaLocationDot, FaPhone, FaRegEnvelope, FaFacebookF, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6';
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -146,6 +146,7 @@ export default function MobileNavigation() {
                 <div className="drawer-social">
                   <a href="https://www.facebook.com/profile.php?id=61555766881039&mibextid=wwXIfr&rdid=zHOAWbIOG4jg6CVB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DSqKZ2P3M%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
                   <a href="https://www.linkedin.com/in/perfect-booth-46070240b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+                  <a href="https://wa.me/201116013011" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
                 </div>
               </div>
               <div className="drawer-copyright">
