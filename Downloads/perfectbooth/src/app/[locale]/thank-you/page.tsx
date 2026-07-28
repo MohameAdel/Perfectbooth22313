@@ -193,6 +193,31 @@ export default async function ThankYouPage({
         >
           {t('contactNote')}
         </p>
+
+        {/* Back to Home Button */}
+        <div style={{ marginTop: '2.5rem' }}>
+          <Link 
+            href="/" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              backgroundColor: '#cfa856',
+              color: '#121418',
+              padding: '0.9rem 2.5rem',
+              borderRadius: '8px',
+              fontWeight: 700,
+              fontSize: '1.05rem',
+              transition: 'all 0.3s ease',
+              textDecoration: 'none',
+              boxShadow: '0 4px 20px rgba(207, 168, 86, 0.3)'
+            }}
+          >
+            <span>{t('button')}</span>
+            <span style={{ fontSize: '1.2rem' }}>{dir === 'rtl' ? '←' : '→'}</span>
+          </Link>
+        </div>
       </div>
 
       {/* Bottom Footer Area */}
