@@ -73,7 +73,15 @@ export default function LocationMapSection() {
               maxWidth: '850px'
             }}
           >
-            {t('title')}
+            {locale === 'ar' ? (
+              <>
+                شريكك الأقرب <span style={{ color: '#cfa856' }}>لتنظيم فعالياتك</span>
+              </>
+            ) : (
+              <>
+                Your Trusted Partner for <span style={{ color: '#cfa856' }}>Event Execution</span>
+              </>
+            )}
           </h2>
         </div>
       </div>
