@@ -36,9 +36,23 @@ export default function ContactHero() {
           </p>
           
           <div className="about-hero-actions animate-slide-in-fix" style={{ animationDelay: '0.4s' }}>
-            <Link href="#project-form" className="about-hero-btn-primary">
+            <a 
+              href="#project-form" 
+              onClick={(e) => {
+                e.preventDefault();
+                const formSection = document.getElementById('project-form');
+                if (formSection) {
+                  formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  setTimeout(() => {
+                    const input = document.getElementById('fullName');
+                    if (input) input.focus({ preventScroll: true });
+                  }, 600);
+                }
+              }}
+              className="about-hero-btn-primary animated-cta-pulse-btn"
+            >
               {t('cta')}
-            </Link>
+            </a>
             <a 
               href="https://wa.me/201116013011" 
               target="_blank" 

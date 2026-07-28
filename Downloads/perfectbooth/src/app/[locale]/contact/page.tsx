@@ -3,6 +3,7 @@ import ContactHero from '@/components/contact/ContactHero';
 import ContactFormSection from '@/components/contact/ContactFormSection';
 import ContactProcess from '@/components/contact/ContactProcess';
 import LocationMapSection from '@/components/home/LocationMapSection';
+import AnimatedFormCTA from '@/components/ui/AnimatedFormCTA';
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string}> }) {
   const { locale } = await params;
@@ -39,6 +40,7 @@ export default async function ContactPage({ params }: { params: Promise<{locale:
       <ContactFormSection />
       <ContactProcess />
       <LocationMapSection />
+      <AnimatedFormCTA />
     </main>
   );
 }
