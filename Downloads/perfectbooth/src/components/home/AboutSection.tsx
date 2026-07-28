@@ -53,7 +53,7 @@ export default function AboutSection() {
             
             <div className="about-media-card">
               <Image 
-                src="/assets/section2.jpeg" 
+                src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/24a70cfb-883b-4529-8cfb-90e4aef219a8.JPG.jpeg" 
                 alt={t('title') || "About Perfect Booth"} 
                 fill 
                 style={{ objectFit: 'cover' }}
