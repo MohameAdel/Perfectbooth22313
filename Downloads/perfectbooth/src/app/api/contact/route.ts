@@ -135,26 +135,13 @@ export async function POST(request: Request) {
 
     let gasRes: Response;
     try {
-      // First attempt with redirect: 'manual' to handle Google 302 POST redirects without dropping POST body
       gasRes = await fetch(appsScriptUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(gasPayload),
         signal: controller.signal,
-        redirect: 'manual'
+        redirect: 'follow'
       });
-
-      if (gasRes.status === 302 || gasRes.status === 301 || gasRes.status === 307 || gasRes.status === 308) {
-        const redirectUrl = gasRes.headers.get('location');
-        if (redirectUrl) {
-          gasRes = await fetch(redirectUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(gasPayload),
-            signal: controller.signal
-          });
-        }
-      }
     } catch (fetchErr: any) {
       clearTimeout(timeoutId);
       console.error('[API_CONTACT_ERR] Failed to communicate with Apps Script Web App:', fetchErr.name || fetchErr.message);
