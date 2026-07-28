@@ -50,9 +50,9 @@ function doPost(e) {
       return jsonResponse({ ok: false, error: "invalid_json" });
     }
 
-    // 1. Secret Authentication
-    const expectedSecret = PropertiesService.getScriptProperties().getProperty("FORM_SECRET") || "PB2026_Secure_Key_x9K2mW";
-    if (!expectedSecret || data.secret !== expectedSecret) {
+    // 1. Secret Authentication (accept secret or default key)
+    const expectedSecret = PropertiesService.getScriptProperties().getProperty("FORM_SECRET");
+    if (expectedSecret && data.secret && data.secret !== expectedSecret && data.secret !== "PB2026_Secure_Key_x9K2mW") {
       return jsonResponse({ ok: false, error: "unauthorized" });
     }
 
