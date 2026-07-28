@@ -65,9 +65,9 @@ export default function LocationMapSection() {
           {/* Main Title */}
           <h2 
             style={{
-              fontSize: 'clamp(1.85rem, 4vw, 3.25rem)',
+              fontSize: 'clamp(2.65rem, 4vw, 3.25rem)',
               fontWeight: 700,
-              lineHeight: 1.25,
+              lineHeight: 1.70,
               color: '#ffffff',
               margin: 0,
               maxWidth: '850px'
