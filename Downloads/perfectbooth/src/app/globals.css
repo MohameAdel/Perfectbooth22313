@@ -7889,24 +7889,6 @@ html[dir="rtl"] .before-after-actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  background-color: var(--pb-primary);
-  color: var(--pb-text);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-top: 3rem;
-}
-
-/* Hide main site header and footer on thank-you page */
-body:has(.thank-you-pixel-page) > header,
-body:has(.thank-you-pixel-page) > footer,
-body:has(.thank-you-pixel-page) .main-header,
-body:has(.thank-you-pixel-page) .top-bar,
-body:has(.thank-you-pixel-page) .pb-footer-premium {
-  display: none !important;
-}
   gap: 1rem;
   border: 1px solid var(--pb-accent);
   border-radius: 4px;
@@ -7922,6 +7904,15 @@ body:has(.thank-you-pixel-page) .pb-footer-premium {
 .read-more-btn:hover {
   background-color: var(--pb-accent);
   color: var(--pb-bg);
+}
+
+/* Hide main site header and footer on thank-you page */
+body:has(.thank-you-pixel-page) > header,
+body:has(.thank-you-pixel-page) > footer,
+body:has(.thank-you-pixel-page) .main-header,
+body:has(.thank-you-pixel-page) .top-bar,
+body:has(.thank-you-pixel-page) .pb-footer-premium {
+  display: none !important;
 }
 .read-more-icon {
   transition: transform 0.3s ease;
