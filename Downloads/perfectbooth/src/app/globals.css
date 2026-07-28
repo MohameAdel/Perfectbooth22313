@@ -7914,9 +7914,10 @@ body:has(.thank-you-pixel-page) .top-bar,
 body:has(.thank-you-pixel-page) .pb-footer-premium {
   display: none !important;
 }
-.read-more-icon {
-  transition: transform 0.3s ease;
-}
 .read-more-btn:hover .read-more-icon {
   transform: translateX(5px);
+}
+
+.projects-page-wrapper {
+  background-color: #1a1a1a;
 }
