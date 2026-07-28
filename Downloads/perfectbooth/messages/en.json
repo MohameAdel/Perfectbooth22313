@@ -198,9 +198,10 @@
       "title": "Tell us about your project",
       "subtext": "We’ll use these details only to respond to your project inquiry.",
       "submitBtn": "Send Inquiry",
-      "submitBtnLoading": "Sending...",
-      "successMsg": "Thank you! Your project inquiry has been sent successfully. We will contact you soon.",
-      "errorMsg": "We couldn't send your request. Please review the information and try again.",
+      "submitBtnLoading": "Sending your inquiry...",
+      "successMsg": "Your inquiry has been sent successfully. Our team will contact you shortly.",
+      "errorMsg": "We couldn't send your inquiry right now. Please try again.",
+      "validationErrorMsg": "Please review the required information.",
       "fields": {
         "fullName": "Full Name",
         "company": "Company or Organization",

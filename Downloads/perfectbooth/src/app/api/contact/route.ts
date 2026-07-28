@@ -1,162 +1,181 @@
 import { NextResponse } from 'next/server';
-import crypto from 'crypto';
-import { google } from 'googleapis';
+
+const MAX_PAYLOAD_BYTES = 50 * 1024; // 50 KB
+
+const SERVICE_MAP: Record<string, string> = {
+  booths: 'أجنحة المعارض',
+  planning: 'تخطيط وتنسيق الفعاليات',
+  tents: 'الخيام والتجهيزات الخارجية',
+  printing: 'المطبوعات والهوية البصرية',
+  audio: 'أنظمة الصوت والإضاءة',
+  registration: 'حلول التسجيل',
+  conferences: 'المؤتمرات وورش العمل',
+  other: 'أخرى'
+};
+
+const TIMELINE_MAP: Record<string, string> = {
+  urgent: 'عاجل',
+  weeks: 'خلال أسبوعين إلى 4 أسابيع',
+  months1: 'خلال شهر إلى شهرين',
+  months2: 'أكثر من شهرين',
+  planning: 'ما زلنا في مرحلة التخطيط'
+};
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    // 1. Payload size check
+    const contentLength = parseInt(request.headers.get('content-length') || '0', 10);
+    if (contentLength > MAX_PAYLOAD_BYTES) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
+
+    const bodyText = await request.text();
+    if (Buffer.byteLength(bodyText, 'utf8') > MAX_PAYLOAD_BYTES) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
+
+    let body: Record<string, any>;
+    try {
+      body = JSON.parse(bodyText);
+    } catch {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
+
     const { 
-      fullName, company, email, phone, service, location, timeline, details, website,
-      locale, utm_source, utm_medium, utm_campaign, utm_term, utm_content
+      fullName, 
+      company, 
+      email, 
+      phone, 
+      service, 
+      timeline, 
+      eventLocation, 
+      location, 
+      projectDetails, 
+      details, 
+      website 
     } = body;
 
-    // Honeypot spam check
-    if (website && website.trim() !== '') {
-      return NextResponse.json({ success: true, message: 'Inquiry received' }, { status: 200 });
+    // 2. Honeypot check
+    if (website && String(website).trim() !== '') {
+      // Fake success for bots
+      return NextResponse.json({ ok: true }, { status: 200 });
     }
 
-    // Basic Validation
-    if (!fullName || !fullName.trim()) {
-      return NextResponse.json({ success: false, error: 'Full Name is required' }, { status: 400 });
-    }
-    if (!email || !email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json({ success: false, error: 'A valid email is required' }, { status: 400 });
-    }
-    if (!phone || !phone.trim()) {
-      return NextResponse.json({ success: false, error: 'Phone Number is required' }, { status: 400 });
-    }
-    if (!service || !service.trim()) {
-      return NextResponse.json({ success: false, error: 'Required Service selection is required' }, { status: 400 });
-    }
-    if (!timeline || !timeline.trim()) {
-      return NextResponse.json({ success: false, error: 'Event timeline selection is required' }, { status: 400 });
-    }
+    // 3. Extract & sanitize text fields
+    const cleanFullName = typeof fullName === 'string' ? fullName.trim() : '';
+    const cleanCompany = typeof company === 'string' ? company.trim() : '';
+    const cleanEmail = typeof email === 'string' ? email.trim() : '';
+    const cleanPhone = typeof phone === 'string' ? phone.trim() : '';
+    const cleanService = typeof service === 'string' ? service.trim() : '';
+    const cleanTimeline = typeof timeline === 'string' ? timeline.trim() : '';
+    const rawLocation = typeof eventLocation === 'string' ? eventLocation : typeof location === 'string' ? location : '';
+    const cleanLocation = rawLocation.trim();
+    const rawDetails = typeof projectDetails === 'string' ? projectDetails : typeof details === 'string' ? details : '';
+    const cleanDetails = rawDetails.trim();
 
-    // Generate server-side values
-    const submission_id = crypto.randomUUID();
-    const submitted_at_utc = new Date().toISOString();
-    
-    // IP Hash
-    const rawIp = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
-    let ip_hash = null;
-    if (rawIp !== 'unknown' && process.env.LEADS_IP_HASH_SALT) {
-      ip_hash = crypto.createHash('sha256').update(rawIp + process.env.LEADS_IP_HASH_SALT).digest('hex');
+    // 4. Validation
+    if (!cleanFullName || !cleanEmail || !cleanPhone || !cleanService || !cleanTimeline) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
     }
 
-    // Duplicate key based on email and service
-    const duplicate_key = crypto.createHash('sha256').update(`${email.trim().toLowerCase()}-${service.trim()}`).digest('hex');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(cleanEmail)) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
 
-    const row = [
-      submission_id,                                       // A - Submission ID
-      submitted_at_utc,                                    // B - Submitted At (UTC)
-      null,                                                // C - Submitted At (Local)
-      "perfect-booth-contact-v1",                          // D - Form Version
-      locale || 'en',                                      // E - Website Locale
-      "Website Form",                                      // F - Submission Channel
-      request.headers.get('referer') ? new URL(request.headers.get('referer')!).pathname : '/contact', // G - Source Page
-      request.headers.get('referer') || null,              // H - Referrer URL
-      fullName.trim(),                                     // I - Full Name
-      company?.trim() || null,                             // J - Company Name
-      null,                                                // K - Job Title
-      email.trim(),                                        // L - Email
-      phone.trim(),                                        // M - Phone
-      null,                                                // N - Country
-      null,                                                // O - City
-      null,                                                // P - Preferred Contact Method
-      null,                                                // Q - Preferred Contact Time
-      service.trim(),                                      // R - Service Interest
-      null,                                                // S - Event Name
-      null,                                                // T - Event Date
-      location?.trim() || null,                            // U - Event Location
-      null,                                                // V - Booth Size
-      null,                                                // W - Budget Range
-      timeline.trim(),                                     // X - Project Timeline
-      details?.trim() || null,                             // Y - Requirements Message
-      null,                                                // Z - Attachment URL
-      null,                                                // AA - Marketing Consent
-      null,                                                // AB - Privacy Consent
-      utm_source || null,                                  // AC - UTM Source
-      utm_medium || null,                                  // AD - UTM Medium
-      utm_campaign || null,                                // AE - UTM Campaign
-      utm_term || null,                                    // AF - UTM Term
-      utm_content || null,                                 // AG - UTM Content
-      (request.headers.get('user-agent') || '').substring(0, 255) || null, // AH - User Agent
-      ip_hash,                                             // AI - IP Hash
-      "New",                                               // AJ - Lead Status
-      null,                                                // AK - Assigned To
-      null,                                                // AL - Follow-up Date
-      null,                                                // AM - Internal Notes
-      duplicate_key,                                       // AN - Duplicate Key
-      "Sent",                                              // AO - Integration Status
-      null                                                 // AP - Integration Error
-    ];
+    const phoneRegex = /^\+?[0-9\s\-()]{7,40}$/;
+    if (!phoneRegex.test(cleanPhone)) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
 
-    const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-    const clientEmail = process.env.GOOGLE_SHEETS_CLIENT_EMAIL;
-    const privateKey = process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n');
-    const sheetName = process.env.GOOGLE_SHEETS_WORKSHEET_NAME || 'Lead Submissions';
+    // Length limit checks
+    if (
+      cleanFullName.length > 120 ||
+      cleanCompany.length > 160 ||
+      cleanEmail.length > 254 ||
+      cleanPhone.length > 40 ||
+      cleanService.length > 150 ||
+      cleanTimeline.length > 150 ||
+      cleanLocation.length > 250 ||
+      cleanDetails.length > 5000
+    ) {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
+    }
 
-    if (spreadsheetId && clientEmail && privateKey) {
-      try {
-        const auth = new google.auth.GoogleAuth({
-          credentials: {
-            client_email: clientEmail,
-            private_key: privateKey,
-          },
-          scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-        });
+    // 5. Environment Variables check
+    const appsScriptUrl = process.env.GOOGLE_APPS_SCRIPT_WEB_APP_URL;
+    const formSecret = process.env.CONTACT_FORM_SECRET;
 
-        const sheets = google.sheets({ version: 'v4', auth });
+    if (!appsScriptUrl || !formSecret) {
+      console.warn('[WARN] Missing GOOGLE_APPS_SCRIPT_WEB_APP_URL or CONTACT_FORM_SECRET env variables.');
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 500 });
+    }
 
-        // 1. Check for duplicates (Idempotency)
-        // We will read Column AN (Duplicate Key) and Column A (Submission ID)
-        // Since we don't have the client passing submission_id on retries, we use our deterministic duplicate_key
-        const getRes = await sheets.spreadsheets.values.get({
-          spreadsheetId,
-          range: `${sheetName}!A:AN`,
-        });
-        
-        const rows = getRes.data.values || [];
-        // Check if duplicate_key already exists in the last few hours/days (Column AN is index 39)
-        const duplicateRow = rows.find(r => r[39] === duplicate_key);
-        
-        if (duplicateRow) {
-          // It's a duplicate, we return the existing submission ID (Column A is index 0)
-          return NextResponse.json({
-            success: true,
-            submission_id: duplicateRow[0]
-          }, { status: 200 });
-        }
+    // Map service and timeline keys to display labels if matched
+    const mappedService = SERVICE_MAP[cleanService] || cleanService;
+    const mappedTimeline = TIMELINE_MAP[cleanTimeline] || cleanTimeline;
 
-        // 2. Append new row
-        await sheets.spreadsheets.values.append({
-          spreadsheetId,
-          range: `${sheetName}!A:AP`,
-          valueInputOption: 'USER_ENTERED',
-          insertDataOption: 'INSERT_ROWS',
-          requestBody: {
-            values: [row],
-          },
-        });
-      } catch (sheetsError: unknown) {
-        const errorMessage = sheetsError instanceof Error ? sheetsError.message : 'Unknown error';
-        console.error('[ERR_GOOGLE_SHEETS] Failed to integrate with Google Sheets:', errorMessage);
-        return NextResponse.json({ success: false, error: 'Service error. Please try again.' }, { status: 502 });
-      }
+    // 6. Forward payload to Google Apps Script Web App
+    const gasPayload = {
+      secret: formSecret,
+      fullName: cleanFullName,
+      company: cleanCompany,
+      email: cleanEmail,
+      phone: cleanPhone,
+      service: mappedService,
+      timeline: mappedTimeline,
+      eventLocation: cleanLocation,
+      projectDetails: cleanDetails,
+      website: ''
+    };
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000); // 12 seconds timeout
+
+    let gasRes: Response;
+    try {
+      gasRes = await fetch(appsScriptUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(gasPayload),
+        signal: controller.signal,
+        redirect: 'follow'
+      });
+    } catch (fetchErr: any) {
+      clearTimeout(timeoutId);
+      console.error('[API_CONTACT_ERR] Failed to communicate with Apps Script Web App:', fetchErr.name || fetchErr.message);
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
+    } finally {
+      clearTimeout(timeoutId);
+    }
+
+    if (!gasRes.ok) {
+      console.error('[API_CONTACT_ERR] Apps Script returned HTTP status:', gasRes.status);
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
+    }
+
+    let gasData: { ok?: boolean; error?: string } = {};
+    try {
+      gasData = await gasRes.json();
+    } catch (jsonErr) {
+      console.error('[API_CONTACT_ERR] Invalid JSON response from Apps Script');
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
+    }
+
+    if (gasData.ok) {
+      return NextResponse.json({ ok: true }, { status: 200 });
+    } else if (gasData.error === 'validation_error') {
+      return NextResponse.json({ ok: false, error: 'validation_error' }, { status: 400 });
     } else {
-      console.warn('[WARN] Google Sheets credentials missing. Simulating success.');
+      return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 502 });
     }
 
-    return NextResponse.json({
-      success: true,
-      submission_id
-    }, { status: 200 });
-
-  } catch (error) {
-    console.error('Error handling contact form submission:', error);
-    return NextResponse.json({
-      success: false,
-      error: 'An internal server error occurred. Please try again.'
-    }, { status: 500 });
+  } catch (error: any) {
+    console.error('[API_CONTACT_ERR] Internal server error:', error.message || error);
+    return NextResponse.json({ ok: false, error: 'submission_failed' }, { status: 500 });
   }
+}
+
+export async function GET() {
+  return NextResponse.json({ ok: false, error: 'Method not allowed' }, { status: 405 });
 }

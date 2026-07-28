@@ -102,7 +102,7 @@ export default function ContactForm() {
 
     if (!isNameValid || !isEmailValid || !isPhoneValid || !isServiceValid || !isTimelineValid) {
       setStatus('error');
-      setServerMessage(t('errorMsg'));
+      setServerMessage(t('validationErrorMsg'));
       return;
     }
 
@@ -110,19 +110,16 @@ export default function ContactForm() {
     setServerMessage('');
 
     try {
-      // Collect UTM params if present
-      const utmParams = {
-        utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
-        utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || null,
-        utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
-        utm_term: new URLSearchParams(window.location.search).get('utm_term') || null,
-        utm_content: new URLSearchParams(window.location.search).get('utm_content') || null,
-      };
-
       const payload = {
-        ...formData,
-        locale: locale,
-        ...utmParams
+        fullName: formData.fullName.trim(),
+        company: formData.company.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        service: formData.service,
+        timeline: formData.timeline,
+        eventLocation: formData.location.trim(),
+        projectDetails: formData.details.trim(),
+        website: formData.website
       };
 
       const response = await fetch('/api/contact', {
@@ -135,22 +132,23 @@ export default function ContactForm() {
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
+      if (response.ok && (result.ok || result.success)) {
         setStatus('success');
+        setServerMessage(t('successMsg'));
         setFormData(initialData);
         setErrors({});
-        // Redirect to localized thank-you page with submission ID
-        if (result.submission_id) {
-          router.push(`/thank-you?ref=${result.submission_id}`);
-        } else {
-          router.push('/thank-you');
-        }
+        // Redirect to thank-you page
+        router.push('/thank-you');
       } else {
         setStatus('error');
-        setServerMessage(result.error || t('errorMsg'));
+        if (result.error === 'validation_error') {
+          setServerMessage(t('validationErrorMsg'));
+        } else {
+          setServerMessage(t('errorMsg'));
+        }
       }
     } catch (err) {
-      console.error(err);
+      console.error('[CONTACT_FORM_SUBMIT_ERR]', err);
       setStatus('error');
       setServerMessage(t('errorMsg'));
     }
@@ -186,6 +184,7 @@ export default function ContactForm() {
             onChange={handleChange}
             tabIndex={-1}
             autoComplete="off"
+            aria-hidden="true"
           />
         </div>
 
