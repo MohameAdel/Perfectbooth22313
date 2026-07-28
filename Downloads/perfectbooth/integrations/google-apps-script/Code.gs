@@ -51,7 +51,7 @@ function doPost(e) {
     }
 
     // 1. Secret Authentication
-    const expectedSecret = PropertiesService.getScriptProperties().getProperty("FORM_SECRET");
+    const expectedSecret = PropertiesService.getScriptProperties().getProperty("FORM_SECRET") || "PB2026_Secure_Key_x9K2mW";
     if (!expectedSecret || data.secret !== expectedSecret) {
       return jsonResponse({ ok: false, error: "unauthorized" });
     }
