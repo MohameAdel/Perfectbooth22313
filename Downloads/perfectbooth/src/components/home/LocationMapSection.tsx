@@ -24,7 +24,7 @@ export default function LocationMapSection() {
         style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          padding: '0 5% 2.5rem 5%',
+          padding: '0 2% 2.5rem 5%',
           boxSizing: 'border-box'
         }}
       >
