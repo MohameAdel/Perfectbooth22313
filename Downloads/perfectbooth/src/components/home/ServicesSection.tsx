@@ -9,22 +9,22 @@ export default function ServicesSection() {
   const services = [
     {
       key: 's01',
-      image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/co1X3sNRqpx9Kdnicliy0dmKe5puz1phE7CYyV8l.jpg',
+      image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7416.jpg.webp',
       objectPosition: 'center 25%'
     },
     {
       key: 's02',
-      image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/IatwT74DySD8ZSpWbgvabYzkYO9qffWWvK1kYzXL.jpg',
+      image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/34be3507-c4e9-42ef-b903-c262fe3d0e2b.JPG.jpeg',
       objectPosition: 'center center'
     },
     {
       key: 's03',
-      image: 'https://admin.perfectbooth-events.com/storage/services/images/fVoSlHLlnIqOMCs6IWYAKHabGZ2fmhAu2gWtigdE.jpg',
+      image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/5FE0C0C9-255D-4D1E-9267-E935BF7231B3.PNG',
       objectPosition: 'center 35%'
     },
     {
       key: 's04',
-      image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg',
+      image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/09d26c62-fd1c-4df1-a7e0-44659d9e1ca1.JPG.jpeg',
       objectPosition: 'center center'
     }
   ];

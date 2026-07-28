@@ -1,16 +1,23 @@
 :root {
   --header-height: 80px;
+  --pb-bg-page: #1a1a1a;
+  --pb-bg-section: #1a1a1a;
+
   --pb-bg: #1a1a1a;
   --pb-bg-soft: #1a1a1a;
   
-  --pb-surface: #1a1a1a; /* Base surface is same as bg */
-  --pb-surface-raised: rgba(18, 20, 24, 0.55);
-  --pb-surface-hover: rgba(18, 20, 24, 0.75);
-  
   --pb-structural: #121418;
-  --pb-border: #121418;
+  --pb-surface-dark: #121418;
+  --pb-surface-soft: rgba(18, 20, 24, 0.65);
+  --pb-surface-raised: rgba(255, 255, 255, 0.035);
+  --pb-surface-hover: rgba(255, 255, 255, 0.055);
+  --pb-surface: #121418;
+  
+  --pb-border-subtle: rgba(255, 255, 255, 0.08);
+  --pb-border-visible: rgba(255, 255, 255, 0.13);
+  --pb-border: rgba(255, 255, 255, 0.13);
   --pb-border-strong: rgba(255, 255, 255, 0.22);
-  --pb-divider: #121418;
+  --pb-divider: rgba(255, 255, 255, 0.08);
   
   --pb-primary: #19528A;
   --pb-primary-hover: #2469A8;
@@ -18,7 +25,7 @@
   --pb-primary-dark: #0D3F7E;
   
   --pb-accent: #cfa856;
-  --pb-accent-hover: rgba(207, 168, 86, 0.82);
+  --pb-accent-hover: #b89345;
   --pb-accent-muted: rgba(207, 168, 86, 0.08);
   --pb-accent-subtle: rgba(207, 168, 86, 0.12);
   
@@ -4311,8 +4318,8 @@ html[dir="rtl"] .about-approach-closing {
 }
 
 .contact-form-card {
-  background-color: var(--pb-surface);
-  border: 1px solid var(--pb-border);
+  background-color: var(--pb-surface-dark); /* #121418 */
+  border: 1px solid var(--pb-border-visible); /* rgba(255, 255, 255, 0.13) */
   border-radius: 12px;
   padding: 3.5rem;
   position: relative;
@@ -4374,8 +4381,8 @@ html[dir="rtl"] .about-approach-closing {
 
 .form-input {
   width: 100%;
-  background-color: var(--pb-bg);
-  border: 1px solid var(--pb-border);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--pb-border-visible);
   color: var(--pb-text);
   border-radius: 6px;
   padding: 0.85rem 1rem;
@@ -4388,8 +4395,8 @@ html[dir="rtl"] .about-approach-closing {
 .form-input:focus {
   outline: none;
   border-color: var(--pb-accent);
-  background-color: var(--pb-surface-hover);
-  box-shadow: 0 0 0 1px var(--pb-accent);
+  background-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 2px rgba(207, 168, 86, 0.25);
 }
 
 .form-input::placeholder {
@@ -4463,7 +4470,7 @@ html[dir="rtl"] .form-select {
   justify-content: center;
   padding: 1rem 3rem;
   background-color: var(--pb-accent);
-  color: var(--pb-bg);
+  color: #121418;
   font-weight: 700;
   border-radius: 6px;
   border: none;
@@ -4473,14 +4480,19 @@ html[dir="rtl"] .form-select {
   font-size: 1rem;
 }
 
+.form-submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 0 0 5px var(--pb-accent);
+}
+
 .form-submit-btn:hover:not(:disabled) {
-  background: var(--pb-text);
-  color: var(--pb-bg);
+  background-color: var(--pb-accent-hover);
+  color: #121418;
   transform: translateY(-2px);
 }
 
 .form-submit-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -6210,7 +6222,7 @@ html {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1 / 1;
   background-color: var(--pb-bg-soft);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
