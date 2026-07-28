@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
+import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
 import { FaXTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa6';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -96,9 +97,13 @@ export default async function ThankYouPage({
           position: 'relative'
         }}
       >
-        <Link href="/" aria-label="Home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div>
           <Logo width={130} height={42} />
-        </Link>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <LanguageSwitcher />
+        </div>
       </header>
 
       {/* Main Center Content */}
@@ -330,14 +335,7 @@ export default async function ThankYouPage({
           </a>
         </div>
 
-        {/* Footer Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.6)' }}>
-          <Link href="/contact" style={{ color: 'inherit' }}>{t('contact')}</Link>
-          <span>•</span>
-          <Link href="/privacy" style={{ color: 'inherit' }}>{t('privacy')}</Link>
-          <span>•</span>
-          <Link href="/terms" style={{ color: 'inherit' }}>{t('terms')}</Link>
-        </div>
+
 
         {/* Copyright */}
         <div style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.4)', fontFamily: 'monospace' }}>
