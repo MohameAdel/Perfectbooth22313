@@ -466,10 +466,16 @@
     "genericAlt20": "Project image 20"
   },
   "ThankYouPage": {
-    "title": "Thank You",
-    "message": "We've received your request successfully. Our team will review the details and contact you soon.",
-    "button": "Back to Home",
-    "reference": "Request reference"
+    "title": "Thank you.",
+    "subtitle": "Now check your email inbox. We sent you the confirmation.",
+    "spamNote": "No email? Be sure to check your spam folder.",
+    "contactNote": "You can contact us at info@perfectbooth-events.com if you need additional assistance.",
+    "home": "Home",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© Copyright Perfect Booth. All rights reserved."
   },
   "Location": {
     "eyebrow": "OUR LOCATION",
