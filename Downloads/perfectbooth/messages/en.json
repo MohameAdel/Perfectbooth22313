@@ -37,7 +37,8 @@
       "booths": "Exhibition Booths",
       "printing": "Publications and Visual Identity",
       "audio": "Sound and Lighting Systems"
-    }
+    },
+    "readMore": "Read More"
   },
   "Solutions": {
     "subtitle": "Trusted by Leading Organizations",
@@ -95,7 +96,8 @@
       "years": "Years of experience",
       "projects": "Projects Delivered",
       "satisfaction": "Customer Satisfaction",
-      "team": "Team Members"
+      "team": "Team Members",
+      "management": "Full Project Management"
     }
   },
   "SelectedProjects": {
@@ -198,7 +200,7 @@
       "submitBtn": "Send Inquiry",
       "submitBtnLoading": "Sending...",
       "successMsg": "Thank you! Your project inquiry has been sent successfully. We will contact you soon.",
-      "errorMsg": "Something went wrong. Please check your inputs and try again.",
+      "errorMsg": "We couldn't send your request. Please review the information and try again.",
       "fields": {
         "fullName": "Full Name",
         "company": "Company or Organization",
@@ -298,6 +300,8 @@
         "title": "3D Exhibition Design",
         "statement": "Developing an architectural vision that reflects your identity and maximizes space efficiency.",
         "description": "",
+        "alt": "Architectural visualization of a modern exhibition booth with optimized visitor flow.",
+        "homeAlt": "Architectural exhibition booth with a distinctive three-dimensional design",
         "cap1": "Highly precise and innovative 3D architectural designs.",
         "cap2": "Strategic space allocation to ease visitor flow and attract attention.",
         "cap3": "Dedicated reception areas and private meeting rooms for privacy."
@@ -306,6 +310,8 @@
         "title": "Custom Stand Fabrication",
         "statement": "Professional custom manufacturing transforming designs into tangible reality with high craftsmanship.",
         "description": "",
+        "alt": "Custom-built exhibition stand demonstrating premium wood fabrication and structural finish.",
+        "homeAlt": "Custom-fabricated exhibition stand with precise architectural finishing",
         "cap1": "Advanced wood manufacturing techniques (MDF, natural veneer, premium finishes).",
         "cap2": "Extreme precision in executing dimensions and details to the plans.",
         "cap3": "Sturdy structural solutions ensuring safety and booth aesthetics."
@@ -314,6 +320,8 @@
         "title": "Technical & AV Setup",
         "statement": "Integrating interactive and visual elements to create an engaging experience for visitors.",
         "description": "",
+        "alt": "Exhibition environment featuring integrated digital screens and professional architectural lighting.",
+        "homeAlt": "Exhibition booth with integrated screens and architectural lighting",
         "cap1": "Installing decorative and direct lighting systems to highlight products.",
         "cap2": "Integrating professional screens and audio-visual equipment.",
         "cap3": "Managing electrical installations to the highest safety standards."
@@ -322,6 +330,8 @@
         "title": "On-site Management",
         "statement": "Comprehensive management of transport, assembly, and operations to ensure client comfort.",
         "description": "",
+        "alt": "Fully assembled exhibition space ready for visitors on the trade show floor.",
+        "homeAlt": "Completed exhibition installation managed and prepared on site",
         "cap1": "On-schedule shipping, transportation, and booth assembly.",
         "cap2": "Technical support and on-site presence throughout the event.",
         "cap3": "Booth dismantling and site restoration after the exhibition."
@@ -454,5 +464,15 @@
     "genericAlt18": "Project image 18",
     "genericAlt19": "Project image 19",
     "genericAlt20": "Project image 20"
+  },
+  "ThankYouPage": {
+    "title": "Thank You",
+    "message": "We've received your request successfully. Our team will review the details and contact you soon.",
+    "button": "Back to Home",
+    "reference": "Request reference"
+  },
+  "Location": {
+    "eyebrow": "OUR LOCATION",
+    "title": "Your Closest Partner for Event Organization"
   }
 }

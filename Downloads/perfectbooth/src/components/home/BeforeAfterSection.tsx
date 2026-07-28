@@ -108,13 +108,7 @@ export default function BeforeAfterSection() {
           onMouseEnter={stopAutoplay} 
           onMouseLeave={startAutoplay}
         >
-          <div className="case-study-header">
-            <span className="case-study-caption">{t('caseStudyLabel')}</span>
-            <h3 className="before-after-project-title">{t(beforeAfterProjects[activeIndex].titleKey)}</h3>
-            {beforeAfterProjects[activeIndex].categoryKey && (
-              <p className="case-study-subtitle">{t(beforeAfterProjects[activeIndex].categoryKey as Parameters<typeof t>[0])}</p>
-            )}
-          </div>
+
 
           <div className="portfolio-actions before-after-actions">
             <button className="portfolio-nav-btn prev" onClick={scrollPrev} aria-label={t('prevProject')}>

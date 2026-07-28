@@ -50,7 +50,7 @@ export default function CoreServices() {
                   <div className="core-service-image-wrapper">
                     <Image
                       src={service.image}
-                      alt={t(`${service.id}.title`)}
+                      alt={t(`${service.id}.alt`)}
                       fill
                       className="core-service-image"
                       sizes="(max-width: 768px) 100vw, 50vw"

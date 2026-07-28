@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter } from '@/i18n/navigation';
 import { FaCircleCheck, FaCircleExclamation } from 'react-icons/fa6';
 
 interface FormData {
@@ -18,6 +19,8 @@ interface FormData {
 
 export default function ContactForm() {
   const t = useTranslations('ContactPage.form');
+  const locale = useLocale();
+  const router = useRouter();
   
   const initialData: FormData = {
     fullName: '',
@@ -107,21 +110,41 @@ export default function ContactForm() {
     setServerMessage('');
 
     try {
+      // Collect UTM params if present
+      const utmParams = {
+        utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
+        utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || null,
+        utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
+        utm_term: new URLSearchParams(window.location.search).get('utm_term') || null,
+        utm_content: new URLSearchParams(window.location.search).get('utm_content') || null,
+      };
+
+      const payload = {
+        ...formData,
+        locale: locale,
+        ...utmParams
+      };
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
 
       if (response.ok && result.success) {
         setStatus('success');
-        setServerMessage(t('successMsg'));
-        setFormData(initialData); // Reset form
+        setFormData(initialData);
         setErrors({});
+        // Redirect to localized thank-you page with submission ID
+        if (result.submission_id) {
+          router.push(`/thank-you?ref=${result.submission_id}`);
+        } else {
+          router.push('/thank-you');
+        }
       } else {
         setStatus('error');
         setServerMessage(result.error || t('errorMsg'));

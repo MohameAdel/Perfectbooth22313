@@ -9,6 +9,21 @@ export default function WhyChooseUsSection() {
   const stats = [
     {
       id: 1,
+      number: '360°',
+      label: t('stats.management'),
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+          <path d="M12 11h4"></path>
+          <path d="M12 16h4"></path>
+          <path d="M8 11h.01"></path>
+          <path d="M8 16h.01"></path>
+        </svg>
+      )
+    },
+    {
+      id: 2,
       number: '9',
       label: t('stats.years'),
       icon: (
@@ -18,7 +33,7 @@ export default function WhyChooseUsSection() {
       )
     },
     {
-      id: 2,
+      id: 3,
       number: '+50',
       label: t('stats.projects'),
       icon: (
@@ -30,25 +45,12 @@ export default function WhyChooseUsSection() {
       )
     },
     {
-      id: 3,
+      id: 4,
       number: '4.9/5',
       label: t('stats.satisfaction'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-      )
-    },
-    {
-      id: 4,
-      number: '80',
-      label: t('stats.team'),
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
       )
     }
