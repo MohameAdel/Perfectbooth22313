@@ -7921,3 +7921,7 @@ body:has(.thank-you-pixel-page) .pb-footer-premium {
 .projects-page-wrapper {
   background-color: #1a1a1a;
 }
+
+[dir="rtl"] .partners-section {
+  padding: 5rem 4% 0rem 0;
+}
