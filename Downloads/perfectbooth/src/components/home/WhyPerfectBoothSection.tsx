@@ -37,7 +37,7 @@ export default function WhyPerfectBoothSection() {
           <h2 className="why-pb-title">{t('title')}</h2>
           <div className="why-pb-wavy-line">
             <svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0,10 Q10,0 20,10 T40,10 T60,10 T80,10 T100,10" fill="none" stroke="var(--pb-primary-light)" strokeWidth="2"/>
+              <path d="M0,10 Q10,0 20,10 T40,10 T60,10 T80,10 T100,10" fill="none" stroke="var(--pb-accent)" strokeWidth="2"/>
             </svg>
           </div>
           <p className="why-pb-description">{t('description')}</p>

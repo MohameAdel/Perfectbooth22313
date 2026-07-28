@@ -78,7 +78,7 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
     <div className="project-slider-container" dir={dir} style={{ marginBottom: '5rem' }}>
       <div className="project-slider-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
-          <h3 className="project-slider-title" style={{ fontSize: '2rem', marginBottom: '0.5rem', color: '#fff' }}>{t(titleKey as any)}</h3>
+          <h3 className="project-slider-title" style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--pb-text)' }}>{t(titleKey as any)}</h3>
           {categoryKey && (
             <p className="project-slider-category" style={{ color: 'var(--pb-accent)', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>{t(categoryKey as any)}</p>
           )}

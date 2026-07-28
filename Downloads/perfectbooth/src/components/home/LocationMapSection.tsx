@@ -27,7 +27,7 @@ export default function LocationMapSection() {
       <div className="w-full relative px-4 md:px-8 max-w-7xl mx-auto pt-16 pb-8 md:pt-24 md:pb-12" dir={dir}>
         <div className="flex flex-col text-start">
           <div className="max-w-[95%] md:max-w-2xl lg:max-w-3xl">
-            <p className="text-[#C4972D] text-sm md:text-base uppercase tracking-[0.2em] font-semibold mb-3 md:mb-4">
+            <p className="text-[var(--pb-accent)] text-sm md:text-base uppercase tracking-[0.2em] font-semibold mb-3 md:mb-4">
               {t('eyebrow')}
             </p>
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-snug md:leading-tight">

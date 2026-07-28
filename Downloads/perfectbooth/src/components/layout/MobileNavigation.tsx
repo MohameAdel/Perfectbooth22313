@@ -57,9 +57,9 @@ export default function MobileNavigation() {
         tabIndex={0}
         aria-label="Open menu"
       >
-        <div style={{ width: '30px', height: '2px', backgroundColor: '#fff' }}></div>
-        <div style={{ width: '30px', height: '2px', backgroundColor: '#fff' }}></div>
-        <div style={{ width: '30px', height: '2px', backgroundColor: '#fff' }}></div>
+        <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--pb-text)' }}></div>
+        <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--pb-text)' }}></div>
+        <div style={{ width: '30px', height: '2px', backgroundColor: 'var(--pb-text)' }}></div>
       </div>
       
       {/* Overlay rendered in a Portal so it escapes the Header backdrop-filter constraints */}

@@ -13,11 +13,11 @@ export default function AboutSection() {
       <div className="about-container">
         {/* Text Content */}
         <div className="about-text" style={{ textAlign: dir === 'rtl' ? 'right' : 'left' }}>
-          <h4 className="about-subtitle" style={{ color: '#C4972D', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{t('subtitle')}</h4>
+          <h4 className="about-subtitle" style={{ color: 'var(--pb-accent)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{t('subtitle')}</h4>
           <h2 className="about-title" style={{ marginBottom: '0.5rem' }}>{t('title')}</h2>
           <div className="wavy-line" style={{ marginBottom: '2rem' }}>
             <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 6C3.96 6 6.04 1 10 1C13.96 1 16.04 11 20 11C23.96 11 26.04 1 30 1C33.96 1 36.04 11 40 11C43.96 11 46.04 1 50 1C53.96 1 56.04 6 60 6" stroke="#C4972D" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M0 6C3.96 6 6.04 1 10 1C13.96 1 16.04 11 20 11C23.96 11 26.04 1 30 1C33.96 1 36.04 11 40 11C43.96 11 46.04 1 50 1C53.96 1 56.04 6 60 6" stroke="var(--pb-accent)" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </div>
           <p className="about-description">
@@ -32,7 +32,7 @@ export default function AboutSection() {
           <p className="about-description">
             {t('description4')}
           </p>
-          <p className="about-description" style={{ fontWeight: '600', color: '#fff', marginTop: '1rem' }}>
+          <p className="about-description" style={{ fontWeight: '600', color: 'var(--pb-text)', marginTop: '1rem' }}>
             {t('description5')}
           </p>
           <div style={{ marginTop: '2.5rem' }}>
