@@ -3717,38 +3717,22 @@ a {
 
 .about-hero-btn-secondary {
   color: var(--pb-text);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  position: relative;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.about-hero-btn-secondary::after {
-  content: '';
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--pb-text-muted);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-[dir="rtl"] .about-hero-btn-secondary::after {
-  transform-origin: left;
-}
-
-.about-hero-btn-secondary:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-[dir="rtl"] .about-hero-btn-secondary:hover::after {
-  transform-origin: right;
+.about-hero-btn-secondary:hover {
+  border-color: var(--pb-accent);
+  background-color: rgba(197, 143, 45, 0.05);
+  transform: translateY(-2px);
 }
 
 .about-hero-image-wrapper {
