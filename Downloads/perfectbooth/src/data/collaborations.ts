@@ -67,6 +67,46 @@ export const beforeAfterProjects: BeforeAfterProject[] = [
     afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/ac6bff72-d972-451d-80c1-d479796fc50f.jpg.webp',
     beforeAltKey: 'project2BeforeAlt',
     afterAltKey: 'project2AfterAlt',
+  },
+  {
+    id: 3,
+    titleKey: 'project1Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp',
+    beforeAltKey: 'project1BeforeAlt',
+    afterAltKey: 'project1AfterAlt',
+  },
+  {
+    id: 4,
+    titleKey: 'project2Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro22.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro2.webp',
+    beforeAltKey: 'project2BeforeAlt',
+    afterAltKey: 'project2AfterAlt',
+  },
+  {
+    id: 5,
+    titleKey: 'project3Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp',
+    beforeAltKey: 'project3BeforeAlt',
+    afterAltKey: 'project3AfterAlt',
+  },
+  {
+    id: 6,
+    titleKey: 'project4Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro44.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro4.webp',
+    beforeAltKey: 'project4BeforeAlt',
+    afterAltKey: 'project4AfterAlt',
+  },
+  {
+    id: 7,
+    titleKey: 'project5Title',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro55.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro5.webp',
+    beforeAltKey: 'project5BeforeAlt',
+    afterAltKey: 'project5AfterAlt',
   }
 ];
 
