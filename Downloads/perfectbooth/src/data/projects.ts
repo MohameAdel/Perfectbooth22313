@@ -34,6 +34,14 @@ export const projectsGallery: ProjectGalleryItem[] = [
   { id: 'umbrella-3', titleKey: 'brandUmbrella', image: `${BLOB_BASE_URL}/736AEA72-FDA2-4D45-86D0-324186382647.webp`, altKey: 'genericAlt3', categoryKey: 'categoryCustomSpace' },
   { id: 'umbrella-4', titleKey: 'brandUmbrella', image: `${BLOB_BASE_URL}/DCA12578-A18E-49BD-9AAA-8B21365A6C72.webp`, altKey: 'genericAlt4', categoryKey: 'categoryCustomSpace' },
 
+  // 3.5 Umbrella New Slider
+  { id: 'umbrella2-1', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/7C96DA7B-5DEC-4FBC-8024-D1882D0D8062.webp`, altKey: 'genericAlt1', categoryKey: 'categoryCustomSpace' },
+  { id: 'umbrella2-2', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_4081.webp`, altKey: 'genericAlt2', categoryKey: 'categoryCustomSpace' },
+  { id: 'umbrella2-3', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9466.jpg.webp`, altKey: 'genericAlt3', categoryKey: 'categoryCustomSpace' },
+  { id: 'umbrella2-4', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9467.jpg.webp`, altKey: 'genericAlt4', categoryKey: 'categoryCustomSpace' },
+  { id: 'umbrella2-5', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9470.jpg.webp`, altKey: 'genericAlt5', categoryKey: 'categoryCustomSpace' },
+  { id: 'umbrella2-6', titleKey: 'brandUmbrella2', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/ac6bff72-d972-451d-80c1-d479796fc50f.jpg.webp`, altKey: 'genericAlt6', categoryKey: 'categoryCustomSpace' },
+
   // 4. AUO
   { id: 'auo-1', titleKey: 'brandAUO', image: `${BLOB_BASE_URL}/8190832C-15D1-41AB-9EAE-3F926F0D6410.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
   { id: 'auo-2', titleKey: 'brandAUO', image: `${BLOB_BASE_URL}/8A703CDC-F978-4210-B2F5-8BDBA890A8BC.webp`, altKey: 'genericAlt2', categoryKey: 'categoryExhibition' },
