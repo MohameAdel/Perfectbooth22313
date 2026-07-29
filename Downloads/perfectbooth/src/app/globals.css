@@ -3622,9 +3622,9 @@ a {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 4rem;
+  gap: 5rem;
   width: 100%;
 }
 
@@ -3654,9 +3654,9 @@ a {
 }
 
 .about-hero-title {
-  font-size: clamp(1.75rem, 6vw, 4rem);
+  font-size: clamp(1.75rem, 4.5vw, 3.25rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   max-width: 900px;
   color: var(--pb-text);
@@ -3675,7 +3675,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   padding-left: 1rem;
   border-left: 2px solid var(--pb-border-strong);
 }
@@ -3690,9 +3690,9 @@ a {
 .about-hero-actions {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .about-hero-btn-primary {
