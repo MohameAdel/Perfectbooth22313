@@ -5528,7 +5528,7 @@ html {
   scroll-behavior: smooth;
 }
 .services-hero {
-  padding-top: calc(var(--header-height, 80px) + 4rem);
+  padding-top: calc(var(--header-height, 90px) + 7rem);
   padding-bottom: clamp(80px, 8vw, 120px);
   background-color: var(--pb-bg);
   position: relative;
