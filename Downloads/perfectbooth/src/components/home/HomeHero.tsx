@@ -158,7 +158,7 @@ export default function HomeHero() {
                   {t('description')}
                 </p>
                 <div className="pb-hero-1-cta animate-slide-in-fix" style={{ animationDelay: '0.3s' }}>
-                  <Link href="#selected-projects" className="pb-hero-1-btn">
+                  <Link href="/contact#project-form" className="pb-hero-1-btn">
                     {t('cta')}
                     <span aria-hidden="true" style={{ marginInlineStart: '12px' }}>{dir === 'rtl' ? '←' : '→'}</span>
                   </Link>

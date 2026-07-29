@@ -39,7 +39,7 @@ export default function AboutHero() {
           </p>
           
           <div className="about-hero-actions animate-slide-in-fix" style={{ animationDelay: '0.4s' }}>
-            <Link href="/contact" className="about-hero-btn-primary">
+            <Link href="/contact#project-form" className="about-hero-btn-primary">
               {t('cta')}
             </Link>
             <a href="#approach" className="about-hero-btn-secondary">

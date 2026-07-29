@@ -29,7 +29,7 @@ export default function NavLinks({
       <Link href="/services" className={pathname === '/services' ? 'active' : ''}>{navServices}</Link>
       <Link href="/partners" className={pathname === '/partners' ? 'active' : ''}>{navPartners}</Link>
       <Link href="/projects" className={pathname === '/projects' ? 'active' : ''}>{navProjects}</Link>
-      <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>{navContact}</Link>
+      <Link href="/contact#project-form" className={pathname === '/contact' ? 'active' : ''}>{navContact}</Link>
     </nav>
   );
 }

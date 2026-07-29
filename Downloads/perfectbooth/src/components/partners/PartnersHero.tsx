@@ -34,7 +34,7 @@ export default function PartnersHero() {
             <Link href="#collaborations" className="btn btn-primary">
               {t('ctaPrimary')}
             </Link>
-            <Link href="/contact" className="btn btn-secondary">
+            <Link href="/contact#project-form" className="btn btn-secondary">
               {t('ctaSecondary')}
             </Link>
           </div>

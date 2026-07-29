@@ -40,7 +40,7 @@ export default function ServicesHero() {
             <p className="services-hero-support">{t('support')}</p>
           </div>
           <div className="services-hero-actions services-hero-reveal" style={{ animationDelay: '0.5s' }}>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact#project-form" className="btn btn-primary">
               {t('ctaPrimary')}
             </Link>
             <a href="#core-services" className="btn btn-secondary">

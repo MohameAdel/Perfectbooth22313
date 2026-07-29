@@ -70,7 +70,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                 </div>
               )}
               <div className="featured-project-explore">
-                <Link href="/contact" className="explore-link">
+                <Link href="/contact#project-form" className="explore-link">
                   {t('exploreProject')}
                 </Link>
               </div>
@@ -100,7 +100,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
           <h2 className="projects-cta-title">{t('ctaTitle')}</h2>
           <p className="projects-cta-description">{t('ctaText')}</p>
           <div className="projects-cta-actions">
-            <Link href="/contact" className="pb-btn-primary projects-cta-btn">
+            <Link href="/contact#project-form" className="pb-btn-primary projects-cta-btn">
               {t('ctaAction')} 
               <span className="cta-arrow">{isAr ? '←' : '→'}</span>
             </Link>

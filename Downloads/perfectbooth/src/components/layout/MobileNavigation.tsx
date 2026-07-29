@@ -44,7 +44,7 @@ export default function MobileNavigation() {
     { key: 'services', href: '/services' },
     { key: 'partners', href: '/partners' },
     { key: 'projects', href: '/projects' },
-    { key: 'contact', href: '/contact' },
+    { key: 'contact', href: '/contact#project-form' },
   ];
 
   return (

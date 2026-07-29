@@ -71,7 +71,7 @@ export default function Footer() {
             <div className="footer-divider"></div>
             <ul className="contact-links-list">
               <li>
-                <Link href="/contact" className="footer-link">
+                <Link href="/contact#project-form" className="footer-link">
                   {tHeader('nav.contact')}
                 </Link>
               </li>

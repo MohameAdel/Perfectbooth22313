@@ -17,7 +17,7 @@ export default function FinalCTA() {
         <h2 className="final-cta-title">{t('title')}</h2>
         <p className="final-cta-body">{t('body')}</p>
         <div className="final-cta-actions">
-          <Link href="/contact" className="btn btn-primary">
+          <Link href="/contact#project-form" className="btn btn-primary">
             {t('primary')}
           </Link>
           <Link href="/partners" className="btn btn-secondary">

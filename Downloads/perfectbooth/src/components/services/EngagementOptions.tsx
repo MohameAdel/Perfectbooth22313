@@ -17,7 +17,7 @@ export default function EngagementOptions() {
             <div className="engagement-panel-label">{t(`${option}.label`)}</div>
             <h3 className="engagement-panel-title">{t(`${option}.title`)}</h3>
             <p className="engagement-panel-body">{t(`${option}.body`)}</p>
-            <Link href="/contact" className="engagement-panel-cta btn btn-secondary">
+            <Link href="/contact#project-form" className="engagement-panel-cta btn btn-secondary">
               {t(`${option}.cta`)}
             </Link>
           </div>
