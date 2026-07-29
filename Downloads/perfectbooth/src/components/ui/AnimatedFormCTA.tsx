@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { FaPaperPlane, FaArrowDown } from 'react-icons/fa6';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { FaArrowDown, FaPaperPlane } from 'react-icons/fa6';
 
 interface AnimatedFormCTAProps {
   targetId?: string;
@@ -18,6 +19,9 @@ export default function AnimatedFormCTA({
   floating = true
 }: AnimatedFormCTAProps) {
   const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
   const isAr = locale === 'ar';
   const label = isAr ? labelAr : labelEn;
 
@@ -26,11 +30,17 @@ export default function AnimatedFormCTA({
   useEffect(() => {
     if (!floating) return;
     
+    // Hide on thank-you page
+    if (pathname.includes('/thank-you')) {
+      setIsVisible(false);
+      return;
+    }
+
     const handleScroll = () => {
-      // Show floating button after scrolling 200px down, hide when near bottom form
       const formEl = document.getElementById(targetId);
       const scrollY = window.scrollY;
 
+      // Show floating button after scrolling past the first section (220px+)
       if (scrollY > 220) {
         if (formEl) {
           const rect = formEl.getBoundingClientRect();
@@ -51,21 +61,24 @@ export default function AnimatedFormCTA({
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [floating, targetId]);
+  }, [floating, targetId, pathname]);
 
-  const handleScrollToForm = (e: React.MouseEvent) => {
+  const handleAction = (e: React.MouseEvent) => {
     e.preventDefault();
     const formSection = document.getElementById(targetId);
     
     if (formSection) {
+      // If form exists on current page, smooth scroll directly to it
       formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Focus on first input
       setTimeout(() => {
         const input = document.getElementById('fullName');
         if (input) {
           input.focus({ preventScroll: true });
         }
       }, 600);
+    } else {
+      // If on another page, navigate to contact page form section
+      router.push('/contact#project-form');
     }
   };
 
@@ -84,10 +97,6 @@ export default function AnimatedFormCTA({
           100% {
             box-shadow: 0 0 0 0 rgba(207, 168, 86, 0), 0 8px 25px rgba(0, 0, 0, 0.4);
           }
-        }
-        @keyframes animatedCtaShimmer {
-          0% { background-position: -200% 0; }
-          100% { background-position: 200% 0; }
         }
         .animated-form-cta-floating {
           position: fixed;
@@ -133,13 +142,13 @@ export default function AnimatedFormCTA({
 
       <div className={floating ? 'animated-form-cta-floating' : ''}>
         <button
-          onClick={handleScrollToForm}
+          onClick={handleAction}
           className="animated-form-cta-btn"
           aria-label={label}
         >
           <span>{label}</span>
           <div className="animated-cta-icon-box">
-            <FaArrowDown />
+            {pathname.includes('/contact') ? <FaArrowDown /> : <FaPaperPlane />}
           </div>
         </button>
       </div>

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import AnimatedFormCTA from '@/components/ui/AnimatedFormCTA';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <Footer />
+          <AnimatedFormCTA />
         </NextIntlClientProvider>
       </body>
     </html>
