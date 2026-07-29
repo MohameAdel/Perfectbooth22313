@@ -8,7 +8,6 @@ import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import FaqSection from '@/components/home/FaqSection';
 
 const SelectedProjectsSection = dynamic(() => import('@/components/home/SelectedProjectsSection'));
-const BeforeAfterSection = dynamic(() => import('@/components/home/BeforeAfterSection'));
 const PartnersSection = dynamic(() => import('@/components/home/PartnersSection'));
 const LocationMapSection = dynamic(() => import('@/components/home/LocationMapSection'));
 
@@ -24,7 +23,6 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
       <SolutionsSection />
       <WhyChooseUsSection />
       <SelectedProjectsSection />
-      <BeforeAfterSection />
       <FaqSection />
       <PartnersSection />
       <LocationMapSection />

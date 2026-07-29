@@ -3,22 +3,17 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
-import { selectedProjects } from '@/data/collaborations';
+import { beforeAfterProjects } from '@/data/collaborations';
+import BeforeAfterPair from '@/components/ui/BeforeAfterPair';
 
 export default function SelectedProjectsSection() {
   const t = useTranslations('SelectedProjects');
+  const tBeforeAfter = useTranslations('BeforeAfter');
   const locale = useLocale();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   const trackRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-
-  // Project data comes from collaborations.ts, but we map the title dynamically
-  const projects = selectedProjects.map(p => ({
-    ...p,
-    title: t(p.titleKey as 'project1' | 'project2' | 'project3' | 'project4')
-  }));
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;
@@ -110,15 +105,14 @@ export default function SelectedProjectsSection() {
         </div>
 
         <div className="portfolio-track" ref={trackRef}>
-          {projects.map((project) => (
+          {beforeAfterProjects.map((project) => (
             <div key={project.id} className="portfolio-item">
-              <div className="portfolio-img-wrapper">
-                <Image 
-                  src={project.image} 
-                  alt={project.title} 
-                  fill 
-                  sizes="(max-width: 768px) 85vw, 60vw"
-                  className="portfolio-img" 
+              <div className="case-study-box" style={{ width: '100%', height: '100%', position: 'relative' }}>
+                <BeforeAfterPair 
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  beforeAlt={tBeforeAfter(project.beforeAltKey as any)}
+                  afterAlt={tBeforeAfter(project.afterAltKey as any)}
                 />
               </div>
             </div>
