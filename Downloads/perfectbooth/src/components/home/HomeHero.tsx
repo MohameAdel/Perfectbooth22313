@@ -138,7 +138,7 @@ export default function HomeHero() {
             display: 'flex', 
             width: '300%', 
             alignItems: 'stretch',
-            minHeight: 'calc(100svh - var(--header-height, 100px))',
+            minHeight: 'calc(100vh - 130px)',
             transform: `translateX(${dir === 'rtl' ? currentSlide * (100 / 3) : -currentSlide * (100 / 3)}%)`, 
             transition: 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' 
           }}
