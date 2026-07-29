@@ -72,7 +72,7 @@ export default function ContactHero() {
             <div className="hero-3d-frame">
               <div className="hero-3d-frame-image-layer">
                 <Image
-                  src="/assets/WhatsApp-Image-2026-04-04-at-3.21.52-AM8.jpeg"
+                  src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9466.jpg.webp"
                   alt={isRtl ? 'تصميم وتنفيذ أجنحة معارض مخصصة من تنفيذ Perfect Booth' : 'Custom exhibition booth design and fabrication by Perfect Booth'}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
