@@ -178,26 +178,26 @@ export default function HomeHero() {
             </div>
           </div>
 
-          {/* SLIDE 2: Before/After Card (pro11 / pro1) */}
+          {/* SLIDE 2: Before/After Card (Container 1) */}
           <div className="pb-hero-1-slide pb-hero-case-slide" style={{ flex: '0 0 33.333333%', width: '33.333333%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem' }}>
             <div className="case-study-box pb-hero-case-box" style={{ width: '100%', maxWidth: '1400px' }}>
               <BeforeAfterPair 
-                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro11.webp"
-                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp"
+                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9467.jpg.webp"
+                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_4081.webp"
                 beforeAlt="التصميم"
-                afterAlt="الحقيقة"
+                afterAlt="الواقع"
               />
             </div>
           </div>
 
-          {/* SLIDE 3: Before/After Card (pro33 / pro3) */}
+          {/* SLIDE 3: Before/After Card (Container 2) */}
           <div className="pb-hero-1-slide pb-hero-case-slide" style={{ flex: '0 0 33.333333%', width: '33.333333%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem' }}>
             <div className="case-study-box pb-hero-case-box" style={{ width: '100%', maxWidth: '1400px' }}>
               <BeforeAfterPair 
-                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg"
-                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/IMG_9430%20%281%29.webp"
+                beforeImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9470.jpg.webp"
+                afterImage="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/ac6bff72-d972-451d-80c1-d479796fc50f.jpg.webp"
                 beforeAlt="التصميم"
-                afterAlt="الحقيقة"
+                afterAlt="الواقع"
               />
             </div>
           </div>
