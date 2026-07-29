@@ -92,7 +92,7 @@ export default function AnimatedFormCTA({
         .animated-form-cta-floating {
           position: fixed;
           bottom: 30px;
-          ${isAr ? 'left: 30px;' : 'right: 30px;'}
+          ${isAr ? 'right: 30px;' : 'left: 30px;'}
           z-index: 999;
           animation: animatedCtaPulse 2.2s infinite;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
