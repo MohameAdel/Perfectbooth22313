@@ -1,6 +1,8 @@
+"use client";
+
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import HeroVideoController from './HeroVideoController';
 
 export default function PartnersHero() {
@@ -9,6 +11,14 @@ export default function PartnersHero() {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
   
   const videoUrl = "https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/videos/homepage-intro-v2.mp4";
+
+  const handleScrollToCollaborations = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const section = document.getElementById('collaborations');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <section className="partners-hero" dir={dir}>
@@ -31,9 +41,13 @@ export default function PartnersHero() {
           </div>
 
           <div className="partners-hero-actions">
-            <Link href="#collaborations" className="btn btn-primary">
+            <a 
+              href="#collaborations" 
+              onClick={handleScrollToCollaborations} 
+              className="btn btn-primary"
+            >
               {t('ctaPrimary')}
-            </Link>
+            </a>
             <Link href="/contact#project-form" className="btn btn-secondary">
               {t('ctaSecondary')}
             </Link>
