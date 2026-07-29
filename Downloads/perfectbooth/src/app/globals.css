@@ -6645,7 +6645,7 @@ html {
 @media (max-width: 768px) {
   .about-page-hero,
   .partners-hero {
-    padding-top: 140px !important;
+    padding-top: 176px !important;
     padding-bottom: 3rem !important;
   }
 }
