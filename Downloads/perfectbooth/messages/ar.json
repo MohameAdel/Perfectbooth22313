@@ -77,7 +77,7 @@
     "followUs": "تابعنا",
     "copyright": "© 2026 perfect booth. جميع الحقوق محفوظة.",
     "addressPlaceholder": "القاهرة، مصر",
-    "phonePlaceholder": "+20 111 601 3011",
+    "phonePlaceholder": "+201116013011",
     "emailPlaceholder": "info@perfectbooth-events.com"
   },
   "WhyPerfectBooth": {
@@ -189,8 +189,8 @@
       "whatsappLabel": "واتساب",
       "locationLabel": "موقعنا",
       "emailValue": "info@perfectbooth-events.com",
-      "phoneValue": "+20 111 601 3011",
-      "whatsappValue": "+20 111 601 3011",
+      "phoneValue": "+201116013011",
+      "whatsappValue": "+201116013011",
       "locationValue": "القاهرة، مصر",
       "desc": "سواء كان لديك موجز مشروع كامل أو مجرد فكرة أولية، أرسل لنا ما لديك وسيساعدك فريقنا في تحديد الخطوة التالية."
     },
@@ -213,13 +213,10 @@
         "details": "تفاصيل المشروع"
       },
       "services": {
-        "booths": "أجنحة المعارض",
-        "planning": "تخطيط وتنسيق الفعاليات",
-        "tents": "الخيام والتجهيزات الخارجية",
-        "printing": "المطبوعات والهوية البصرية",
-        "audio": "أنظمة الصوت والإضاءة",
-        "registration": "حلول التسجيل",
-        "conferences": "المؤتمرات وورش العمل",
+        "design": "التصميم الهندسي المبتكر",
+        "fabrication": "التصنيع والتجهيز الخشبي",
+        "technical": "التجهيزات الفنية والإضاءة",
+        "supervision": "الإشراف والتركيب الميداني",
         "other": "أخرى"
       },
       "timelines": {

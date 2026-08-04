@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
@@ -41,6 +43,11 @@ export default function SelectedCollaborations() {
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="collaboration-logo-image"
+                      unoptimized={logo.src.startsWith('/')}
+                      onError={(e) => {
+                        const card = e.currentTarget.closest('.collaboration-logo-item');
+                        if (card) (card as HTMLElement).style.display = 'none';
+                      }}
                     />
                   </div>
                 </div>

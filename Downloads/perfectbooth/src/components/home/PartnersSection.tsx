@@ -107,6 +107,11 @@ export default function PartnersSection() {
                 fill 
                 sizes="(max-width: 768px) 60vw, 25vw"
                 className="partner-img" 
+                unoptimized={partner.src.startsWith('/')}
+                onError={(e) => {
+                  const card = e.currentTarget.closest('.partner-card');
+                  if (card) (card as HTMLElement).style.display = 'none';
+                }}
               />
             </div>
           ))}

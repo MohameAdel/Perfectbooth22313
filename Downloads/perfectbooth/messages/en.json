@@ -77,7 +77,7 @@
     "followUs": "Follow Us",
     "copyright": "© 2026 perfect booth. All rights reserved.",
     "addressPlaceholder": "Cairo, Egypt",
-    "phonePlaceholder": "+20 111 601 3011",
+    "phonePlaceholder": "+201116013011",
     "emailPlaceholder": "info@perfectbooth-events.com"
   },
   "WhyPerfectBooth": {
@@ -189,8 +189,8 @@
       "whatsappLabel": "WhatsApp Us",
       "locationLabel": "Visit Us",
       "emailValue": "info@perfectbooth-events.com",
-      "phoneValue": "+20 111 601 3011",
-      "whatsappValue": "+20 111 601 3011",
+      "phoneValue": "+201116013011",
+      "whatsappValue": "+201116013011",
       "locationValue": "Cairo, Egypt",
       "desc": "Whether you have a complete project brief or only an initial idea, send us what you have and our team will guide the next step."
     },
@@ -213,13 +213,10 @@
         "details": "Project Details"
       },
       "services": {
-        "booths": "Exhibition Booths",
-        "planning": "Event Planning and Coordination",
-        "tents": "Tents and Outdoor Equipment",
-        "printing": "Publications and Visual Identity",
-        "audio": "Sound and Lighting Systems",
-        "registration": "Registration Solutions",
-        "conferences": "Conferences and Workshops",
+        "design": "Innovative Architectural Design",
+        "fabrication": "Custom Wood Fabrication & Fitting",
+        "technical": "Technical & AV Setup & Lighting",
+        "supervision": "Field Supervision & On-site Installation",
         "other": "Other"
       },
       "timelines": {

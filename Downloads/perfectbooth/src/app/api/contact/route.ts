@@ -3,6 +3,10 @@ import { NextResponse } from 'next/server';
 const MAX_PAYLOAD_BYTES = 50 * 1024; // 50 KB
 
 const SERVICE_MAP: Record<string, string> = {
+  design: 'التصميم الهندسي المبتكر',
+  fabrication: 'التصنيع والتجهيز الخشبي',
+  technical: 'التجهيزات الفنية والإضاءة',
+  supervision: 'الإشراف والتركيب الميداني',
   booths: 'أجنحة المعارض',
   planning: 'تخطيط وتنسيق الفعاليات',
   tents: 'الخيام والتجهيزات الخارجية',

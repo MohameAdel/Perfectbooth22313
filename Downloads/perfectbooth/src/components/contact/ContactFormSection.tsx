@@ -48,7 +48,7 @@ export default function ContactFormSection() {
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('phoneLabel')}</h3>
-                      <p className="contact-row-value">{t('phoneValue')}</p>
+                      <p className="contact-row-value" dir="ltr" style={{ display: 'inline-block' }}>{t('phoneValue')}</p>
                     </div>
                   </a>
                 </ScrollReveal>
@@ -66,7 +66,7 @@ export default function ContactFormSection() {
                     </div>
                     <div className="contact-row-content">
                       <h3 className="contact-row-label">{t('whatsappLabel')}</h3>
-                      <p className="contact-row-value">{t('whatsappValue')}</p>
+                      <p className="contact-row-value" dir="ltr" style={{ display: 'inline-block' }}>{t('whatsappValue')}</p>
                     </div>
                   </a>
                 </ScrollReveal>

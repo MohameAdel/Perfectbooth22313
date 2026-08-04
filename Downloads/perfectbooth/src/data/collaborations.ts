@@ -1,39 +1,35 @@
 export const partnersLogos = [
-  { id: 1, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/Rmkc7QaaCe8XlyXXmyEAwEjUiGVeBnbR89HGz9NI.jpg' },
+  { id: 1, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7849.jpg.jpeg' },
   { id: 2, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7852.jpg.jpeg' },
-  { id: 3, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/LNqMe6pqnkrShQ4LqOHCXwUl8UUHufg0angYGMEE.jpg' },
-  { id: 4, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/XVtbnDDwpl4VhQhHhmPRcc3i2kC3MDI6ZVYKuqbL.jpg' },
+  { id: 3, src: '' },
+  { id: 4, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7858.jpg.jpeg' },
   { id: 5, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7859.jpg.jpeg' },
-  { id: 6, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7858.jpg.jpeg' },
-  { id: 7, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/rhBu302I5Aj0lYydXzwVxl9YXUFXbVyR7pDn8jjS.jpg' },
-  { id: 8, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/F1z10WGYkP387OLbYBwPH9ovBewY73gPIvatmqTm.jpg' },
-  { id: 9, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/kT7gHkkr4Hh4FF9hko2Fz9Cg6yoIMlK14bFWofWp.jpg' },
-  { id: 10, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/8LlhgK6irwqbLbzhihYZK5jkRBpvTr5yrxj97ULQ.jpg' },
-  { id: 11, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7849.jpg.jpeg' },
-  { id: 12, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/m0aHdhxpylE9CLSsvGPaS7NKkoiCJ0iUhN5sjmoL.jpg' },
-  { id: 13, src: 'https://admin.perfectbooth-events.com/storage/home-logo-slides/qodcfXqF5judSBpiZLG3bdckUYCH4SZuZaD01Zcw.jpg' }
+  { id: 6, src: '/assets/tqnia_logo.png' },
+  { id: 7, src: '' },
+  { id: 8, src: '' },
+  { id: 9, src: '' }
 ];
 
 export const selectedProjects = [
   {
     id: 1,
     titleKey: 'project1',
-    image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/co1X3sNRqpx9Kdnicliy0dmKe5puz1phE7CYyV8l.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp',
   },
   {
     id: 2,
     titleKey: 'project2',
-    image: 'https://admin.perfectbooth-events.com/storage/home-banner-slides/IatwT74DySD8ZSpWbgvabYzkYO9qffWWvK1kYzXL.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro2.webp',
   },
   {
     id: 3,
     titleKey: 'project3',
-    image: 'https://admin.perfectbooth-events.com/storage/services/images/fVoSlHLlnIqOMCs6IWYAKHabGZ2fmhAu2gWtigdE.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp',
   },
   {
     id: 4,
     titleKey: 'project4',
-    image: 'https://admin.perfectbooth-events.com/storage/services/images/x2ymges6TaOHCBS3BSquSoOlzw1UW146iD9hlTQ2.jpg',
+    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro4.webp',
   }
 ];
 
@@ -79,32 +75,34 @@ export const beforeAfterProjects: BeforeAfterProject[] = [
   {
     id: 4,
     titleKey: 'project2Title',
-    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro22.webp',
-    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro2.webp',
+    beforeImage:'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro2.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro22.webp',
     beforeAltKey: 'project2BeforeAlt',
     afterAltKey: 'project2AfterAlt',
   },
   {
     id: 5,
     titleKey: 'project3Title',
-    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp',
-    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp',
+    beforeImage:  'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro33.webp',
     beforeAltKey: 'project3BeforeAlt',
     afterAltKey: 'project3AfterAlt',
   },
   {
     id: 6,
     titleKey: 'project4Title',
-    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro44.webp',
-    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro4.webp',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro4.webp',
+    afterImage:'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro44.webp' 
+ ,
     beforeAltKey: 'project4BeforeAlt',
     afterAltKey: 'project4AfterAlt',
   },
   {
     id: 7,
     titleKey: 'project5Title',
-    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro55.webp',
-    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro5.webp',
+    beforeImage:  'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro5.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro55.webp'
+   ,
     beforeAltKey: 'project5BeforeAlt',
     afterAltKey: 'project5AfterAlt',
   }

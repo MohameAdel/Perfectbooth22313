@@ -314,13 +314,10 @@ export default function ContactForm() {
                 aria-describedby={errors.service ? "service-error" : undefined}
               >
                 <option value="">-- {t('fields.service')} --</option>
-                <option value="booths">{t('services.booths')}</option>
-                <option value="planning">{t('services.planning')}</option>
-                <option value="tents">{t('services.tents')}</option>
-                <option value="printing">{t('services.printing')}</option>
-                <option value="audio">{t('services.audio')}</option>
-                <option value="registration">{t('services.registration')}</option>
-                <option value="conferences">{t('services.conferences')}</option>
+                <option value="design">{t('services.design')}</option>
+                <option value="fabrication">{t('services.fabrication')}</option>
+                <option value="technical">{t('services.technical')}</option>
+                <option value="supervision">{t('services.supervision')}</option>
                 <option value="other">{t('services.other')}</option>
               </select>
               {errors.service && (
