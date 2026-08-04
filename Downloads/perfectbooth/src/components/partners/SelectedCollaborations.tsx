@@ -34,7 +34,7 @@ export default function SelectedCollaborations() {
           
           <div className="collaborations-logos-grid-container">
             <div className="collaborations-logos-grid">
-              {partnersLogos.map((logo) => (
+              {partnersLogos.filter(logo => Boolean(logo?.src && logo.src.trim())).map((logo) => (
                 <div key={logo.id} className="collaboration-logo-item">
                   <div className="collaboration-logo-inner">
                     <Image

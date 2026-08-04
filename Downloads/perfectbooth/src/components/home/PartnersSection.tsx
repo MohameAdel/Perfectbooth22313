@@ -13,7 +13,7 @@ export default function PartnersSection() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const partners = partnersLogos;
+  const partners = partnersLogos.filter(logo => Boolean(logo?.src && logo.src.trim()));
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;

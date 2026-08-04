@@ -1,14 +1,11 @@
 export const partnersLogos = [
   { id: 1, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7849.jpg.jpeg' },
   { id: 2, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7852.jpg.jpeg' },
-  { id: 3, src: '' },
+  { id: 3, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7857.jpg.jpeg' },
   { id: 4, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7858.jpg.jpeg' },
   { id: 5, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7859.jpg.jpeg' },
-  { id: 6, src: '/assets/tqnia_logo.png' },
-  { id: 7, src: '' },
-  { id: 8, src: '' },
-  { id: 9, src: '' }
-];
+  { id: 6, src: '/assets/tqnia_logo.png' }
+].filter(logo => Boolean(logo.src && logo.src.trim()));
 
 export const selectedProjects = [
   {
