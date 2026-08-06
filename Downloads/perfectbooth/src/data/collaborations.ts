@@ -4,7 +4,23 @@ export const partnersLogos = [
   { id: 3, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7857.jpg.jpeg' },
   { id: 4, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7858.jpg.jpeg' },
   { id: 5, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/logos/IMG_7859.jpg.jpeg' },
-  { id: 6, src: '/assets/tqnia_logo.png' }
+  { id: 6, src: '/assets/tqnia_logo.png' },
+  { id: 7, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/EBF98385-145C-4D23-9D69-C4B05C54560D.webp' },
+  { id: 8, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/DD6D52EB-4BA5-4494-9F31-79F9145FDCE7.webp' },
+  { id: 9, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/889FE735-3701-4A37-8AF0-87442BADA5FB.webp' },
+  { id: 10, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/9C29F1E6-1810-4246-ABB0-E68980B24164.webp' },
+  { id: 11, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_9563.webp' },
+  { id: 12, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/BAA4060E-D72C-425C-923E-B01C2E63F46D.webp' },
+  { id: 13, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7315.webp' },
+  { id: 14, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/E51F3BD9-B043-45CB-AB6D-601C4F5FA335.webp' },
+  { id: 15, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7318.webp' },
+  { id: 16, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7313.webp' },
+  { id: 17, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/3BD652A3-1720-4103-B978-BEED148C3161.webp' },
+  { id: 18, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7312.webp' },
+  { id: 19, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7317.webp' },
+  { id: 20, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/A9604528-3A02-426A-9D22-667FA3E8E88D.webp' },
+  { id: 21, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/38331D96-972A-4708-A41F-EA0E9C9C6DD7.webp' },
+  { id: 22, src: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20logos/IMG_7314.webp' }
 ].filter(logo => Boolean(logo.src && logo.src.trim()));
 
 export const selectedProjects = [
