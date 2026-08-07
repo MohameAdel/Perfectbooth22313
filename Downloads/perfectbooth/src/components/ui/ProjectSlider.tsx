@@ -25,21 +25,28 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scrollToSlide = (index: number) => {
+    if (trackRef.current) {
+      const slides = trackRef.current.querySelectorAll('.project-slider-slide');
+      if (slides[index]) {
+        slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      }
+    }
+  };
 
   const scrollPrev = () => {
-    if (trackRef.current) {
-      const scrollAmount = trackRef.current.clientWidth * 0.8;
-      trackRef.current.scrollBy({ left: dir === 'rtl' ? scrollAmount : -scrollAmount, behavior: 'smooth' });
-    }
+    const prevIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
+    scrollToSlide(prevIndex);
   };
 
   const scrollNext = () => {
-    if (trackRef.current) {
-      const scrollAmount = trackRef.current.clientWidth * 0.8;
-      trackRef.current.scrollBy({ left: dir === 'rtl' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
-    }
+    const nextIndex = (activeIndex + 1) % images.length;
+    scrollToSlide(nextIndex);
   };
 
+  // IntersectionObserver to sync activeIndex on manual user drag / swipe
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -57,7 +64,7 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
       },
       {
         root: track,
-        threshold: 0.6, // Trigger when 60% of the slide is visible
+        threshold: 0.6,
       }
     );
 
@@ -67,15 +74,34 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
     return () => observer.disconnect();
   }, []);
 
+  // Auto-play / Auto-slide effect (4s interval)
+  useEffect(() => {
+    if (images.length <= 1 || isPaused) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % images.length;
+        scrollToSlide(next);
+        return next;
+      });
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length, isPaused]);
+
   const totalImages = images.length;
   const displayIndex = (activeIndex + 1).toString().padStart(2, '0');
   const displayTotal = totalImages.toString().padStart(2, '0');
 
-  const isFirst = activeIndex === 0;
-  const isLast = activeIndex === totalImages - 1;
-
   return (
-    <div className="project-slider-container" dir={dir}>
+    <div 
+      className="project-slider-container" 
+      dir={dir}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
       <div className="project-slider-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <h3 className="project-slider-title" style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--pb-text)' }}>{t(titleKey as any)}</h3>
@@ -92,10 +118,9 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
             <div className="project-slider-nav" style={{ display: 'flex', gap: '0.5rem' }}>
               <button 
                 onClick={scrollPrev} 
-                className={`portfolio-nav-btn prev ${isFirst ? 'disabled' : ''}`} 
-                disabled={isFirst}
+                className="portfolio-nav-btn prev" 
                 aria-label="Previous image" 
-                style={{ transform: 'scale(0.8)', opacity: isFirst ? 0.3 : 1, cursor: isFirst ? 'not-allowed' : 'pointer', border: '1px solid var(--pb-accent)', borderRadius: '50%', background: 'transparent', color: 'var(--pb-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px' }}
+                style={{ transform: 'scale(0.8)', cursor: 'pointer', border: '1px solid var(--pb-accent)', borderRadius: '50%', background: 'transparent', color: 'var(--pb-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d={dir === 'rtl' ? "M5 12h14M12 5l7 7-7 7" : "M19 12H5M12 19l-7-7 7-7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -103,10 +128,9 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
               </button>
               <button 
                 onClick={scrollNext} 
-                className={`portfolio-nav-btn next ${isLast ? 'disabled' : ''}`} 
-                disabled={isLast}
+                className="portfolio-nav-btn next" 
                 aria-label="Next image" 
-                style={{ transform: 'scale(0.8)', opacity: isLast ? 0.3 : 1, cursor: isLast ? 'not-allowed' : 'pointer', border: '1px solid var(--pb-accent)', borderRadius: '50%', background: 'transparent', color: 'var(--pb-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px' }}
+                style={{ transform: 'scale(0.8)', cursor: 'pointer', border: '1px solid var(--pb-accent)', borderRadius: '50%', background: 'transparent', color: 'var(--pb-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d={dir === 'rtl' ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
