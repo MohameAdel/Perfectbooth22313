@@ -52,10 +52,13 @@ export const projectsGallery: ProjectGalleryItem[] = [
   { id: 'centrepoint-2', titleKey: 'brandCentrepoint', image: `${BLOB_BASE_URL}/IMG_7404.jpg.webp`, altKey: 'genericAlt2', categoryKey: 'categoryBrandEnvironment' },
 
   // 6. Latest Projects (New 20 images)
+  { id: 'latest-21', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/26DBE5B6-8F3A-4C58-9DAA-CD668CBC1144.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
+  { id: 'latest-22', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/AE49896F-6DC3-4B18-8803-01AA700FCD90.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
   { id: 'latest-1', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/02131138-b018-4584-8dac-9d2a9067b31d.JPG.jpeg`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
   { id: 'latest-2', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/0448dc4c-f71d-419a-a335-72ea466c9005.JPG.jpeg`, altKey: 'genericAlt2', categoryKey: 'categoryExhibition' },
   { id: 'latest-3', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/09d26c62-fd1c-4df1-a7e0-44659d9e1ca1.JPG.jpeg`, altKey: 'genericAlt3', categoryKey: 'categoryExhibition' },
-  { id: 'latest-4', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/203A0BA8-5812-488F-97E4-A6451C7745B8.JPG.jpeg`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
+  { id: 'latest-4', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/D2B9C7E3-4C66-4C9C-9051-6A6A90227931.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
+  { id: 'latest-44', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/FC67C430-A558-447F-89B1-9B423561B80E.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
   { id: 'latest-5', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/24a70cfb-883b-4529-8cfb-90e4aef219a8.JPG.jpeg`, altKey: 'genericAlt5', categoryKey: 'categoryExhibition' },
   { id: 'latest-6', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/34be3507-c4e9-42ef-b903-c262fe3d0e2b.JPG.jpeg`, altKey: 'genericAlt6', categoryKey: 'categoryExhibition' },
   { id: 'latest-7', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/5FE0C0C9-255D-4D1E-9267-E935BF7231B3.PNG`, altKey: 'genericAlt7', categoryKey: 'categoryExhibition' },

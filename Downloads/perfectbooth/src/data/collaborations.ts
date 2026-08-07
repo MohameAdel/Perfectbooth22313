@@ -27,24 +27,24 @@ export const selectedProjects = [
   {
     id: 1,
     titleKey: 'project1',
-    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro1.webp',
+    image: '',
   },
   {
     id: 2,
     titleKey: 'project2',
-    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro2.webp',
+    image: '',
   },
   {
     id: 3,
     titleKey: 'project3',
-    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro3.webp',
+    image: '',
   },
   {
     id: 4,
     titleKey: 'project4',
-    image: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-work-badge/pro4.webp',
+    image: '',
   }
-];
+].filter(project => Boolean(project.image && project.image.trim()));
 
 export interface BeforeAfterProject {
   id: number;
@@ -64,8 +64,8 @@ export const beforeAfterProjects: BeforeAfterProject[] = [
   {
     id: 1,
     titleKey: 'project1Title',
-    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_9467.jpg.webp',
-    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20images%20project/IMG_4081.webp',
+    beforeImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/D2B9C7E3-4C66-4C9C-9051-6A6A90227931.webp',
+    afterImage: 'https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/FC67C430-A558-447F-89B1-9B423561B80E.webp',
     beforeAltKey: 'project1BeforeAlt',
     afterAltKey: 'project1AfterAlt',
   },

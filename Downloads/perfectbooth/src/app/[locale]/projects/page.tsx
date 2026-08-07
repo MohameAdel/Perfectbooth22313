@@ -80,7 +80,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
       )}
 
       {/* 3. Multi-image Project Sliders */}
-      <section className="projects-sliders-section" style={{ padding: '4rem 5%', maxWidth: '1400px', margin: '0 auto' }}>
+      <section className="projects-sliders-section">
         {multiImageProjectsGroups.map((group, index) => (
           <div key={`slider-group-${index}`} className="reveal-animate" style={{ animationDelay: `${0.1 * index}s` }}>
             <ProjectSlider 
@@ -94,16 +94,33 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
       </section>
 
       {/* 4. Project CTA */}
-      <section className="projects-cta-section reveal-animate" style={{ animationDelay: '0.2s' }}>
-        <div className="projects-cta-container">
-          <p className="projects-cta-eyebrow">{t('ctaEyebrow')}</p>
-          <h2 className="projects-cta-title">{t('ctaTitle')}</h2>
-          <p className="projects-cta-description">{t('ctaText')}</p>
-          <div className="projects-cta-actions">
-            <Link href="/contact#project-form" className="pb-btn-primary projects-cta-btn">
-              {t('ctaAction')} 
-              <span className="cta-arrow">{isAr ? '←' : '→'}</span>
-            </Link>
+      <section className="projects-cta-section reveal-animate">
+        <div className="projects-cta-wrapper">
+          <div className="projects-cta-glow" aria-hidden="true"></div>
+          
+          <div className="projects-cta-card">
+            <div className="corner-accent corner-tl" aria-hidden="true"></div>
+            <div className="corner-accent corner-tr" aria-hidden="true"></div>
+            <div className="corner-accent corner-bl" aria-hidden="true"></div>
+            <div className="corner-accent corner-br" aria-hidden="true"></div>
+
+            <div className="projects-cta-container">
+              <div className="projects-cta-eyebrow-wrapper">
+                <span className="projects-cta-line" aria-hidden="true"></span>
+                <p className="projects-cta-eyebrow">{t('ctaEyebrow')}</p>
+                <span className="projects-cta-line" aria-hidden="true"></span>
+              </div>
+              
+              <h2 className="projects-cta-title">{t('ctaTitle')}</h2>
+              <p className="projects-cta-description">{t('ctaText')}</p>
+              
+              <div className="projects-cta-actions">
+                <Link href="/contact#project-form" className="pb-btn-primary projects-cta-btn">
+                  <span>{t('ctaAction')}</span>
+                  <span className="cta-arrow">{isAr ? '←' : '→'}</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

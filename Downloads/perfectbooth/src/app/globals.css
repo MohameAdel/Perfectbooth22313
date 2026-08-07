@@ -783,48 +783,51 @@ a {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
-  /* Header Adjustments */
+  /* Header Adjustments: Exact 2-Row Layout */
   .top-bar {
-    display: none;
+    display: none !important;
   }
   
   .main-header {
-    padding: 0;
-    flex-direction: column;
-    justify-content: flex-start;
+    padding: 0 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    height: auto !important;
+    border-bottom: none !important;
   }
 
   .logo-container {
-    width: 100%;
-    justify-content: center;
-    background-color: #111;
-    padding: 15px 5%;
-    overflow: hidden;
-  }
-  
-  .logo-container.mobile-hidden-logo {
-    max-height: 0 !important;
-    padding: 0 5% !important;
-    opacity: 0;
-    margin: 0;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: #111111 !important;
+    padding: 15px 5% !important;
+    overflow: hidden !important;
+    max-height: none !important;
   }
 
   .nav-links {
-    display: none; /* Hide standard nav on mobile */
+    display: none !important;
   }
 
   .header-actions {
-    width: 100%;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 12px 5%;
-    border-top: 1px solid #444;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: #333333 !important;
+    padding: 12px 5% !important;
+    border-top: 1px solid #444444 !important;
+    gap: 1rem !important;
   }
 
   /* Hero Adjustments */
   .hero-section {
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 70px;
   }
 
   .hero-content {
@@ -868,6 +871,7 @@ a {
   .about-media-wrapper {
     width: 100%;
     margin-bottom: 2rem;
+    padding-top: 0.5rem;
   }
   
   .about-play-button {
@@ -880,8 +884,15 @@ a {
   }
   
   .about-media-offset-frame {
-    top: -16px;
-    inset-inline-start: 18px;
+    top: 10px !important;
+    inset-inline-start: 12px !important;
+    bottom: -10px !important;
+    height: auto !important;
+  }
+  
+  .about-media-caption {
+    bottom: 12px !important;
+    font-size: 0.8rem !important;
   }
   
   .about-media-3d-scene {
@@ -7210,53 +7221,154 @@ html[dir='rtl'] .projects-hero-watermark {
   line-height: 1.3;
 }
 
-/* 4. Projects CTA */
+/* 4. Projects CTA (Redesigned Architectural Luxury) */
 .projects-cta-section {
-  padding: 3rem 5% 5rem;
-  background-color: var(--pb-bg-dark, #0d0d0d);
-  text-align: center;
+  padding: 5rem 5% 7rem;
+  background-color: var(--pb-bg);
+  position: relative;
+  overflow: hidden;
 }
+
+.projects-cta-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.projects-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  background: radial-gradient(circle, rgba(207, 168, 86, 0.15) 0%, rgba(25, 82, 138, 0.08) 55%, transparent 80%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects-cta-card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(145deg, rgba(18, 20, 24, 0.95) 0%, rgba(10, 12, 16, 0.98) 100%);
+  border: 1px solid rgba(207, 168, 86, 0.3);
+  border-radius: 12px;
+  padding: 4.5rem 3rem;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+/* Corner Accents */
+.projects-cta-card .corner-accent {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--pb-accent);
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.projects-cta-card .corner-tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.projects-cta-card .corner-tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.projects-cta-card .corner-bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+.projects-cta-card .corner-br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+
 .projects-cta-container {
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
+.projects-cta-eyebrow-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.projects-cta-line {
+  width: 32px;
+  height: 1px;
+  background-color: var(--pb-accent);
+  opacity: 0.6;
+}
+
 .projects-cta-eyebrow {
-  color: var(--pb-accent, #c58f2d);
+  color: var(--pb-accent);
   font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  letter-spacing: 0.15em;
+  margin: 0;
 }
+
 .projects-cta-title {
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: var(--pb-text, #ffffff);
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-wrap: balance;
 }
+
+[dir="rtl"] .projects-cta-title {
+  line-height: 1.35;
+}
+
 .projects-cta-description {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--pb-text-secondary, #a0a0a0);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
   margin-bottom: 2.5rem;
+  max-width: 620px;
 }
+
+.projects-cta-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .projects-cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2.5rem;
-  min-width: 200px;
-  gap: 0.75rem;
+  gap: 0.85rem;
+  padding: 1.1rem 3.25rem;
+  background: linear-gradient(135deg, var(--pb-accent) 0%, #b8903c 100%) !important;
+  color: #0b0d10 !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(207, 168, 86, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  min-height: 52px;
 }
+
+.projects-cta-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(207, 168, 86, 0.55);
+  background: linear-gradient(135deg, #e3ba63 0%, #c5993e 100%) !important;
+}
+
 .cta-arrow {
   transition: transform 0.3s ease;
+  font-size: 1.1rem;
 }
+
 .projects-cta-btn:hover .cta-arrow {
   transform: translateX(4px);
 }
+
 html[dir="rtl"] .projects-cta-btn:hover .cta-arrow {
   transform: translateX(-4px);
 }
@@ -7922,7 +8034,7 @@ body:has(.thank-you-pixel-page) .pb-footer-premium {
   position: relative;
   overflow: hidden;
   display: flex;
-  margin-top: 130px !important;
+  margin-top: 90px !important;
   padding-top: 0 !important;
 }
 
@@ -8153,7 +8265,7 @@ body:has(.thank-you-pixel-page) .pb-footer-premium {
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
   .pb-hero-1-section {
-    margin-top: 90px !important;
+    margin-top: 130px !important;
     padding-top: 0 !important;
   }
 
@@ -8199,6 +8311,185 @@ body:has(.thank-you-pixel-page) .pb-footer-premium {
 
   [dir="rtl"] .pb-hero-slider-controls {
     transform: translateX(50%) !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE SPACING AUDIT & OPTIMIZATION (Width <= 768px)
+   Eliminates excessive vertical padding/margins and restores tight rhythm.
+   ========================================================================== */
+
+.project-slider-container {
+  margin-bottom: 4rem;
+}
+
+.projects-sliders-section {
+  padding: 4rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  /* 1. Global Section Padding Reduction on Mobile */
+  .about-section,
+  .services-section,
+  .solutions-section,
+  .why-pb-section,
+  .portfolio-section,
+  .partners-section,
+  .why-choose-us-section,
+  .faq-section,
+  .our-location-section,
+  .before-after-section,
+  .contact-section,
+  .contact-process-section,
+  .selected-collaborations,
+  .about-page-hero,
+  .about-page-approach,
+  .projects-hero,
+  .featured-project-section,
+  .projects-gallery-section,
+  .projects-sliders-section,
+  .projects-cta-section,
+  .services-hero,
+  .services-intro-section,
+  .core-services-section,
+  .delivery-process-section,
+  .engagement-options-section,
+  .final-cta-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* 2. Hero Mobile Top Spacing Adjustments */
+  .pb-hero-1-section {
+    margin-top: 130px !important;
+  }
+
+  .pb-hero-1-viewport {
+    margin-top: 0.5rem !important;
+  }
+
+  .pb-hero-1-content {
+    padding: 1.5rem 1.25rem 2rem 1.25rem !important;
+  }
+
+  /* 3. Section Headers & Title Bottom Margins */
+  .why-choose-us-header,
+  .why-pb-header,
+  .services-header-container,
+  .partners-header,
+  .portfolio-header,
+  .contact-process-header,
+  .collaborations-header,
+  .network-header,
+  .case-study-header,
+  .faq-intro,
+  .projects-hero-container {
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* 4. Why Choose Us Timeline Mobile Vertical Line Fix */
+  .why-choose-us-timeline-wrapper {
+    margin-top: 1rem !important;
+    padding-top: 0.5rem !important;
+  }
+
+  .why-choose-us-timeline-wrapper::before {
+    top: 24px !important;
+    bottom: 24px !important;
+  }
+
+  .timeline-grid {
+    row-gap: 1.5rem !important;
+  }
+
+  .timeline-pin-wrapper {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .timeline-content {
+    margin-top: 0.5rem !important;
+  }
+
+  /* 5. About Section Paragraph & Media Gap Reductions */
+  .about-container {
+    gap: 1.5rem !important;
+  }
+
+  .about-description {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .about-text {
+    margin-bottom: 0 !important;
+  }
+
+  .about-media-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  /* 6. Portfolio & Collaborations Adjustments */
+  .portfolio-track,
+  .partners-track {
+    padding-bottom: 1rem !important;
+  }
+
+  .portfolio-footer-cta {
+    margin-top: 1.5rem !important;
+  }
+
+  .project-slider-container {
+    margin-bottom: 2rem !important;
+  }
+
+  .collaborations-projects {
+    gap: 2rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .collaboration-info-panel {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .collaboration-project-desc {
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* 7. Footer Padding & Margins */
+  .pb-footer-premium {
+    padding-top: 2.5rem !important;
+  }
+
+  .footer-bottom-row {
+    margin-top: 1.5rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  .premium-grid {
+    gap: 2rem !important;
+  }
+
+  /* 8. Solutions & Service Cards */
+  .solutions-desc {
+    margin: 1rem auto !important;
+  }
+
+  .solutions-grid {
+    margin-top: 1.25rem !important;
+    gap: 1rem !important;
+  }
+
+  .solution-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .engagement-panel {
+    padding: 1.5rem !important;
+  }
+
+  .process-intro {
+    margin-bottom: 2rem !important;
   }
 }
 

@@ -75,7 +75,7 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
   const isLast = activeIndex === totalImages - 1;
 
   return (
-    <div className="project-slider-container" dir={dir} style={{ marginBottom: '5rem' }}>
+    <div className="project-slider-container" dir={dir}>
       <div className="project-slider-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <h3 className="project-slider-title" style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--pb-text)' }}>{t(titleKey as any)}</h3>
@@ -132,7 +132,7 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
       >
         {images.map((img, index) => (
           <div 
-            key={img.id} 
+            key={`${img.id}-${index}`} 
             data-index={index}
             className="project-slider-slide" 
             style={{ 

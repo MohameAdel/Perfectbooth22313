@@ -128,15 +128,21 @@ export default function AnimatedFormCTA({
           background-position: right center;
           color: #000000;
         }
-        .animated-cta-icon-box {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 28px;
-          background: rgba(13, 15, 18, 0.15);
-          border-radius: 50%;
-          font-size: 0.85rem;
+        @media (max-width: 768px) {
+          .animated-form-cta-floating {
+            bottom: 16px !important;
+            ${isAr ? 'right: 14px !important;' : 'left: 14px !important;'}
+          }
+          .animated-form-cta-btn {
+            padding: 0.65rem 1.15rem !important;
+            font-size: 0.85rem !important;
+            gap: 0.4rem !important;
+          }
+          .animated-cta-icon-box {
+            width: 22px !important;
+            height: 22px !important;
+            font-size: 0.75rem !important;
+          }
         }
       `}</style>
 

@@ -17,10 +17,12 @@ export default function SelectedProjectsSection() {
   const [isHovered, setIsHovered] = useState(false);
 
   // Project data comes from collaborations.ts, but we map the title dynamically
-  const projects = selectedProjects.map(p => ({
-    ...p,
-    title: t(p.titleKey as 'project1' | 'project2' | 'project3' | 'project4')
-  }));
+  const projects = selectedProjects
+    .filter(p => Boolean(p.image && p.image.trim()))
+    .map(p => ({
+      ...p,
+      title: t(p.titleKey as 'project1' | 'project2' | 'project3' | 'project4')
+    }));
 
   const getScrollAmount = () => {
     if (!trackRef.current) return 0;
@@ -125,17 +127,19 @@ export default function SelectedProjectsSection() {
             </div>
           ))}
           {projects.map((project) => (
-            <div key={`sp-${project.id}`} className="portfolio-item">
-              <div className="portfolio-img-wrapper">
-                <Image 
-                  src={project.image} 
-                  alt={project.title} 
-                  fill 
-                  sizes="(max-width: 768px) 85vw, 60vw"
-                  className="portfolio-img" 
-                />
+            project.image ? (
+              <div key={`sp-${project.id}`} className="portfolio-item">
+                <div className="portfolio-img-wrapper">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    sizes="(max-width: 768px) 85vw, 60vw"
+                    className="portfolio-img" 
+                  />
+                </div>
               </div>
-            </div>
+            ) : null
           ))}
         </div>
 
