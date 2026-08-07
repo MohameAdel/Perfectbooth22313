@@ -29,9 +29,10 @@ export default function ProjectSlider({ titleKey, categoryKey, images, priorityF
 
   const scrollToSlide = (index: number) => {
     if (trackRef.current) {
-      const slides = trackRef.current.querySelectorAll('.project-slider-slide');
+      const slides = trackRef.current.querySelectorAll('.project-slider-slide') as NodeListOf<HTMLElement>;
       if (slides[index]) {
-        slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        const targetScrollLeft = slides[index].offsetLeft;
+        trackRef.current.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
       }
     }
   };
