@@ -90,14 +90,14 @@ export const projectsGallery: ProjectGalleryItem[] = [
 // ==========================================
 { id: 'latest-11', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9419.jpg.jpeg`, altKey: 'genericAlt15', categoryKey: 'categoryExhibition' },
 { id: 'latest-12', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9420.jpg.jpeg`, altKey: 'genericAlt16', categoryKey: 'categoryExhibition' },
+{ id: 'latest-13', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_6771.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
 
 // ==========================================
 // 7. EMMAAR AL DIYAFA HOTELS — 4 Unique Images
 // ==========================================
-{ id: 'latest-13', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9416.jpg.jpeg`, altKey: 'genericAlt13', categoryKey: 'categoryExhibition' },
-{ id: 'latest-14', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9418.jpg.jpeg`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
-{ id: 'latest-15', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_3669.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
-{ id: 'latest-16', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_6771.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
+{ id: 'latest-14', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9416.jpg.jpeg`, altKey: 'genericAlt13', categoryKey: 'categoryExhibition' },
+{ id: 'latest-15', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9418.jpg.jpeg`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
+{ id: 'latest-16', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_3669.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
 
 // ==========================================
 // 8. VGOD / VAPE EXHIBITION — 2 Images
