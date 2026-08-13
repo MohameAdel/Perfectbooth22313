@@ -52,7 +52,7 @@ export default function ServicesHero() {
           <div className="services-hero-image-wrapper">
             <div className="services-hero-yellow-line" />
             <Image
-              src="https://admin.perfectbooth-events.com/storage/home-banner-slides/co1X3sNRqpx9Kdnicliy0dmKe5puz1phE7CYyV8l.jpg"
+              src="https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/image-work-home-badge/IMG_7416.jpg.webp"
               alt={t('title')}
               fill
               className="services-hero-image"

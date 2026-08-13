@@ -13,15 +13,17 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.ouneg.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'admin.perfectbooth-events.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'vqknbbjrosel3hr8.public.blob.vercel-storage.com',
-        pathname: '/photos/**',
+        pathname: '/**',
       },
     ],
   },
