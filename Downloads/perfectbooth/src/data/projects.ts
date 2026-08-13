@@ -54,105 +54,75 @@ export const projectsGallery: ProjectGalleryItem[] = [
   // 6. Latest Projects (23 images)
 // Ordered by project + visual quality
 
+// ==========================================
+// 1. SMARTEL — 2 Images
+// ==========================================
+{ id: 'latest-0', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/26DBE5B6-8F3A-4C58-9DAA-CD668CBC1144.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
+{ id: 'latest-1', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/AE49896F-6DC3-4B18-8803-01AA700FCD90.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
 
-  // ==========================================
-  // 1. SMARTEL — High Quality
-  // ==========================================
+// ==========================================
+// 2. ATIC — 2 Images
+// ==========================================
+{ id: 'latest-2', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/D2B9C7E3-4C66-4C9C-9051-6A6A90227931.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
+{ id: 'latest-3', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/FC67C430-A558-447F-89B1-9B423561B80E.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
 
-  { id: 'latest-21', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/26DBE5B6-8F3A-4C58-9DAA-CD668CBC1144.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
+// ==========================================
+// 3. ABA FASHION HUB — 3 Images
+// ==========================================
+{ id: 'latest-4', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/02131138-b018-4584-8dac-9d2a9067b31d.JPG.jpeg`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
+{ id: 'latest-5', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9422.jpg.jpeg`, altKey: 'genericAlt18', categoryKey: 'categoryExhibition' },
+{ id: 'latest-6', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9272.jpg.jpeg`, altKey: 'genericAlt11', categoryKey: 'categoryExhibition' },
 
-  { id: 'latest-22', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/AE49896F-6DC3-4B18-8803-01AA700FCD90.webp`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
+// ==========================================
+// 4. TIBA AGRITECH — 2 Images
+// ==========================================
+{ id: 'latest-7', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg`, altKey: 'genericAlt9', categoryKey: 'categoryExhibition' },
+{ id: 'latest-8', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9430.jpg.jpeg`, altKey: 'genericAlt19', categoryKey: 'categoryExhibition' },
 
+// ==========================================
+// 5. BCMI / GOLDSTONE — 2 Images
+// ==========================================
+{ id: 'latest-9', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/5FE0C0C9-255D-4D1E-9267-E935BF7231B3.PNG`, altKey: 'genericAlt7', categoryKey: 'categoryExhibition' },
+{ id: 'latest-10', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9415.jpg.jpeg`, altKey: 'genericAlt12', categoryKey: 'categoryExhibition' },
 
-  // ==========================================
-  // 2. ATIC — High Quality
-  // ==========================================
+// ==========================================
+// 6. DIDO — 2 Images
+// ==========================================
+{ id: 'latest-11', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9419.jpg.jpeg`, altKey: 'genericAlt15', categoryKey: 'categoryExhibition' },
+{ id: 'latest-12', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9420.jpg.jpeg`, altKey: 'genericAlt16', categoryKey: 'categoryExhibition' },
 
-  { id: 'latest-4', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/D2B9C7E3-4C66-4C9C-9051-6A6A90227931.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
+// ==========================================
+// 7. EMMAAR AL DIYAFA HOTELS — 4 Unique Images
+// ==========================================
+{ id: 'latest-13', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9416.jpg.jpeg`, altKey: 'genericAlt13', categoryKey: 'categoryExhibition' },
+{ id: 'latest-14', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9418.jpg.jpeg`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
+{ id: 'latest-15', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_3669.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
+{ id: 'latest-16', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_6771.webp`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
 
-  { id: 'latest-44', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/FC67C430-A558-447F-89B1-9B423561B80E.webp`, altKey: 'genericAlt4', categoryKey: 'categoryExhibition' },
+// ==========================================
+// 8. VGOD / VAPE EXHIBITION — 2 Images
+// ==========================================
+{ id: 'latest-17', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C8947A3E-EC61-45B9-A2C1-6085D2308145.PNG`, altKey: 'genericAlt10', categoryKey: 'categoryExhibition' },
+{ id: 'latest-18', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/9334419a-bcd7-40bb-8aaf-4b553c0a8719.JPG.jpeg`, altKey: 'genericAlt8', categoryKey: 'categoryExhibition' },
 
+// ==========================================
+// 9. EG / ELERIAN / CIXING MACHINERY — 5 Images
+// ==========================================
+{ id: 'latest-19', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/34be3507-c4e9-42ef-b903-c262fe3d0e2b.JPG.jpeg`, altKey: 'genericAlt6', categoryKey: 'categoryExhibition' },
+{ id: 'latest-20', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/IMG_4298.webp`, altKey: 'genericAlt6', categoryKey: 'categoryExhibition' },
+{ id: 'latest-21', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/c5607f6b-0800-4b85-adac-a2e1911498b0.JPG.jpeg`, altKey: 'genericAlt20', categoryKey: 'categoryExhibition' },
+{ id: 'latest-22', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/09d26c62-fd1c-4df1-a7e0-44659d9e1ca1.JPG.jpeg`, altKey: 'genericAlt3', categoryKey: 'categoryExhibition' },
+{ id: 'latest-23', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/0448dc4c-f71d-419a-a335-72ea466c9005.JPG.jpeg`, altKey: 'genericAlt2', categoryKey: 'categoryExhibition' },
 
-  // ==========================================
-  // 3. ABA FASHION HUB — 3 Images
-  // ==========================================
+// ==========================================
+// 10. EGYBOS — 2 Images
+// ==========================================
+{ id: 'latest-24', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/24a70cfb-883b-4529-8cfb-90e4aef219a8.JPG.jpeg`, altKey: 'genericAlt5', categoryKey: 'categoryExhibition' },
+{ id: 'latest-25', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/22.webp`, altKey: 'genericAlt5', categoryKey: 'categoryExhibition' },
 
-  { id: 'latest-1', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/02131138-b018-4584-8dac-9d2a9067b31d.JPG.jpeg`, altKey: 'genericAlt1', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-18', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9422.jpg.jpeg`, altKey: 'genericAlt18', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-11', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9272.jpg.jpeg`, altKey: 'genericAlt11', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 4. TIBA AGRITECH — Render + Real
-  // ==========================================
-
-  { id: 'latest-9', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C2889CFB-CC2D-4F73-9B7D-21AB71654A4F.jpg.jpeg`, altKey: 'genericAlt9', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-19', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9430.jpg.jpeg`, altKey: 'genericAlt19', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 5. BCMI / GOLDSTONE — Render + Real
-  // ==========================================
-
-  { id: 'latest-7', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/5FE0C0C9-255D-4D1E-9267-E935BF7231B3.PNG`, altKey: 'genericAlt7', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-12', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9415.jpg.jpeg`, altKey: 'genericAlt12', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 6. DIDO — 2 High Quality Renders
-  // ==========================================
-
-  { id: 'latest-15', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9419.jpg.jpeg`, altKey: 'genericAlt15', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-16', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9420.jpg.jpeg`, altKey: 'genericAlt16', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 7. EMMAAR AL DIYAFA HOTELS — 2 Renders
-  // ==========================================
-
-  { id: 'latest-13', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9416.jpg.jpeg`, altKey: 'genericAlt13', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-14', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9418.jpg.jpeg`, altKey: 'genericAlt14', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 8. VGOD / VAPE EXHIBITION — Render + Real
-  // ==========================================
-
-  { id: 'latest-10', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/C8947A3E-EC61-45B9-A2C1-6085D2308145.PNG`, altKey: 'genericAlt10', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-8', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/9334419a-bcd7-40bb-8aaf-4b553c0a8719.JPG.jpeg`, altKey: 'genericAlt8', categoryKey: 'categoryExhibition' },
-
-  // ==========================================
-  // 11. EG / ELERIAN / CIXING MACHINERY
-  // 4 Images — kept together
-  // ==========================================
-
-  { id: 'latest-6', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/34be3507-c4e9-42ef-b903-c262fe3d0e2b.JPG.jpeg`, altKey: 'genericAlt6', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-20', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/c5607f6b-0800-4b85-adac-a2e1911498b0.JPG.jpeg`, altKey: 'genericAlt20', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-3', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/09d26c62-fd1c-4df1-a7e0-44659d9e1ca1.JPG.jpeg`, altKey: 'genericAlt3', categoryKey: 'categoryExhibition' },
-
-  { id: 'latest-2', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/0448dc4c-f71d-419a-a335-72ea466c9005.JPG.jpeg`, altKey: 'genericAlt2', categoryKey: 'categoryExhibition' },
-
-  // ==========================================
-  // 9. EGYBOS
-  // ==========================================
-
-  { id: 'latest-5', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/24a70cfb-883b-4529-8cfb-90e4aef219a8.JPG.jpeg`, altKey: 'genericAlt5', categoryKey: 'categoryExhibition' },
-
-
-  // ==========================================
-  // 10. DUICK
-  // ==========================================
-
-  { id: 'latest-17', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9421.jpg.jpeg`, altKey: 'genericAlt17', categoryKey: 'categoryExhibition' },
-
-
+// ==========================================
+// 11. DUICK — 2 Images
+// ==========================================
+{ id: 'latest-26', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/projects/IMG_9421.jpg.jpeg`, altKey: 'genericAlt17', categoryKey: 'categoryExhibition' },
+{ id: 'latest-27', titleKey: 'brandLatestProjects', image: `https://vqknbbjrosel3hr8.public.blob.vercel-storage.com/photos/new%20projects/233.webp`, altKey: 'genericAlt17', categoryKey: 'categoryExhibition' },
 ];
